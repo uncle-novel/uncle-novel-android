@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">Uncle小说</string>
+    <string name="app_browser_name">通用浏览器</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_analysis">解析</string>
+    <string name="menu_news">资讯</string>
+    <string name="menu_task">任务</string>
+    <string name="menu_profile">我的</string>
+
+    <string name="menu_notifications">通知</string>
+    <string name="menu_issues">问题</string>
+    <string name="menu_starred">收藏</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_about">关于</string>
+
+    <string name="about_copyright">© %1$s xuexiangjys All rights reserved.</string>
+    <string name="about_item_homepage">访问官网</string>
+    <string name="about_item_author_github">联系作者</string>
+    <string name="about_item_donation_link">捐赠作者</string>
+    <string name="about_item_add_qq_group">QQ交流群</string>
+    <string name="url_project_github">https://github.com/xuexiangjys/TemplateAppProject</string>
+    <string name="url_author_github">https://gitee.com/xuexiangjys/xuexiangjys</string>
+    <string name="url_donation_link">https://gitee.com/xuexiangjys/Resource/blob/master/doc/sponsor.md</string>
+    <string name="url_add_qq_group">http://qm.qq.com/cgi-bin/qm/qr?k=tiP-E6rDf0y77PRNfp2lNVcc9RsglPCM</string>
+
+    <string name="lab_yes">是</string>
+    <string name="lab_no">否</string>
+    <string name="lab_open_third_app">是否允许页面打开第三方应用?</string>
+
+    <!-- 隐私政策弹窗   -->
+    <string name="lab_exit_app">退出应用</string>
+    <string name="lab_agree">同意</string>
+    <string name="lab_disagree">不同意</string>
+    <string name="lab_look_again">再次查看</string>
+    <string name="lab_still_disagree">仍不同意</string>
+    <string name="title_reminder">温馨提示</string>
+    <string name="content_think_about_it_again">要不要再想想</string>
+    <string name="content_privacy_explain_again">我们非常重视对你个人信息的保护，承诺严格按照《%s隐私权政策》保护及处理你的信息。如果你不同意该政策，很遗憾我们将无法为你提供服务</string>
+    <string name="lab_privacy_name">《%s隐私权政策》</string>
+
+    <!-- 登录   -->
+    <string name="title_login_register">登录/注册</string>
+    <string name="action_get_verify_code">获取验证码</string>
+    <string name="title_login">登录</string>
+    <string name="title_login_by_verify_code">验证码登录</string>
+    <string name="title_register">注册</string>
+    <string name="lab_forget_password">忘记密码?</string>
+    <string name="lab_login_by_verify_code">验证码登录</string>
+    <string name="lab_login_by_password">密码登录</string>
+    <string name="tip_please_input_phone_number">请输入手机号码</string>
+    <string name="title_phone_number">手机号码</string>
+    <string name="title_password">密码</string>
+    <string name="title_old_password">旧密码</string>
+    <string name="hint_please_input_verify_code">请输入验证码</string>
+    <string name="lab_verify_code">验证码</string>
+    <string name="tip_password_error">密码必须是8~18位字母和数字的组合！</string>
+    <string name="tip_new_password_error">新密码必须是8~18位字母和数字的组合！</string>
+    <string name="tip_phone_number_error">无效的手机号！</string>
+    <string name="regex_phone_number">^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(16[6])|(17[0,1,3,5-8])|(18[0-9])|(19[8,9]))\\d{8}$</string>
+    <string name="tip_verify_code_error">请输入4位数验证码</string>
+    <string name="regex_verify_code">^\\d{4}$</string>
+    <string name="regex_password">^(?:(?=.*[a-zA-Z])(?=.*[0-9])).{8,18}$</string>
+    <string name="title_forget_password">重置密码</string>
+    <string name="lab_register_account">点击注册即表示同意</string>
+    <string name="lab_service_protocol"><![CDATA[<用户协议>]]></string>
+    <string name="lab_logout_confirm">是否确认退出账号？</string>
+    <string name="title_user_protocol">用户协议</string>
+    <string name="title_privacy_protocol">隐私政策</string>
+    <string name="agree_protocol">我已阅读并同意</string>
+    <string name="lab_and">和</string>
+
+    <string name="title_jump_login">跳过</string>
+    <string name="label_previous">上一条</string>
+    <string name="label_next">下一条</string>
+    <string name="tip_ignore_message">以后不再提示此类信息</string>
+    <string name="tip_title">你知道吗？</string>
+    <string name="search_history">历史搜索</string>
+    <string name="search_book_prompt">请输入小说的名称</string>
+    <string name="search_book_hint">请输入小说名称、作者</string>
+    <string name="plus">+</string>
+    <string name="introduce">简介</string>
+    <string name="analysis_download">解析下载</string>
+    <string name="download_direct">直接下载</string>
+    <string name="analysis_novel">小说解析</string>
+
+    <string name="chapter_text">
+        皮肤黝黑的二猛傻笑，哈喇子都快流出来了，快步向前走去，道：“这是我掏过的最大的鸟窝，这么大的蛋生平第一次见到。”
+
+“嘿嘿，没错，掏这样的鸟窝才有成就感。”皮猴干巴巴，笑起来真像是一只山猴子。
+
+“真漂亮！”小不点石昊眨巴着大眼睛，长长的睫毛随之而颤，看着三枚凶禽卵温润晶莹、光泽点点，忍不住欢喜，他最为年幼，好奇心很重，很想抱起来看个仔细。
+
+二猛来到近前，可刚一伸手触碰巨蛋，当即就“哎呦”了一声，感觉手臂麻酥酥，像是被电击了一般。
+
+“这是怎么了？！”几个孩子都是一惊。
+
+碧玉般的晶莹蛋壳上，那些斑点与纹络灿灿生辉，如星辰在闪耀，非常的美丽，有一种神秘的力量在流淌。
+
+“真强大呀，青鳞鹰是太古魔禽的后裔，血脉即便早已不纯净，但生命印记中也还有部分破碎的符文传承。”小不点每日都学习骨文，此时看出了端倪，扑闪着大眼，小大人般，清脆的说道。
+
+几个孩子又惊又喜，这种凶禽越强大孵化出来的幼鸟越稀珍与血脉高贵，将来可以守护村子，也许能比肩祭灵。
+
+“只是蛋壳上的斑点在流动光辉而已，小心别触碰那些地方，装进兽皮袋中，我们得赶紧离开了。”石大壮人高马大，很粗壮，也很稳重，催促几人，现在没有时间可耽搁。
+
+显然，他们早有准备，每一个人都带着兽皮袋，迅速打开，小心翼翼的将凶禽的卵放了进去，共有三枚水盆大的碧玉蛋，除却小不点外另外三人一人背起一个。
+
+“太好了，想不到我们成功了。”二猛乐滋滋，笑的鼻涕泡都快出来了。
+
+🍅 鲲*弩*小*说* w WW … K u n N u … c om
+
+皮猴也笑嘻嘻，道：“以后我们石村将会有强大的凶禽守护，族长还有林虎叔他们肯定会服气，对我们另眼相看。”
+
+“哎呦！”石大壮一个趔趄，差点栽倒，被小不点一把扶住。
+
+凶鸟的巢中铺满了金丝草，很柔软，但在当中却也隐有几枚闪动冷冽金属光泽的鳞片，石大壮一个没注意，踏在了上面，鞋底都被刺穿了，脚掌流出一些血迹，还好只是划破皮而已。
+
+“好锋锐的鳞片！”小不点石昊将几枚青鳞收集到手中，每一个都有婴儿巴掌大，寒光闪烁。
+
+“这就是成熟的凶禽的鳞片，果然不凡，我估计以数百斤重的阔剑都很难劈开！”皮猴道。
+
+几个孩子不敢停留，沿着崖壁如同壁虎般迅速地下行，很快就到了地面上，抹了把汗水，长出了一口气。
+
+“怎么样，有收获吗？”一群孩子都围了上来。
+
+“成功了，我们掏了一窝的鸟蛋，哈哈……”二猛大笑。
+
+这些孩子掀开兽皮袋，向里面看观看，见到了水盆大的鸟蛋，光泽莹莹，神秘清辉点点，全都惊叹。
+
+“太好了，成功了！”
+
+“这可是实力强大的凶禽产下的卵，我们石村将会有飞空的战禽了。”
+
+“走喽！”
+
+他们既高兴又兴奋，如同一群小山兽般在石林中腾跃，迅疾无比，不久就出了石林，赶在青鳞鹰回归前出来了。
+
+“这次真是顺利，我们赶紧走吧！”
+
+山林茂密，落叶积了尺许厚，踩在上面很软。大树参天，遮蔽了烈日，古藤如螭龙蜿蜒，傍着巨木，远处不时有兽啸传来，震动山地。
+
+还好，这里距离石村不是很远，还处在相对安全的区域，并没有接近到大山中那些危险凶物的活动范围内。
+
+“快了，加把劲，我们一口气跑到村中去！”
+
+一群孩子虽然兴奋，但是心中也有点担忧，毕竟那可是一头青鳞鹰啊，让村中的最强大的壮年男子都心有惧意，而他们却成功的将其所产下的卵一窝端了，有点不真实的感觉。
+
+突然，一声鸣叫响彻长空，穿金裂石，非常尖锐，具有一种可怕的穿透性，震的一群孩子耳膜生疼。
+
+“不好，那头青鳞鹰回去了，肯定发现三枚蛋不见了，要发狂了。”有孩子惊叫。
+
+“快逃！”小石昊眼神很亮，透过巨树的枝桠缝隙，看到了天空中一团阴影正在盘旋，朝这个方向而来。
+
+高空中，大风呼啸，一只巨鸟在山林中投下大片的阴影，极速俯冲而来，浑身流动青色寒光，凶气惊人。
+
+至此其他孩子也都看到了，远处一只巨鸟凌空扑击向这片山林来，速度极快，如一颗星辰砸落，凌厉而慑人。
+
+“我的娘诶，好大一只鸟，快跑呀！”
+
+孩子们惊呼，心中生出恐惧，那头鸟太大了，体长七八米，双翅一展则有十五米，浑身密布着青色的鳞片，闪烁着冷冽的金属光泽，凶煞气息迫人！
+
+这群孩子撒丫子狂逃，仰仗着对山林的熟悉，专门向林子密的地方冲，躲避这头浑身鳞片闪烁冷光的凶禽。
+
+“轰！”
+
+几十株参天大树被它的铁翅击碎，枝桠与树叶乱飞，碎屑纷舞，它犹如钢铁铸成，俯冲下来，无坚不摧。
+
+这让人惊悚，孩子们大叫，脸色发白，飞快奔逃。
+
+这头庞然大物非常可怕，铁翅击天，摧毁一切，鳞片闪烁着森寒的光芒，一个俯冲，就让这片山林毁了大半，碎木与残叶飞舞。
+
+它太强了，身体坚硬无比，双翅如阔刀，简直能将一座山峰撞断，这些林木根本阻挡不了。
+
+它形似一头巨鹰，但浑身却没有一根羽毛，鳞片森森，像是以铁水浇铸而成，充满了震撼性的力感。
+
+弯钩状的鹰喙，黑亮而锋锐，有大半米长，上面还沾染着凶兽的血，显然刚刚捕猎回来。而那对爪子更是慑人，寒光森冷，极其锋利，近一米长，绝对可以轻易撕裂一头巨象。
+
+在其头上还有一些类似翎羽的突起，但绝不是羽毛，而是一根根粗长而锐利的骨刺，宛若一排犄角，可以轻易剖开大型猛兽的胸腹。
+
+这就是青鳞鹰，密布冰冷的青色鳞片，浑身充满了无穷的力量，像是钢铁铸成，横扫这片山林，视这些巨树如无物。
+
+“轰！”
+
+在隆隆声中，成片成片的参天大树折断，很多都是十几人才能合抱过来的粗大巨木，青鳞鹰直接俯冲而过，铁翅击断一切障碍物，满地都是枝桠与乱叶。
+
+砰的一声巨响，一块巨大的山石挡路，都被它生生击裂，火星四溅，乱石崩飞，很多上百斤重的石块砸落向四方，击断了许多大树，声势惊人。
+
+所有孩子都毛骨发寒，这头青鳞鹰太强大了，若非是那块山石阻挡，刚才他们当中不少人可能会被扑杀。
+
+青鳞鹰摧毁大片山林后，重新冲天而起，在空中盘旋，鹰眸如电，冷冷的盯着下方，准备再次俯冲下来，追杀那些正在逃窜的孩子。
+
+“村子就在前面不远处，赶紧冲啊！”孩子们大叫。
+
+兄弟们给力，推荐票马上第一了，再加把劲马上就上去了，这个票每天都有，请兄弟姐妹投给本书吧。需要你们。谢谢啦。
+    </string>
+    <string name="cookies">Cookies</string>
+    <string name="edit_source">编辑源码</string>
+    <string name="user_agent">User-Agent</string>
+    <string name="rule_site">书源站点</string>
+    <string name="rule_name">书源名称</string>
+    <string name="get_cookie">获取</string>
+    <string name="enabled_rule">启用书源</string>
+    <string name="audio_rule">有声书源</string>
+    <string name="enabled_dynamic">动态网页</string>
+    <string name="add_rule">新增书源</string>
+    <string name="clipboard_import">剪贴板导入</string>
+    <string name="import_rule">导入书源</string>
+    <string name="export_rule">导出书源</string>
+    <string name="rule_manager">书源管理</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/add_rule"
+        android:id="@+id/add" />
+    <item
+        android:title="@string/clipboard_import"
+        android:id="@+id/clipboard_import" />
+    <item
+        android:title="@string/import_rule"
+        android:id="@+id/import_rule" />
+    <item
+        android:title="@string/export_rule"
+        android:id="@+id/export" />
+</menu>

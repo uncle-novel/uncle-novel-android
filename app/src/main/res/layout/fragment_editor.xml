@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:background="@color/xui_config_color_white"
+            android:layout_height="match_parent">
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/enabled"
+                style="@style/SwitchInfoItem"
+                app:sLeftTextString="@string/enabled_rule" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/is_audio"
+                style="@style/SwitchInfoItem"
+                app:sLeftTextString="@string/audio_rule" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/dynamic"
+                style="@style/SwitchInfoItem"
+                app:sLeftTextString="@string/enabled_dynamic" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/name"
+                style="@style/EditInfoItem"
+                android:inputType="text"
+                app:sEditTextHint="@string/rule_name"
+                app:sEditTextIsAsteriskStyle="true"
+                app:sLeftTextString="@string/rule_name" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/site"
+                style="@style/EditInfoItem"
+                android:inputType="text"
+                app:sEditTextHint="@string/rule_site"
+                app:sEditTextIsAsteriskStyle="true"
+                app:sLeftTextString="@string/rule_site" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/user_agent"
+                style="@style/EditInfoItem"
+                android:inputType="text"
+                app:sEditTextHint="@string/user_agent"
+                app:sEditTextIsAsteriskStyle="true"
+                app:sLeftTextString="@string/user_agent" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/cookies"
+                app:sRightTextString="获取"
+                app:sRightTextBackground="@color/colorPrimary"
+                app:sRightViewMarginRight="10dp"
+                app:srig=""
+                style="@style/EditInfoItem"
+                android:inputType="text"
+                app:sEditTextHint="@string/cookies"
+                app:sEditTextIsAsteriskStyle="true"
+                app:sLeftTextString="@string/cookies" />
+
+            <TextView
+                android:text="@string/edit_source"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/source"
+                style="@style/EditText.Normal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/chapter_text"
+                android:autofillHints="@string/edit_source" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

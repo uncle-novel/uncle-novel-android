@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/menu_rule_manager"
+                style="@style/InfoItem.Common"
+                app:sLeftIconRes="@drawable/ic_rule_manager"
+                app:sLeftBottomTextString="管理解析规则"
+                app:sLeftTextString="书源管理" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Common"
+                android:layout_marginTop="20dp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="意见反馈" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/menu_settings"
+                style="@style/InfoItem.Common"
+                android:layout_marginTop="20dp"
+                app:sLeftTextString="设置" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/menu_privacy"
+                style="@style/InfoItem.Common"
+                android:layout_marginTop="20dp"
+                app:sLeftTextString="隐私政策" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/menu_about"
+                style="@style/InfoItem.Common"
+                app:sDividerLineType="none"
+                app:sLeftTextString="关于" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,539 @@
+[
+  {
+    "name": "斋书苑",
+    "site": "https://www.zhaishuyuan.com/",
+    "group": "123",
+    "enabled": true,
+    "audio": false,
+    "weight": 0,
+    "params": {
+      "dynamic": false,
+      "enabledProxy": false
+    },
+    "content": {
+      "enableNext": false,
+      "content": {},
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      }
+    },
+    "toc": {
+      "params": {},
+      "list": {},
+      "name": {},
+      "url": {},
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      },
+      "enableNext": false,
+      "blackUrls": [],
+      "filter": false,
+      "sort": false
+    },
+    "detail": {
+      "title": {},
+      "author": {},
+      "broadcast": {},
+      "category": {},
+      "wordCount": {},
+      "introduce": {},
+      "latestChapterName": {},
+      "latestChapterUrl": {},
+      "coverUrl": {},
+      "state": {},
+      "updateTime": {}
+    },
+    "search": {
+      "params": {
+        "url": "https://www.zhaishuyuan.com/search/?page={{page}}&key={{keyword}}",
+        "method": "POST",
+        "charset": "gbk",
+        "mediaType": "application/x-www-form-urlencoded",
+        "body": "",
+        "dynamic": false,
+        "enableProxy": false,
+        "autoProxy": true
+      },
+      "list": {
+        "type": "//",
+        "rule": "//*[@id=\"sitembox\"]/dl"
+      },
+      "detailPage": {},
+      "detail": {
+        "url": {
+          "type": "//",
+          "rule": "/dd[1]/h3/a/@href"
+        },
+        "title": {
+          "type": "//",
+          "rule": "/dd[1]/h3/a/allText()"
+        },
+        "author": {
+          "type": "//",
+          "rule": "/dd[2]/span[1]/text()"
+        },
+        "broadcast": {
+          "type": "//"
+        },
+        "category": {
+          "type": "//",
+          "rule": "/dd[2]/span[3]/text()"
+        },
+        "wordCount": {
+          "type": "//",
+          "rule": "/dd[2]/span[4]/text()"
+        },
+        "introduce": {
+          "type": "//",
+          "rule": "dd[3]/text()"
+        },
+        "latestChapterName": {
+          "type": "//",
+          "rule": "dd[4]/a/text()"
+        },
+        "latestChapterUrl": {
+          "type": "//",
+          "rule": "dd[4]/a/@href"
+        },
+        "coverUrl": {
+          "type": "//",
+          "rule": "dt[1]/a/img/@_src"
+        },
+        "state": {
+          "type": "//",
+          "rule": "/dd[2]/span[2]/text()"
+        },
+        "updateTime": {
+          "type": "//",
+          "rule": "dd[4]/span/text()"
+        }
+      }
+    }
+  },
+  {
+    "name": "快眼看书",
+    "site": "https://www.see023.com/",
+    "enabled": true,
+    "audio": false,
+    "weight": 0,
+    "params": {},
+    "content": {
+      "content": {
+        "type": "auto:",
+        "rule": "1"
+      },
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      }
+    },
+    "toc": {
+      "list": {},
+      "name": {},
+      "url": {},
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      },
+      "enableNext": true,
+      "filter": true
+    },
+    "detail": {
+      "title": {},
+      "author": {},
+      "broadcast": {},
+      "category": {},
+      "wordCount": {},
+      "introduce": {},
+      "latestChapterName": {},
+      "latestChapterUrl": {},
+      "coverUrl": {},
+      "state": {},
+      "updateTime": {}
+    },
+    "search": {
+      "params": {
+        "url": "https://www.see023.com/search46.html?searchkey={{keyword}}&p={{page}}",
+        "charset": "UTF-8",
+        "mediaType": ""
+      },
+      "list": {
+        "type": "//",
+        "rule": "//*[@id=\"hotcontent\"]/div/div[@class='item']"
+      },
+      "detailPage": {
+        "rule": ""
+      },
+      "detail": {
+        "url": {
+          "type": "//",
+          "rule": "/div[1]/a/@href"
+        },
+        "title": {
+          "type": "//",
+          "rule": "/div[1]/a/@title"
+        },
+        "author": {
+          "type": "//",
+          "rule": "/dl/div/a/text()"
+        },
+        "broadcast": {
+          "type": "//"
+        },
+        "category": {
+          "type": "//"
+        },
+        "wordCount": {
+          "type": "//"
+        },
+        "introduce": {
+          "type": "//",
+          "rule": "/dl/dd/text()"
+        },
+        "latestChapterName": {
+          "type": "//"
+        },
+        "latestChapterUrl": {
+          "type": "//"
+        },
+        "coverUrl": {
+          "type": "//",
+          "rule": "///div[1]/a/img/@data-original"
+        },
+        "state": {
+          "type": "//"
+        },
+        "updateTime": {
+          "type": "//"
+        }
+      }
+    }
+  },
+  {
+    "name": "聚听网",
+    "site": "https://www.yousxs.com/",
+    "enabled": true,
+    "audio": true,
+    "weight": 0,
+    "params": {},
+    "content": {
+      "content": {
+        "script": "skeyPage = utils.get('https://www.yousxs.com/js/bootstrap.min.js');skey = utils.match(skeyPage, \"regex:ey\\\"]=\\\"(.+?)\\\"##$1\");result = utils.match(source, \"regex:url: '(https://.+?skey=)'##$1\") + skey;"
+      },
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      }
+    },
+    "toc": {
+      "list": {
+        "type": "//",
+        "rule": "//div/div[3]/div[1]/div[2]/div/div/div"
+      },
+      "name": {
+        "type": "//",
+        "rule": "a/text()"
+      },
+      "url": {
+        "type": "//",
+        "rule": "a/@href"
+      },
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      },
+      "enableNext": true,
+      "filter": true
+    },
+    "detail": {
+      "title": {},
+      "author": {},
+      "broadcast": {},
+      "category": {},
+      "wordCount": {},
+      "introduce": {},
+      "latestChapterName": {},
+      "latestChapterUrl": {},
+      "coverUrl": {},
+      "state": {},
+      "updateTime": {}
+    },
+    "search": {
+      "params": {
+        "url": "https://www.yousxs.com/classify.html?clsid=&pageNum={{page}}&novelName={{keyword}}",
+        "charset": "UTF-8",
+        "mediaType": ""
+      },
+      "list": {
+        "type": "//",
+        "rule": "//div/div[5]/div/div/div[2]/ul/li"
+      },
+      "detailPage": {
+        "type": "//",
+        "rule": "a/@href"
+      },
+      "detail": {
+        "url": {
+          "page": "search",
+          "type": "//",
+          "rule": "a/@href"
+        },
+        "title": {
+          "type": "//",
+          "rule": "//div/div[3]/div[1]/div[1]/div/div/div[2]/h3/text()"
+        },
+        "author": {
+          "type": "//",
+          "rule": "//div/div[3]/div[1]/div[1]/div/div/div[2]/p[1]/text()",
+          "replace": [
+            {
+              "from": "作者：",
+              "to": ""
+            }
+          ]
+        },
+        "broadcast": {
+          "type": "//",
+          "rule": "//div/div[3]/div[1]/div[1]/div/div/div[2]/p[2]/text()",
+          "replace": [
+            {
+              "from": "播讲：",
+              "to": ""
+            }
+          ]
+        },
+        "category": {
+          "type": "//",
+          "rule": ""
+        },
+        "wordCount": {
+          "type": "//"
+        },
+        "introduce": {
+          "type": "//"
+        },
+        "latestChapterName": {
+          "type": "//"
+        },
+        "latestChapterUrl": {
+          "type": "//"
+        },
+        "coverUrl": {
+          "type": "//",
+          "rule": "//div/div[3]/div[1]/div[1]/div/div/div[1]/img/@src"
+        },
+        "state": {
+          "type": "//"
+        },
+        "updateTime": {
+          "type": "//"
+        }
+      }
+    }
+  },
+  {
+    "name": "28听书网",
+    "site": "https://m.28ts.com/",
+    "enabled": false,
+    "audio": true,
+    "weight": 0,
+    "params": {},
+    "content": {
+      "content": {
+        "type": "//",
+        "rule": "//*[@id=\"play\"]/@src",
+        "script": "page = utils.get(utils.absUrl('https://m.28ts.com/mp3/1651/1.html',result));url = utils.match(page, \"regex:url\\\\d+? = '(http.+?)'##$1\");suffix = utils.match(page, \"regex:url\\\\d+?[+]*?'(.+?)'##$1\");result = url+suffix;"
+      },
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      }
+    },
+    "toc": {
+      "params": {},
+      "list": {
+        "type": "//",
+        "rule": "//*[@id=\"playlist\"]/ul/li"
+      },
+      "name": {
+        "type": "//",
+        "rule": "a/text()"
+      },
+      "url": {
+        "type": "//",
+        "rule": "a/@href"
+      },
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~='.*?下[一]{0,1}[页节].*']/@href"
+      },
+      "enableNext": false,
+      "filter": false
+    },
+    "detail": {
+      "title": {},
+      "author": {},
+      "broadcast": {},
+      "category": {},
+      "wordCount": {},
+      "introduce": {},
+      "latestChapterName": {},
+      "latestChapterUrl": {},
+      "coverUrl": {},
+      "state": {},
+      "updateTime": {}
+    },
+    "search": {
+      "params": {
+        "url": "https://m.28ts.com/search.html",
+        "method": "POST",
+        "charset": "UTF-8",
+        "mediaType": "application/x-www-form-urlencoded",
+        "body": "searchword={{keyword}}&&page={{page}}"
+      },
+      "list": {
+        "type": "//",
+        "rule": "//div[5]/div[1]/ul"
+      },
+      "detailPage": {},
+      "detail": {
+        "url": {
+          "type": "//",
+          "rule": "li/dl/dt/a/@href"
+        },
+        "title": {
+          "type": "//",
+          "rule": "li/dl/dt/a/text()"
+        },
+        "author": {
+          "type": "//",
+          "rule": "li/dl/dd[2]/span[1]/text()"
+        },
+        "broadcast": {
+          "type": "//",
+          "rule": "li/dl/dd[2]/span[2]/text()"
+        },
+        "category": {
+          "type": "//"
+        },
+        "wordCount": {
+          "type": "//"
+        },
+        "introduce": {
+          "type": "//",
+          "rule": "li/dl/dd[1]/text()"
+        },
+        "latestChapterName": {
+          "type": "//",
+          "rule": ""
+        },
+        "latestChapterUrl": {
+          "type": "//"
+        },
+        "coverUrl": {
+          "type": "//",
+          "rule": "li/div/a/img/@src"
+        },
+        "state": {
+          "type": "//"
+        },
+        "updateTime": {
+          "type": "//",
+          "rule": "li/dl/dd[2]/span[4]/text()"
+        }
+      }
+    }
+  },
+  {
+    "name": "笔趣阁",
+    "site": "https://m.biqugeu.net/",
+    "enabled": true,
+    "audio": false,
+    "weight": 0,
+    "params": {},
+    "content": {
+      "content": {
+        "type": "auto:",
+        "rule": "1"
+      },
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~\u003d\u0027.*?下[一]{0,1}[页节].*\u0027]/@href"
+      }
+    },
+    "toc": {
+      "list": {},
+      "name": {},
+      "url": {},
+      "next": {
+        "type": "xpath",
+        "rule": "//a[text()~\u003d\u0027.*?下[一]{0,1}[页节].*\u0027]/@href"
+      },
+      "enableNext": true,
+      "filter": true
+    },
+    "detail": {
+      "title": {},
+      "author": {},
+      "broadcast": {},
+      "category": {},
+      "wordCount": {},
+      "introduce": {},
+      "latestChapterName": {},
+      "latestChapterUrl": {},
+      "coverUrl": {},
+      "state": {},
+      "updateTime": {}
+    },
+    "search": {
+      "params": {
+        "url": "https://m.biqugeu.net/SearchBook.php?keyword\u003d{{keyword}}\u0026page\u003d{{page}}",
+        "charset": "UTF-8",
+        "mediaType": "application/x-www-form-urlencoded"
+      },
+      "list": {
+        "type": "//",
+        "rule": "//div[@class\u003d\u0027bookbox\u0027]"
+      },
+      "detailPage": {},
+      "detail": {
+        "url": {
+          "rule": "/div[1]/a/@href"
+        },
+        "title": {
+          "rule": "/div[2]/h4/i/a/text()"
+        },
+        "author": {
+          "rule": "/div[2]/div[1]/text()",
+          "replace": [
+            {
+              "from": "作者：",
+              "to": ""
+            }
+          ]
+        },
+        "broadcast": {},
+        "category": {},
+        "wordCount": {},
+        "introduce": {
+          "rule": "/div[2]/div[5]/text()",
+          "replace": [
+            {
+              "from": "简介：",
+              "to": ""
+            }
+          ]
+        },
+        "latestChapterName": {},
+        "latestChapterUrl": {},
+        "coverUrl": {
+          "rule": "/div[1]/a/img/@src"
+        },
+        "state": {},
+        "updateTime": {}
+      }
+    }
+  }
+]
