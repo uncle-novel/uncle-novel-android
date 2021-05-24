@@ -20,26 +20,33 @@
                 app:sLeftTextString="书源管理" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/menu_download_config"
                 style="@style/InfoItem.Common"
-                android:layout_marginTop="20dp"
-                app:sDividerLineType="none"
-                app:sLeftTextString="意见反馈" />
+                app:sLeftIconRes="@drawable/ic_download"
+                app:sLeftBottomTextString="下载相关参数配置"
+                app:sLeftTextString="下载配置" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
-                android:id="@+id/menu_settings"
+                android:id="@+id/menu_support"
                 style="@style/InfoItem.Common"
-                android:layout_marginTop="20dp"
-                app:sLeftTextString="设置" />
+                android:layout_marginTop="5dp"
+                app:sLeftIconRes="@drawable/ic_support"
+                app:sLeftBottomTextString="你的支持将是我最大的动力"
+                app:sLeftTextString="支持作者" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
-                android:id="@+id/menu_privacy"
+                android:id="@+id/menu_feedback"
                 style="@style/InfoItem.Common"
-                android:layout_marginTop="20dp"
-                app:sLeftTextString="隐私政策" />
+                android:layout_marginTop="5dp"
+                app:sLeftIconRes="@drawable/ic_feedback"
+                app:sLeftBottomTextString="反馈软件的BUG与使用中的问题"
+                app:sLeftTextString="@string/feedback" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:id="@+id/menu_about"
                 style="@style/InfoItem.Common"
+                app:sLeftIconRes="@drawable/ic_menu_about"
+                app:sLeftBottomTextString="@string/app_mp_name"
                 app:sDividerLineType="none"
                 app:sLeftTextString="关于" />
 

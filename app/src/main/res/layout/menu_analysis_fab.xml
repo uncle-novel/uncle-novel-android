@@ -15,7 +15,6 @@
     app:menu_colorRipple="@color/colorPrimaryDark"
     app:menu_labels_ellipsize="end"
     app:menu_labels_singleLine="true"
-    android:visibility="gone"
     tools:ignore="RtlHardcoded">
 
     <com.github.clans.fab.FloatingActionButton

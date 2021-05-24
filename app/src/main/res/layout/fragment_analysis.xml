@@ -14,60 +14,75 @@
         android:background="@color/xui_config_color_transparent"
         android:orientation="vertical">
 
-        <com.xuexiang.xui.widget.progress.loading.ARCLoadingView
-            android:id="@+id/loading"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:visibility="gone"
-            app:lv_width="4dp"
-            app:lv_has_icon="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="下载小说，只需要一个目录链接"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/textView"
-            android:layout_marginTop="16dp" />
-
-        <com.unclezs.novel.app.widget.SuperSearchView
-            android:id="@+id/analysis_input"
-            android:background="@drawable/bg_analysis_input"
-            android:backgroundTint="@color/white"
-            android:elevation="5dp"
-            app:queryHint="请输入要解析的小说目录"
-            android:layout_marginEnd="24dp"
-            tools:ignore="UnusedAttribute"
-            android:layout_marginStart="24dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.018"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="1.0">
 
-        <com.yanzhenjie.recyclerview.SwipeRecyclerView
-            android:id="@+id/chapter_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:overScrollMode="never"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/analysis_input"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载小说，只需要一个目录链接"
+                android:id="@+id/textView"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp" />
 
+            <com.unclezs.novel.app.widget.SuperSearchView
+                android:id="@+id/analysis_input"
+                android:background="@drawable/bg_analysis_input"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                app:queryHint="请输入要解析的小说目录"
+                android:layout_marginEnd="24dp"
+                tools:ignore="UnusedAttribute"
+                android:layout_marginStart="24dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="35dp" />
 
-        <include
-            layout="@layout/menu_analysis_fab" />
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnableRefresh="false"
+                app:srlEnableAutoLoadMore="true"
+                app:srlEnableLoadMore="true">
+
+                <com.xuexiang.xui.widget.statelayout.StatefulLayout
+                    android:id="@+id/state_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:stf_animationEnabled="false"
+                    app:stf_inAnimation="@android:anim/slide_in_left"
+                    app:stf_outAnimation="@android:anim/slide_out_right">
+
+                    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                        android:id="@+id/chapter_view"
+                        app:fastScrollEnabled="true"
+                        app:fastScrollVerticalTrackDrawable="@drawable/scroll_track"
+                        app:fastScrollVerticalThumbDrawable="@drawable/scroll_thumb"
+                        app:fastScrollHorizontalTrackDrawable="@drawable/scroll_track"
+                        app:fastScrollHorizontalThumbDrawable="@drawable/scroll_thumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        android:layout_marginTop="8dp" />
+                </com.xuexiang.xui.widget.statelayout.StatefulLayout>
+
+                <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+
+        <include layout="@layout/menu_analysis_fab" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

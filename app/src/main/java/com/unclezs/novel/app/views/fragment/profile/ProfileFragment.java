@@ -4,8 +4,6 @@ import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.views.activity.RuleManagerActivity;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
-import com.unclezs.novel.app.views.fragment.other.SettingsFragment;
-import com.unclezs.novel.app.widget.GuideTipsDialog;
 import com.xuexiang.xaop.annotation.SingleClick;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.enums.CoreAnim;
@@ -24,12 +22,8 @@ import butterknife.BindView;
 public class ProfileFragment extends BaseFragment implements SuperTextView.OnSuperTextViewClickListener {
     @BindView(R.id.menu_rule_manager)
     SuperTextView ruleManager;
-    @BindView(R.id.menu_settings)
-    SuperTextView menuSettings;
     @BindView(R.id.menu_about)
     SuperTextView menuAbout;
-    @BindView(R.id.menu_privacy)
-    SuperTextView menuPrivacy;
 
     /**
      * @return 返回为 null意为不需要导航栏
@@ -59,9 +53,8 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
 
     @Override
     protected void initListeners() {
-        menuSettings.setOnSuperTextViewClickListener(this);
+        // GuideTipsDialog.showTipsForce(requireContext());
         menuAbout.setOnSuperTextViewClickListener(this);
-        menuPrivacy.setOnSuperTextViewClickListener(this);
         ruleManager.setOnSuperTextViewClickListener(this);
     }
 
@@ -73,14 +66,8 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
             case R.id.menu_rule_manager:
                 ActivityUtils.startActivity(RuleManagerActivity.class);
                 break;
-            case R.id.menu_settings:
-                openNewPage(SettingsFragment.class);
-                break;
             case R.id.menu_about:
                 openNewPage(AboutFragment.class);
-                break;
-            case R.id.menu_privacy:
-                GuideTipsDialog.showTipsForce(requireContext());
                 break;
             default:
                 break;

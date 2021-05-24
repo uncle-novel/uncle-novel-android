@@ -12,4 +12,7 @@
     <item
         android:title="@string/export_rule"
         android:id="@+id/export" />
+    <item
+        android:title="@string/share_rule"
+        android:id="@+id/share" />
 </menu>

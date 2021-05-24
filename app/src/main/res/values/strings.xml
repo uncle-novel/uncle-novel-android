@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Uncle小说</string>
+    <string name="app_mp_name">欢迎关注公众号[书虫无书荒]</string>
     <string name="app_browser_name">通用浏览器</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -10,22 +11,21 @@
     <string name="menu_task">任务</string>
     <string name="menu_profile">我的</string>
 
-    <string name="menu_notifications">通知</string>
-    <string name="menu_issues">问题</string>
-    <string name="menu_starred">收藏</string>
     <string name="menu_search">搜索</string>
     <string name="menu_settings">设置</string>
     <string name="menu_about">关于</string>
 
-    <string name="about_copyright">© %1$s xuexiangjys All rights reserved.</string>
+    <string name="about_copyright">© %1$s Unclezs All rights reserved.</string>
     <string name="about_item_homepage">访问官网</string>
+    <string name="about_item_github">开源地址</string>
     <string name="about_item_author_github">联系作者</string>
-    <string name="about_item_donation_link">捐赠作者</string>
     <string name="about_item_add_qq_group">QQ交流群</string>
-    <string name="url_project_github">https://github.com/xuexiangjys/TemplateAppProject</string>
-    <string name="url_author_github">https://gitee.com/xuexiangjys/xuexiangjys</string>
-    <string name="url_donation_link">https://gitee.com/xuexiangjys/Resource/blob/master/doc/sponsor.md</string>
-    <string name="url_add_qq_group">http://qm.qq.com/cgi-bin/qm/qr?k=tiP-E6rDf0y77PRNfp2lNVcc9RsglPCM</string>
+    <string name="about_item_disclaimers">免责声明</string>
+    <string name="url_project_github">https://github.com/unclezs/uncle-novel-android</string>
+    <string name="url_project_site">https://app.unclezs.com</string>
+    <string name="url_author_github">https://github.com/unclezs</string>
+    <string name="url_add_qq_group">https://jq.qq.com/?_wv=1027&amp;k=eisTKc98</string>
+    <string name="url_disclaimers">https://app.unclezs.com</string>
 
     <string name="lab_yes">是</string>
     <string name="lab_no">否</string>
@@ -210,4 +210,13 @@
     <string name="import_rule">导入书源</string>
     <string name="export_rule">导出书源</string>
     <string name="rule_manager">书源管理</string>
+    <string name="content_ad">正文广告</string>
+    <string name="add">添加</string>
+    <string name="show">查看</string>
+    <string name="delete">删除</string>
+    <string name="update">更新</string>
+    <string name="share_rule">分享书源</string>
+    <string name="toc_filter">章节过滤</string>
+    <string name="toc_auto_next">目录自动翻页</string>
+    <string name="feedback">问题反馈</string>
 </resources>

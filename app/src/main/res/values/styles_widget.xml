@@ -33,10 +33,11 @@
     </style>
 
     <style name="InfoItem.Common">
-        <item name="sLeftViewWidth">110dp</item>
+        <item name="sLeftViewWidth">200dp</item>
+        <item name="sLeftViewMarginRight">0dp</item>
         <item name="sLeftViewGravity">left_center</item>
         <item name="sCenterViewGravity">left_center</item>
-        <item name="sCenterViewMarginLeft">25dp</item>
+        <item name="sCenterViewMarginLeft">0dp</item>
         <item name="sRightTextSize">?attr/xui_config_size_content_text</item>
         <item name="sRightViewMarginRight">10dp</item>
         <item name="sRightIconRes">@drawable/icon_arrow_right_grey</item>
@@ -56,8 +57,6 @@
         <item name="sCenterViewMarginLeft">0dp</item>
         <item name="sCenterViewMarginRight">0dp</item>
         <item name="sDividerLineHeight">1dp</item>
-        <item name="sRightTextSize">13sp</item>
-        <item name="sRightViewMarginRight">0dp</item>
         <item name="sLeftIconWidth">0dp</item>
         <item name="sLeftIconHeight">0dp</item>
         <item name="sCenterTextSize">14sp</item>

@@ -8,6 +8,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.clans.fab.FloatingActionMenu;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.unclezs.novel.analyzer.model.Chapter;
 import com.unclezs.novel.analyzer.model.Novel;
 import com.unclezs.novel.analyzer.util.StringUtils;
@@ -28,7 +29,7 @@ import com.xuexiang.xrouter.launcher.XRouter;
 import com.xuexiang.xui.utils.WidgetUtils;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
-import com.xuexiang.xui.widget.progress.loading.ARCLoadingView;
+import com.xuexiang.xui.widget.statelayout.StatefulLayout;
 import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 import com.yanzhenjie.recyclerview.touch.OnItemMoveListener;
 
@@ -53,10 +54,12 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     SearchView analysisInput;
     @BindView(R.id.chapter_view)
     SwipeRecyclerView chapterView;
-    @BindView(R.id.loading)
-    ARCLoadingView loading;
     @BindView(R.id.fab_menus)
     FloatingActionMenu fabMenu;
+    @BindView(R.id.refreshLayout)
+    SmartRefreshLayout refreshLayout;
+    @BindView(R.id.state_layout)
+    StatefulLayout stateLayout;
     private Novel novel;
     private boolean showTitleBar;
     private ChapterListAdapter adapter;
@@ -151,6 +154,12 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     }
 
     @Override
+    protected void initListeners() {
+        // 上拉加载
+        refreshLayout.setOnLoadMoreListener(layout -> presenter.loadMore(false));
+    }
+
+    @Override
     public AnalysisPresenter createPresenter() {
         return new AnalysisPresenter();
     }
@@ -164,7 +173,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         // 初始化
         adapter.clear();
         fabMenu.setVisibility(View.GONE);
-        loading.setVisibility(View.VISIBLE);
+        stateLayout.showLoading("全力解析中...");
         presenter.doAnalysis(url);
     }
 
@@ -237,13 +246,29 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
 
 
     public void addMore(Chapter chapter) {
+        if (adapter.isEmpty()) {
+            stateLayout.showContent();
+        }
         adapter.add(new ChapterWrapper(chapter));
+        refreshLayout.finishLoadMore();
     }
 
-    public void analysisFinished() {
-        loading.setVisibility(View.GONE);
+    public void analysisFinished(boolean hasMore) {
+        if (hasMore) {
+            refreshLayout.finishLoadMore();
+        } else {
+            refreshLayout.finishLoadMoreWithNoMoreData();
+        }
+        if(!presenter.isLoading()){
+            if (adapter.isEmpty()) {
+                stateLayout.showEmpty("没有发现章节");
+            } else {
+                stateLayout.showContent();
+            }
+        }
         fabMenu.setVisibility(View.VISIBLE);
         analysisInput.clearFocus();
+
     }
 
 }

@@ -3,6 +3,7 @@ package com.unclezs.novel.app.manager;
 import com.unclezs.novel.analyzer.core.helper.RuleHelper;
 import com.unclezs.novel.analyzer.core.model.AnalyzerRule;
 import com.unclezs.novel.analyzer.util.GsonUtils;
+import com.unclezs.novel.analyzer.util.StringUtils;
 import com.xuexiang.xutil.resource.ResourceUtils;
 
 import java.io.File;
@@ -55,13 +56,27 @@ public class RuleManager {
      * @param rule 规则
      */
     public static void addRule(AnalyzerRule rule) {
+        if (StringUtils.isBlank(rule.getSite())) {
+            return;
+        }
         AnalyzerRule old = RuleHelper.getRule(rule.getSite());
         if (old != null) {
             BeanUtil.copyProperties(rule, old, CopyOptions.create().setTransientSupport(false));
+            saveRule();
         } else {
             RuleHelper.addRule(rule);
         }
-        saveRule();
+    }
+
+    /**
+     * 存在则哥更，不存在添加
+     *
+     * @param rules 规则
+     */
+    public static void addAllRule(List<AnalyzerRule> rules) {
+        for (AnalyzerRule rule : rules) {
+            addRule(rule);
+        }
     }
 
     /**

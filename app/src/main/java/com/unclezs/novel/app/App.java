@@ -21,6 +21,11 @@ import io.reactivex.plugins.RxJavaPlugins;
  */
 @DataBase(name = "app", type = DataBaseType.INTERNAL)
 public class App extends Application {
+    private static App app;
+
+    public static App me() {
+        return app;
+    }
 
     /**
      * @return 当前app是否是调试开发模式
@@ -41,6 +46,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        App.app = this;
         initLibs();
         initRxErrorHandler();
     }

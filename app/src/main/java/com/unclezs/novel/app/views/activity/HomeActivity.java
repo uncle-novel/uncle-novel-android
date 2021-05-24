@@ -26,9 +26,7 @@ import com.unclezs.novel.app.views.fragment.download.DownloadFragment;
 import com.unclezs.novel.app.views.fragment.news.NewsFragment;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
 import com.unclezs.novel.app.views.fragment.other.SearchBookFragment;
-import com.unclezs.novel.app.views.fragment.other.SettingsFragment;
 import com.unclezs.novel.app.views.fragment.profile.ProfileFragment;
-import com.unclezs.novel.app.views.fragment.rule.RuleEditorFragment;
 import com.unclezs.novel.app.widget.GuideTipsDialog;
 import com.xuexiang.xaop.annotation.SingleClick;
 import com.xuexiang.xui.adapter.FragmentAdapter;
@@ -113,28 +111,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         navView.setItemIconTintList(null);
         View headerView = navView.getHeaderView(0);
         LinearLayout navHeader = headerView.findViewById(R.id.nav_header);
-        RadiusImageView ivAvatar = headerView.findViewById(R.id.iv_avatar);
-        TextView tvAvatar = headerView.findViewById(R.id.tv_avatar);
-        TextView tvSign = headerView.findViewById(R.id.tv_sign);
 
-        if (Utils.isColorDark(ThemeUtils.resolveColor(this, R.attr.colorAccent))) {
-            tvAvatar.setTextColor(Colors.WHITE);
-            tvSign.setTextColor(Colors.WHITE);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                ivAvatar.setImageTintList(ResUtils.getColors(R.color.xui_config_color_white));
-            }
-        } else {
-            tvAvatar.setTextColor(ThemeUtils.resolveColor(this, R.attr.xui_config_color_title_text));
-            tvSign.setTextColor(ThemeUtils.resolveColor(this, R.attr.xui_config_color_explain_text));
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                ivAvatar.setImageTintList(ResUtils.getColors(R.color.xui_config_color_gray_3));
-            }
-        }
-
-        // TODO: 2019-10-09 初始化数据
-        ivAvatar.setImageResource(R.drawable.ic_default_head);
-        tvAvatar.setText(R.string.app_name);
-        tvSign.setText("这个家伙很懒，什么也没有留下～～");
         navHeader.setOnClickListener(this);
     }
 
@@ -150,9 +127,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 return handleNavigationItemSelected(menuItem);
             } else {
                 switch (menuItem.getItemId()) {
-                    case R.id.nav_settings:
-                        openNewPage(SettingsFragment.class);
-                        break;
                     case R.id.nav_about:
                         openNewPage(AboutFragment.class);
                         break;

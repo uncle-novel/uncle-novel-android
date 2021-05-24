@@ -40,31 +40,32 @@ import butterknife.BindView;
 @SuppressWarnings("NonConstantResourceId")
 public class AboutFragment extends BaseFragment {
 
-  @BindView(R.id.tv_version)
-  TextView mVersionTextView;
-  @BindView(R.id.about_list)
-  XUIGroupListView mAboutGroupListView;
-  @BindView(R.id.tv_copyright)
-  TextView mCopyrightTextView;
+    @BindView(R.id.tv_version)
+    TextView mVersionTextView;
+    @BindView(R.id.about_list)
+    XUIGroupListView mAboutGroupListView;
+    @BindView(R.id.tv_copyright)
+    TextView mCopyrightTextView;
 
-  @Override
-  protected int getLayoutId() {
-    return R.layout.fragment_about;
-  }
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_about;
+    }
 
-  @Override
-  protected void initViews() {
-    mVersionTextView.setText(String.format("版本号：%s", AppUtils.getAppVersionName()));
+    @Override
+    protected void initViews() {
+        mVersionTextView.setText(String.format("版本号：%s", AppUtils.getAppVersionName()));
 
-    XUIGroupListView.newSection(getContext())
-            .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_homepage)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_project_github)))
+        XUIGroupListView.newSection(getContext())
+            .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_homepage)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_project_site)))
+            .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_github)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_project_github)))
             .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_author_github)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_author_github)))
-            .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_donation_link)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_donation_link)))
             .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_add_qq_group)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_add_qq_group)))
+            .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_disclaimers)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_disclaimers)))
             .addTo(mAboutGroupListView);
 
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy", Locale.CHINA);
-    String currentYear = dateFormat.format(new Date());
-    mCopyrightTextView.setText(String.format(getResources().getString(R.string.about_copyright), currentYear));
-  }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy", Locale.CHINA);
+        String currentYear = dateFormat.format(new Date());
+        mCopyrightTextView.setText(String.format(getResources().getString(R.string.about_copyright), currentYear));
+    }
 }
