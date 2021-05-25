@@ -1,6 +1,5 @@
 package com.unclezs.novel.app.views.adapter;
 
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.PopupMenu;
@@ -9,8 +8,10 @@ import androidx.annotation.NonNull;
 
 import com.unclezs.novel.analyzer.core.helper.RuleHelper;
 import com.unclezs.novel.analyzer.core.model.AnalyzerRule;
+import com.unclezs.novel.analyzer.util.GsonUtils;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.manager.RuleManager;
+import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.xuexiang.xui.adapter.recyclerview.BaseRecyclerAdapter;
 import com.xuexiang.xui.adapter.recyclerview.RecyclerViewHolder;
@@ -50,19 +51,19 @@ public class RuleListAdapter extends BaseRecyclerAdapter<AnalyzerRule> {
     public void showMenu(View menu, RecyclerViewHolder holder, AnalyzerRule rule) {
         PopupMenu popup = new PopupMenu(holder.getContext(), menu);
         popup.inflate(R.menu.menu_rule);
-        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.delete) {
-                    List<AnalyzerRule> rules = RuleManager.rules();
-                    rules.remove(rule);
-                    mData.remove(rule);
-                    notifyDataSetChanged();
-                    RuleHelper.setRules(rules);
-                    XToastUtils.success("删除成功");
-                }
-                return false;
+        popup.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.delete) {
+                List<AnalyzerRule> rules = RuleManager.rules();
+                rules.remove(rule);
+                mData.remove(rule);
+                notifyDataSetChanged();
+                RuleHelper.setRules(rules);
+                XToastUtils.success("删除成功");
+            } else if (item.getItemId() == R.id.copy_to_clipboard) {
+                ClipboardUtils.set(GsonUtils.PRETTY.toJson(rule));
+                XToastUtils.success("已复制");
             }
+            return false;
         });
         popup.show();
     }

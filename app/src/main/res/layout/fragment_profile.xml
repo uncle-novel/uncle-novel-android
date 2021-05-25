@@ -27,7 +27,7 @@
                 app:sLeftTextString="下载配置" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
-                android:id="@+id/menu_support"
+                android:id="@+id/menu_sponsor"
                 style="@style/InfoItem.Common"
                 android:layout_marginTop="5dp"
                 app:sLeftIconRes="@drawable/ic_support"

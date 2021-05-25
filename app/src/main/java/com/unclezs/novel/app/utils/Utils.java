@@ -37,14 +37,14 @@ import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 import com.unclezs.novel.app.R;
-import com.unclezs.novel.app.core.webview.AgentWebActivity;
+import com.unclezs.novel.app.exts.webview.AgentWebActivity;
 import com.xuexiang.xui.utils.ResUtils;
 import com.xuexiang.xui.widget.dialog.DialogLoader;
 import com.xuexiang.xui.widget.dialog.materialdialog.DialogAction;
 import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
 import com.xuexiang.xutil.XUtil;
 
-import static com.unclezs.novel.app.core.webview.AgentWebFragment.KEY_URL;
+import static com.unclezs.novel.app.exts.webview.AgentWebFragment.KEY_URL;
 
 /**
  * 工具类

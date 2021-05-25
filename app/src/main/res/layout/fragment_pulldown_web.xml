@@ -4,7 +4,7 @@
     android:id="@+id/refreshLayout"
     style="@style/PullDownStyle">
 
-    <com.unclezs.novel.app.core.webview.LollipopFixedWebView
+    <com.unclezs.novel.app.exts.webview.LollipopFixedWebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

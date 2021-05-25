@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
-import com.unclezs.novel.app.core.webview.AgentWebActivity;
+import com.unclezs.novel.app.exts.webview.AgentWebActivity;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xui.widget.grouplist.XUIGroupListView;
 import com.xuexiang.xutil.app.AppUtils;

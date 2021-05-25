@@ -1,7 +1,5 @@
 package com.unclezs.novel.app.presenter;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.net.Uri;
 
@@ -12,6 +10,7 @@ import com.unclezs.novel.analyzer.core.model.AnalyzerRule;
 import com.unclezs.novel.analyzer.util.GsonUtils;
 import com.unclezs.novel.app.base.BasePresenter;
 import com.unclezs.novel.app.manager.RuleManager;
+import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.FileUtils;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.fragment.rule.RuleManagerFragment;
@@ -92,13 +91,8 @@ public class RuleManagerPresenter extends BasePresenter<RuleManagerFragment> {
      * 从剪贴版导入规则
      */
     public void importRuleFromClipboard() {
-        ClipboardManager manager = (ClipboardManager) view.requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
-        if (manager == null) {
-            return;
-        }
-        ClipData clip = manager.getPrimaryClip();
-        if (clip.getItemCount() > 0) {
-            String ruleJson = clip.getItemAt(0).getText().toString();
+        String ruleJson = ClipboardUtils.get();
+        if (ruleJson != null) {
             importRule(ruleJson);
         }
     }

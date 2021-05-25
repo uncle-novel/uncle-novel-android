@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
-    <!--  主内容填充  -->
+    <!--主内容填充  -->
     <include
         android:id="@+id/layout_main_content"
         layout="@layout/layout_main_content"

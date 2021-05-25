@@ -2,9 +2,10 @@ package com.unclezs.novel.app.views.fragment.profile;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.views.activity.RuleManagerActivity;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
-import com.xuexiang.xaop.annotation.SingleClick;
+import com.unclezs.novel.app.views.fragment.other.SponsorFragment;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.enums.CoreAnim;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
@@ -24,6 +25,10 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
     SuperTextView ruleManager;
     @BindView(R.id.menu_about)
     SuperTextView menuAbout;
+    @BindView(R.id.menu_feedback)
+    SuperTextView menuFeedback;
+    @BindView(R.id.menu_sponsor)
+    SuperTextView menuSponsor;
 
     /**
      * @return 返回为 null意为不需要导航栏
@@ -56,9 +61,10 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
         // GuideTipsDialog.showTipsForce(requireContext());
         menuAbout.setOnSuperTextViewClickListener(this);
         ruleManager.setOnSuperTextViewClickListener(this);
+        menuFeedback.setOnSuperTextViewClickListener(this);
+        menuSponsor.setOnSuperTextViewClickListener(this);
     }
 
-    @SingleClick
     @Override
     public void onClick(SuperTextView view) {
         final int id = view.getId();
@@ -66,8 +72,14 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
             case R.id.menu_rule_manager:
                 ActivityUtils.startActivity(RuleManagerActivity.class);
                 break;
+            case R.id.menu_feedback:
+                Utils.goWeb(requireContext(), getString(R.string.url_feedback));
+                break;
             case R.id.menu_about:
                 openNewPage(AboutFragment.class);
+                break;
+            case R.id.menu_sponsor:
+                openNewPage(SponsorFragment.class);
                 break;
             default:
                 break;

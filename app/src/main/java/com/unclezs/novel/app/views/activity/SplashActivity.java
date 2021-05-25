@@ -3,8 +3,6 @@ package com.unclezs.novel.app.views.activity;
 import android.view.KeyEvent;
 
 import com.unclezs.novel.app.R;
-import com.unclezs.novel.app.utils.SettingUtils;
-import com.unclezs.novel.app.utils.Utils;
 import com.xuexiang.xui.utils.KeyboardUtils;
 import com.xuexiang.xui.widget.activity.BaseSplashActivity;
 import com.xuexiang.xutil.app.ActivityUtils;
@@ -19,47 +17,39 @@ import me.jessyan.autosize.internal.CancelAdapt;
  */
 public class SplashActivity extends BaseSplashActivity implements CancelAdapt {
 
-  @Override
-  protected long getSplashDurationMillis() {
-    return 100;
-  }
-
-  /**
-   * activity启动后的初始化
-   */
-  @Override
-  protected void onCreateActivity() {
-    initSplashView(R.drawable.xui_config_bg_splash);
-    startSplash(false);
-  }
-
-
-  /**
-   * 启动页结束后的动作
-   */
-  @Override
-  protected void onSplashFinished() {
-    if (SettingUtils.isAgreePrivacy()) {
-      toHome();
-    } else {
-      Utils.showPrivacyDialog(this, (dialog, which) -> {
-        dialog.dismiss();
-        SettingUtils.setIsAgreePrivacy(true);
-        toHome();
-      });
+    @Override
+    protected long getSplashDurationMillis() {
+        return 500;
     }
-  }
 
-  private void toHome() {
-    ActivityUtils.startActivity(HomeActivity.class);
-    finish();
-  }
+    /**
+     * activity启动后的初始化
+     */
+    @Override
+    protected void onCreateActivity() {
+        initSplashView(R.drawable.xui_config_bg_splash);
+        startSplash(false);
+    }
 
-  /**
-   * 菜单、返回键响应
-   */
-  @Override
-  public boolean onKeyDown(int keyCode, KeyEvent event) {
-    return KeyboardUtils.onDisableBackKeyDown(keyCode) && super.onKeyDown(keyCode, event);
-  }
+
+    /**
+     * 启动页结束后的动作
+     */
+    @Override
+    protected void onSplashFinished() {
+        toHome();
+    }
+
+    private void toHome() {
+        ActivityUtils.startActivity(HomeActivity.class);
+        finish();
+    }
+
+    /**
+     * 菜单、返回键响应
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return KeyboardUtils.onDisableBackKeyDown(keyCode) && super.onKeyDown(keyCode, event);
+    }
 }

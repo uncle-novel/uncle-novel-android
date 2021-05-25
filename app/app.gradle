@@ -105,13 +105,11 @@ dependencies {
     // 分包
     implementation deps.androidx.multidex
 
-    implementation 'com.alibaba.android:vlayout:1.2.36'
     // 下拉刷新
     implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-header:1.1.5'
     implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout:1.1.5'
     // WebView
     implementation 'com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.0'
-    implementation 'com.github.xuexiangjys.AgentWeb:agentweb-download:1.0.0'//选填
     // 弹性布局
     implementation 'com.google.android:flexbox:0.3.1'
     // 悬浮按钮
@@ -125,11 +123,6 @@ dependencies {
     // umeng统计
     implementation 'com.umeng.umsdk:common:9.3.8'
     implementation  'com.umeng.umsdk:asms:1.2.1'
-    // 预加载占位控件
-    implementation 'me.samlss:broccoli:1.0.0'
-
-    implementation 'com.zzhoujay.richtext:richtext:3.0.8'
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
     // ANR异常捕获
     implementation 'com.github.anrwatchdog:anrwatchdog:1.4.0'

@@ -38,6 +38,7 @@
                 android:background="@drawable/bg_analysis_input"
                 android:backgroundTint="@color/white"
                 android:elevation="5dp"
+                android:layout_marginTop="5dp"
                 app:queryHint="请输入要解析的小说目录"
                 android:layout_marginEnd="24dp"
                 tools:ignore="UnusedAttribute"
@@ -51,8 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srlEnableRefresh="false"
-                app:srlEnableAutoLoadMore="true"
-                app:srlEnableLoadMore="true">
+                app:srlEnableAutoLoadMore="false"
+                app:srlEnableLoadMore="false">
 
                 <com.xuexiang.xui.widget.statelayout.StatefulLayout
                     android:id="@+id/state_layout"
@@ -82,7 +83,7 @@
             </com.scwang.smartrefresh.layout.SmartRefreshLayout>
         </LinearLayout>
 
-        <include layout="@layout/menu_analysis_fab" />
+        <include layout="@layout/include_analysis_fab" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -22,7 +22,6 @@ import com.unclezs.novel.app.views.adapter.ChapterListAdapter;
 import com.unclezs.novel.app.views.fragment.components.ChapterTextFragment;
 import com.unclezs.novel.app.views.fragment.rule.RuleEditorFragment;
 import com.unclezs.novel.app.views.fragment.rule.RuleManagerFragment;
-import com.xuexiang.xaop.annotation.SingleClick;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.enums.CoreAnim;
 import com.xuexiang.xrouter.launcher.XRouter;
@@ -164,20 +163,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         return new AnalysisPresenter();
     }
 
-    /**
-     * 执行解析
-     *
-     * @param url 目录地址
-     */
-    private void doAnalysis(String url) {
-        // 初始化
-        adapter.clear();
-        fabMenu.setVisibility(View.GONE);
-        stateLayout.showLoading("全力解析中...");
-        presenter.doAnalysis(url);
-    }
 
-    @SingleClick
     @OnClick({R.id.fab_un_checked_all, R.id.fab_checked_all, R.id.fab_download, R.id.fab_rename, R.id.fab_config})
     public void handleFabClicked(View view) {
         final int id = view.getId();
@@ -244,6 +230,21 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         openNewPage(ChapterTextFragment.class, "chapter", chapter);
     }
 
+    /**
+     * 执行解析
+     *
+     * @param url 目录地址
+     */
+    private void doAnalysis(String url) {
+        refreshLayout.setEnableLoadMore(false);
+        refreshLayout.setEnableAutoLoadMore(false);
+        // 初始化
+        adapter.clear();
+        fabMenu.setVisibility(View.GONE);
+        stateLayout.showLoading("全力解析中...");
+        presenter.doAnalysis(url);
+    }
+
 
     public void addMore(Chapter chapter) {
         if (adapter.isEmpty()) {
@@ -256,10 +257,12 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     public void analysisFinished(boolean hasMore) {
         if (hasMore) {
             refreshLayout.finishLoadMore();
+            refreshLayout.setEnableLoadMore(true);
+            refreshLayout.setEnableAutoLoadMore(true);
         } else {
             refreshLayout.finishLoadMoreWithNoMoreData();
         }
-        if(!presenter.isLoading()){
+        if (!presenter.isLoading()) {
             if (adapter.isEmpty()) {
                 stateLayout.showEmpty("没有发现章节");
             } else {

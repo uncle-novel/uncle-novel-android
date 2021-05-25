@@ -1,12 +1,10 @@
 package com.unclezs.novel.app.views.activity;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -19,32 +17,30 @@ import com.google.android.material.navigation.NavigationView;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseActivity;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
 import com.unclezs.novel.app.views.fragment.download.DownloadFragment;
-import com.unclezs.novel.app.views.fragment.news.NewsFragment;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
 import com.unclezs.novel.app.views.fragment.other.SearchBookFragment;
+import com.unclezs.novel.app.views.fragment.other.SponsorFragment;
 import com.unclezs.novel.app.views.fragment.profile.ProfileFragment;
-import com.unclezs.novel.app.widget.GuideTipsDialog;
-import com.xuexiang.xaop.annotation.SingleClick;
 import com.xuexiang.xui.adapter.FragmentAdapter;
 import com.xuexiang.xui.utils.ResUtils;
-import com.xuexiang.xui.utils.ThemeUtils;
-import com.xuexiang.xui.widget.imageview.RadiusImageView;
+import com.xuexiang.xui.widget.dialog.DialogLoader;
 import com.xuexiang.xutil.XUtil;
+import com.xuexiang.xutil.app.ActivityUtils;
 import com.xuexiang.xutil.common.ClickUtils;
 import com.xuexiang.xutil.common.CollectionUtils;
-import com.xuexiang.xutil.display.Colors;
 
 import butterknife.BindView;
 
 /**
- * 程序主页面,只是一个简单的Tab例子
+ * Home
  *
  * @author blog.unclezs.com
- * @since 2019-07-07 23:53
+ * @date 2021/5/25 14:49
  */
 @SuppressWarnings("NonConstantResourceId")
 public class HomeActivity extends BaseActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener, ClickUtils.OnClick2ExitListener, Toolbar.OnMenuItemClickListener {
@@ -97,14 +93,12 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         //主页内容填充
         BaseFragment[] fragments = new BaseFragment[]{
             new AnalysisFragment(),
-            new NewsFragment(),
             new DownloadFragment(),
             new ProfileFragment()
         };
         FragmentAdapter<BaseFragment> adapter = new FragmentAdapter<>(getSupportFragmentManager(), fragments);
         viewPager.setOffscreenPageLimit(titles.length - 1);
         viewPager.setAdapter(adapter);
-        GuideTipsDialog.showTips(this);
     }
 
     private void initHeader() {
@@ -121,22 +115,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         toggle.syncState();
 
         // 侧边栏点击事件
-        navView.setNavigationItemSelectedListener(menuItem -> {
-            if (menuItem.isCheckable()) {
-                drawerLayout.closeDrawers();
-                return handleNavigationItemSelected(menuItem);
-            } else {
-                switch (menuItem.getItemId()) {
-                    case R.id.nav_about:
-                        openNewPage(AboutFragment.class);
-                        break;
-                    default:
-                        XToastUtils.toast("点击了:" + menuItem.getTitle());
-                        break;
-                }
-            }
-            return true;
-        });
+        navView.setNavigationItemSelectedListener(this::handleNavigationItemClicked);
         //主页事件监听
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -176,40 +155,92 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         return false;
     }
 
+    /**
+     * 处理侧边栏点击事件
+     *
+     * @param menuItem 菜单
+     * @return /
+     */
+    private boolean handleNavigationItemClicked(@NonNull MenuItem menuItem) {
+        if (menuItem.isCheckable()) {
+            drawerLayout.closeDrawers();
+            return handleNavigationItemSelected(menuItem);
+        } else {
+            switch (menuItem.getItemId()) {
+                case R.id.nav_about:
+                    openNewPage(AboutFragment.class);
+                    break;
+                case R.id.nav_feedback:
+                    Utils.goWeb(this, getString(R.string.url_feedback));
+                    break;
+                case R.id.nav_sponsor:
+                    openNewPage(SponsorFragment.class);
+                    break;
+                case R.id.nav_site:
+                    Utils.goWeb(this, getString(R.string.url_project_site));
+                    break;
+                case R.id.nav_qq:
+                    Utils.goWeb(this, getString(R.string.url_add_qq_group));
+                    break;
+                case R.id.nav_rule_manager:
+                    ActivityUtils.startActivity(RuleManagerActivity.class);
+                    break;
+                case R.id.nav_search:
+                    openNewPage(SearchBookFragment.class);
+                    break;
+                case R.id.nav_exit:
+                    DialogLoader.getInstance().showConfirmDialog(this, getString(R.string.lab_logout_confirm), getString(R.string.lab_yes),
+                        (dialog, which) -> {
+                            dialog.dismiss();
+                            finish();
+                        },
+                        getString(R.string.lab_no), (dialog, which) -> dialog.dismiss()
+                    );
+                    break;
+                default:
+                    break;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * toolbar点击事件处理
+     *
+     * @param item /
+     * @return /
+     */
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()) {
-            default:
-                SearchBookFragment fragment = getPage(SearchBookFragment.class);
-                if (fragment == null) {
-                    openNewPage(SearchBookFragment.class);
-                } else {
-                    openPage(SearchBookFragment.class);
-                }
-                break;
+        if (item.getItemId() == R.id.action_search) {
+            SearchBookFragment fragment = getPage(SearchBookFragment.class);
+            if (fragment == null) {
+                openNewPage(SearchBookFragment.class);
+            } else {
+                openPage(SearchBookFragment.class);
+            }
         }
         return false;
     }
 
-    @SingleClick
+    /**
+     * 页面点击事件处理
+     *
+     * @param v /
+     */
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.nav_header:
-                XToastUtils.toast("点击头部！");
-                break;
-            default:
-                break;
+        if (v.getId() == R.id.nav_header) {
+            ClipboardUtils.set(getString(R.string.app_mp));
+            XToastUtils.success("已复制，去微信搜索关注吧~");
         }
     }
-
-    //================Navigation================//
 
     /**
      * 底部导航栏点击事件
      *
-     * @param menuItem
-     * @return
+     * @param menuItem /
+     * @return /
      */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -227,7 +258,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     /**
      * 更新侧边栏菜单选中状态
      *
-     * @param menuItem
+     * @param menuItem /
      */
     private void updateSideNavStatus(MenuItem menuItem) {
         MenuItem side = navView.getMenu().findItem(menuItem.getItemId());

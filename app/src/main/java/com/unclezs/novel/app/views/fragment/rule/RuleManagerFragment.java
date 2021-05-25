@@ -1,6 +1,5 @@
 package com.unclezs.novel.app.views.fragment.rule;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
@@ -23,10 +22,11 @@ import com.unclezs.novel.app.manager.RuleManager;
 import com.unclezs.novel.app.presenter.RuleManagerPresenter;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.adapter.RuleListAdapter;
-import com.xuexiang.xaop.util.PermissionUtils;
+import com.xuexiang.constant.PermissionConstants;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
+import com.xuexiang.xutil.system.PermissionUtils;
 
 import java.io.File;
 
@@ -157,7 +157,7 @@ public class RuleManagerFragment extends BaseFragment<RuleManagerPresenter> impl
     }
 
     private void importFromFile() {
-        PermissionUtils.permission(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
+        PermissionUtils.permission(PermissionConstants.STORAGE)
             .callback(new PermissionUtils.SimpleCallback() {
                 @Override
                 public void onGranted() {

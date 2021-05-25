@@ -18,14 +18,11 @@ import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.db.entity.SearchRecord;
 import com.unclezs.novel.app.presenter.SearchBookPresenter;
 import com.unclezs.novel.app.utils.Utils;
-import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.adapter.SearchBookAdapter;
 import com.unclezs.novel.app.views.adapter.SearchRecordTagAdapter;
 import com.unclezs.novel.app.views.fragment.components.BookDetailFragment;
 import com.unclezs.novel.app.widget.SuperSearchView;
-import com.xuexiang.xaop.annotation.SingleClick;
 import com.xuexiang.xpage.annotation.Page;
-import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xui.adapter.recyclerview.RecyclerViewHolder;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xui.widget.statelayout.StatefulLayout;
@@ -62,7 +59,6 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
     @Override
     protected TitleBar initTitle() {
         TitleBar titleBar = super.initTitle().setLeftClickListener(new View.OnClickListener() {
-            @SingleClick
             @Override
             public void onClick(View v) {
                 hideCurrentPageSoftInput();
@@ -73,7 +69,6 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
         titleBar.setCustomTitle(createSearchView());
         // 类型选择
         titleBar.addAction(new TitleBar.ImageAction(R.drawable.ic_web_more) {
-            @SingleClick
             @Override
             public void performAction(View view) {
                 System.out.println("设置");
@@ -221,7 +216,6 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
      * @param position 索引
      */
     @Override
-    @SingleClick(500)
     public void onItemClick(View itemView, SearchRecord item, int position) {
         if (item != null) {
             searchView.setQuery(item.getContent(), true);
@@ -233,7 +227,6 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
      *
      * @param view 视图
      */
-    @SingleClick
     @OnClick(R.id.iv_delete)
     public void onClearHistoryClicked(View view) {
         presenter.clearSearchRecord();

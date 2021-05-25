@@ -1,26 +1,20 @@
 package com.unclezs.novel.app.base;
 
-import android.content.Context;
 import android.content.res.Configuration;
-import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 
 import com.umeng.analytics.MobclickAgent;
-import com.unclezs.novel.app.core.http.loader.ProgressLoader;
-import com.xuexiang.xhttp2.subsciber.impl.IProgressLoader;
+import com.unclezs.novel.analyzer.util.GsonUtils;
 import com.xuexiang.xpage.base.XPageActivity;
 import com.xuexiang.xpage.base.XPageFragment;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xpage.enums.CoreAnim;
 import com.xuexiang.xpage.utils.Utils;
-import com.xuexiang.xrouter.facade.service.SerializationService;
-import com.xuexiang.xrouter.launcher.XRouter;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xui.widget.actionbar.TitleUtils;
 
@@ -36,7 +30,6 @@ import java.lang.reflect.Type;
 public abstract class BaseFragment<P extends IPresenter> extends XPageFragment implements IView {
 
     protected P presenter;
-    private IProgressLoader progressLoader;
 
     @Override
     protected void initPage() {
@@ -95,33 +88,6 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
         }
     }
 
-    /**
-     * 获取进度条加载者
-     *
-     * @return 进度条加载者
-     */
-    public IProgressLoader getProgressLoader() {
-        if (progressLoader == null) {
-            progressLoader = ProgressLoader.create(getContext());
-        }
-        return progressLoader;
-    }
-
-    /**
-     * 获取进度条加载者
-     *
-     * @param message
-     * @return 进度条加载者
-     */
-    public IProgressLoader getProgressLoader(String message) {
-        if (progressLoader == null) {
-            progressLoader = ProgressLoader.create(getContext(), message);
-        } else {
-            progressLoader.updateMessage(message);
-        }
-        return progressLoader;
-    }
-
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         //屏幕旋转时刷新一下title
@@ -135,9 +101,6 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
 
     @Override
     public void onDestroyView() {
-        if (progressLoader != null) {
-            progressLoader.dismissLoading();
-        }
         super.onDestroyView();
     }
 
@@ -348,7 +311,7 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
      * @return 序列化结果
      */
     public String serializeObject(Object object) {
-        return XRouter.getInstance().navigation(SerializationService.class).object2Json(object);
+        return GsonUtils.toJson(object);
     }
 
     /**
@@ -359,7 +322,7 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
      * @return 反序列化结果
      */
     public <T> T deserializeObject(String input, Type clazz) {
-        return XRouter.getInstance().navigation(SerializationService.class).parseObject(input, clazz);
+        return GsonUtils.me().fromJson(input, clazz);
     }
 
 

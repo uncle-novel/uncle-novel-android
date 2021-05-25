@@ -6,6 +6,7 @@ import android.content.Context;
 import androidx.multidex.MultiDex;
 
 import com.unclezs.novel.app.manager.ResourceManager;
+import com.unclezs.novel.app.utils.MMKVUtils;
 import com.unclezs.novel.app.utils.sdkinit.ANRWatchDogInit;
 import com.unclezs.novel.app.utils.sdkinit.UMengInit;
 import com.unclezs.novel.app.utils.sdkinit.XBasicLibInit;
@@ -64,6 +65,8 @@ public class App extends Application {
     private void initLibs() {
         // X系列基础库初始化
         XBasicLibInit.init(this);
+        // mmkv
+        MMKVUtils.init(this);
         // 版本更新初始化
         XUpdateInit.init(this);
         // 运营统计数据

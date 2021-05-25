@@ -17,7 +17,6 @@ import com.unclezs.novel.app.widget.Tag;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xpage.enums.CoreAnim;
-import com.xuexiang.xrouter.annotation.AutoWired;
 import com.xuexiang.xui.utils.ResUtils;
 import com.xuexiang.xui.widget.imageview.ImageLoader;
 import com.xuexiang.xui.widget.imageview.strategy.DiskCacheStrategyEnum;
@@ -34,8 +33,6 @@ import cn.hutool.core.text.CharSequenceUtil;
 @Page(name = "小说详情", params = BookDetailFragment.INFO)
 public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     public static final String INFO = "novel";
-    @AutoWired
-    String name;
     @BindView(R.id.cover)
     ImageView cover;
     @BindView(R.id.title)
@@ -108,7 +105,6 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
 
     @OnClick(R.id.action_download)
     public void toDownload() {
-        System.out.println(novel);
         XToastUtils.error(novel.getTitle());
     }
 }
