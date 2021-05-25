@@ -29,13 +29,13 @@ public class RuleManager {
 
     static {
         File ruleJsonFile = ResourceManager.file(RULES_FILE_NAME);
-        if (!ruleJsonFile.exists()) {
-            String ruleJson = ResourceUtils.readStringFromAssert(RULES_FILE_NAME);
-            RuleHelper.loadRules(ruleJson);
-        }
         if (ruleJsonFile.exists()) {
             String ruleJson = ResourceManager.fileString(RULES_FILE_NAME);
             RuleHelper.loadRules(ruleJson);
+        } else {
+            String ruleJson = ResourceUtils.readStringFromAssert(RULES_FILE_NAME);
+            RuleHelper.loadRules(ruleJson);
+            saveRule();
         }
         RULES = new ArrayList<>(RuleHelper.rules());
         // 绑定监听

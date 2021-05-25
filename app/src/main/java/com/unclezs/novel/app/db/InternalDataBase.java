@@ -62,7 +62,7 @@ public class InternalDataBase implements IDatabase {
      * @throws java.sql.SQLException
      */
     private static void dropTablesByClassNames(ConnectionSource connectionSource, List<String> tableClassNames) throws SQLException {
-        if (tableClassNames != null && tableClassNames.size() > 0) {
+        if (tableClassNames != null && !tableClassNames.isEmpty()) {
             for (String tableClassName : tableClassNames) {
                 try {
                     TableUtils.dropTable(connectionSource, Class.forName(tableClassName), false);

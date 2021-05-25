@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="?attr/xui_config_content_spacing_horizontal"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner
+        android:id="@+id/spinner"
+        style="@style/Material.SpinnerStyle"
+        android:layout_width="200dp"
+        android:layout_marginStart="20dp"
+        app:ms_dropdown_max_height="60dp"
+        android:layout_marginEnd="20dp"
+        app:ms_in_dialog="true" />
+
+</LinearLayout>

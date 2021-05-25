@@ -66,7 +66,6 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
     SuperTextView cookies;
     @BindView(R.id.get_cookie)
     RoundButton cookieBtn;
-
     @BindView(R.id.content_ad_update)
     RoundButton contentAdUpdate;
     @BindView(R.id.page_content)

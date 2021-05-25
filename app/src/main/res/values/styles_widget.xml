@@ -33,7 +33,7 @@
     </style>
 
     <style name="InfoItem.Common">
-        <item name="sLeftViewWidth">200dp</item>
+        <item name="sLeftViewWidth">300dp</item>
         <item name="sLeftViewMarginRight">0dp</item>
         <item name="sLeftViewGravity">left_center</item>
         <item name="sCenterViewGravity">left_center</item>
@@ -41,6 +41,18 @@
         <item name="sRightTextSize">?attr/xui_config_size_content_text</item>
         <item name="sRightViewMarginRight">10dp</item>
         <item name="sRightIconRes">@drawable/icon_arrow_right_grey</item>
+    </style>
+
+    <style name="InfoItem.Setting">
+        <item name="sLeftViewWidth">300dp</item>
+        <item name="sLeftViewMarginRight">0dp</item>
+        <item name="sLeftViewGravity">left_center</item>
+        <item name="sCenterViewGravity">left_center</item>
+        <item name="sCenterViewMarginLeft">0dp</item>
+        <item name="sCenterViewMarginRight">0dp</item>
+        <item name="sCenterTextSize">14sp</item>
+        <item name="sRightViewMarginRight">0dp</item>
+        <item name="sRightViewGravity">right_center</item>
     </style>
 
     <style name="EditInfoItem">
@@ -76,6 +88,17 @@
         <item name="sRightViewType">switchBtn</item>
         <item name="sSwitchIsChecked">false</item>
         <item name="sDividerLineHeight">1dp</item>
+    </style>
+
+    <style name="Material.SpinnerStyle" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/ms_item_height_size</item>
+        <item name="android:textSize">?attr/xui_config_size_spinner_text</item>
+        <item name="android:textColor">@color/xui_config_color_edittext_textcolor</item>
+        <item name="ms_dropdown_height">wrap_content</item>
+        <item name="ms_text_color">@color/ms_dropdown_item_textcolor</item>
+        <item name="ms_background_selector">@drawable/xui_config_bg_edittext</item>
+        <item name="ms_dropdown_bg">@drawable/ms_drop_down_bg_radius</item>
     </style>
 
     <style name="InfoItem.Common.NoEdit">

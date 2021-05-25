@@ -5,6 +5,7 @@ import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.views.activity.RuleManagerActivity;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
+import com.unclezs.novel.app.views.fragment.other.DownloadConfigFragment;
 import com.unclezs.novel.app.views.fragment.other.SponsorFragment;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.enums.CoreAnim;
@@ -29,7 +30,8 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
     SuperTextView menuFeedback;
     @BindView(R.id.menu_sponsor)
     SuperTextView menuSponsor;
-
+    @BindView(R.id.menu_download_config)
+    SuperTextView menuDownloadConfig;
     /**
      * @return 返回为 null意为不需要导航栏
      */
@@ -58,11 +60,11 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
 
     @Override
     protected void initListeners() {
-        // GuideTipsDialog.showTipsForce(requireContext());
         menuAbout.setOnSuperTextViewClickListener(this);
         ruleManager.setOnSuperTextViewClickListener(this);
         menuFeedback.setOnSuperTextViewClickListener(this);
         menuSponsor.setOnSuperTextViewClickListener(this);
+        menuDownloadConfig.setOnSuperTextViewClickListener(this);
     }
 
     @Override
@@ -80,6 +82,9 @@ public class ProfileFragment extends BaseFragment implements SuperTextView.OnSup
                 break;
             case R.id.menu_sponsor:
                 openNewPage(SponsorFragment.class);
+                break;
+            case R.id.menu_download_config:
+                openNewPage(DownloadConfigFragment.class);
                 break;
             default:
                 break;

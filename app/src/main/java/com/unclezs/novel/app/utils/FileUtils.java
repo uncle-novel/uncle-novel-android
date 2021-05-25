@@ -121,7 +121,6 @@ public class FileUtils {
 
             return getDataColumn(context, uri, null, null);
         } else if ("file".equalsIgnoreCase(uri.getScheme())) {// File
-
             return uri.getPath();
         }
         return null;

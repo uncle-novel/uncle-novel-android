@@ -23,6 +23,7 @@ import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
 import com.unclezs.novel.app.views.fragment.download.DownloadFragment;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
+import com.unclezs.novel.app.views.fragment.other.DownloadConfigFragment;
 import com.unclezs.novel.app.views.fragment.other.SearchBookFragment;
 import com.unclezs.novel.app.views.fragment.other.SponsorFragment;
 import com.unclezs.novel.app.views.fragment.profile.ProfileFragment;
@@ -187,6 +188,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                     break;
                 case R.id.nav_search:
                     openNewPage(SearchBookFragment.class);
+                    break;
+                case R.id.nav_download:
+                    openNewPage(DownloadConfigFragment.class);
                     break;
                 case R.id.nav_exit:
                     DialogLoader.getInstance().showConfirmDialog(this, getString(R.string.lab_logout_confirm), getString(R.string.lab_yes),
