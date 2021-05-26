@@ -35,7 +35,6 @@ public class RxLifecycle<T> implements LifecycleObserver, ObservableTransformer<
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     void onDestroy() {
-        Log.i("rxJava销毁", "onDestroy: 销毁rxJava");
         if (!compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();
         }

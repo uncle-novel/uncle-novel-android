@@ -1,7 +1,9 @@
 package com.unclezs.novel.app.presenter;
 
+import com.hwangjr.rxbus.RxBus;
 import com.unclezs.novel.app.base.BasePresenter;
 import com.unclezs.novel.app.utils.MMKVUtils;
+import com.unclezs.novel.app.views.fragment.download.DownloadingFragment;
 import com.unclezs.novel.app.views.fragment.other.DownloadConfigFragment;
 import com.xuexiang.xutil.file.FileUtils;
 
@@ -49,6 +51,7 @@ public class DownloadConfigPresenter extends BasePresenter<DownloadConfigFragmen
     public void setTaskNum(Integer num) {
         MMKVUtils.put(DOWNLOAD_CONFIG_TASK_NUM, num);
         view.updateTaskNum(num);
+        RxBus.get().post(DownloadingFragment.BUS_ACTION_MAX_TASK_NUM_CHANGE, num);
     }
 
     public int getRetryNum() {
@@ -72,4 +75,5 @@ public class DownloadConfigPresenter extends BasePresenter<DownloadConfigFragmen
         MMKVUtils.put(DOWNLOAD_CONFIG_FORMAT, result);
         view.updateFormat(result);
     }
+
 }

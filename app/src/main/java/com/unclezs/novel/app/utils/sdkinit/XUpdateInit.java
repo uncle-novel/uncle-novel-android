@@ -30,19 +30,19 @@ public final class XUpdateInit {
   public static void init(Application application) {
     XUpdate.get()
             .debug(App.isDebug())
-            //默认设置只在wifi下检查版本更新
+            // 默认设置只在wifi下检查版本更新
             .isWifiOnly(false)
-            //默认设置使用get请求检查版本
+            // 默认设置使用get请求检查版本
             .isGet(true)
-            //默认设置非自动模式，可根据具体使用配置
+            // 默认设置非自动模式，可根据具体使用配置
             .isAutoMode(false)
-            //设置默认公共请求参数
+            // 设置默认公共请求参数
             .param("versionCode", UpdateUtils.getVersionCode(application))
             .param("appKey", application.getPackageName())
-            //这个必须设置！实现网络请求功能。
+            // 这个必须设置！实现网络请求功能。
             .setIUpdateHttpService(new XHttpUpdateHttpServiceImpl())
             .setIUpdateDownLoader(new CustomUpdateDownloader())
-            //这个必须初始化
+            // 这个必须初始化
             .init(application);
   }
 

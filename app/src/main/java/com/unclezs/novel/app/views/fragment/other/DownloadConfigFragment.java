@@ -37,7 +37,7 @@ import cn.hutool.core.util.NumberUtil;
 @SuppressLint("NonConstantResourceId")
 public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter> {
     public static final int SAVE_PATH_REQUEST_CODE = 1001;
-    private static final List<String> formats = ListUtil.of("TXT", "EPUB");
+    private static final List<String> FORMATS = ListUtil.of("TXT", "EPUB");
     @BindView(R.id.save_path)
     SuperTextView savePath;
     @BindView(R.id.select_save_path)
@@ -103,7 +103,7 @@ public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter
     @OnClick(R.id.retry_num)
     public void changeRetryNum() {
         showEditDialog(
-            NumberUtil.appendRange(1, 99, new ArrayList<>()),
+            NumberUtil.appendRange(0, 99, new ArrayList<>()),
             presenter.getRetryNum(),
             "请选失败重试次数",
             num -> presenter.setRetryNum(num));
@@ -123,11 +123,11 @@ public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter
         String[] split = presenter.getFormat().split(DownloadConfigPresenter.DOWNLOAD_CONFIG_FORMAT_SPLIT);
         Integer[] selected = new Integer[split.length];
         for (int i = 0; i < split.length; i++) {
-            selected[i] = formats.indexOf(split[i]);
+            selected[i] = FORMATS.indexOf(split[i]);
         }
         new MaterialDialog.Builder(requireContext())
             .title("下载格式选择")
-            .items(formats)
+            .items(FORMATS)
             .itemsCallbackMultiChoice(selected, (dialog, which, text) -> {
                 presenter.setFormat(text);
                 return false;
@@ -150,7 +150,7 @@ public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter
             .title(title)
             .positiveText("确定")
             .negativeText("取消")
-            .onPositive((d, w) -> callback.accept(spinner.getSelectedIndex() + 1))
+            .onPositive((d, w) -> callback.accept(spinner.getSelectedItem()))
             .cancelable(true).show();
     }
 

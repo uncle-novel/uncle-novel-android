@@ -92,4 +92,13 @@
     <string name="alipay_search_code">704383529</string>
     <string name="exit">退出</string>
     <string name="select">选择</string>
+    <string name="epub">EPUB</string>
+    <string name="txt">TXT</string>
+    <string name="unselected_down">向下不选中</string>
+    <string name="selected_down">向下选中</string>
+    <string name="unselected_up">向上不选中</string>
+    <string name="selected_up">向上选中</string>
+    <string name="unselected_all">全不选</string>
+    <string name="selected_all">全选</string>
+    <string name="audio">有声</string>
 </resources>

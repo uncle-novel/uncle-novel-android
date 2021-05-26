@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.model.ChapterWrapper;
+import com.unclezs.novel.app.utils.XToastUtils;
 import com.xuexiang.xui.adapter.recyclerview.BaseRecyclerAdapter;
 import com.xuexiang.xui.adapter.recyclerview.RecyclerViewHolder;
 
@@ -48,7 +49,7 @@ public class ChapterListAdapter extends BaseRecyclerAdapter<ChapterWrapper> {
         holder.text(R.id.title, item.getChapter().getName());
         CheckBox checkbox = holder.findViewById(R.id.selected);
         checkbox.setChecked(item.isSelected());
-        checkbox.setOnClickListener(e -> item.setSelected(checkbox.isSelected()));
+        checkbox.setOnClickListener(v -> item.setSelected(checkbox.isChecked()));
     }
 
     /**

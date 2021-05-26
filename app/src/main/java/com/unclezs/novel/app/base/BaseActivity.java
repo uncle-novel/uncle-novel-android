@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.lifecycle.LifecycleOwner;
 
+import com.unclezs.novel.app.utils.XToastUtils;
 import com.xuexiang.xpage.base.XPageActivity;
 import com.xuexiang.xpage.base.XPageFragment;
 import com.xuexiang.xpage.core.CoreSwitchBean;

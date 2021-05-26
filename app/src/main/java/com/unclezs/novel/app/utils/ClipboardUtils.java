@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 
 import com.unclezs.novel.app.App;
+import com.xuexiang.xutil.XUtil;
 
 import lombok.experimental.UtilityClass;
 
@@ -15,7 +16,7 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class ClipboardUtils {
     public String get() {
-        ClipboardManager manager = (ClipboardManager) App.me().getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipboardManager manager = (ClipboardManager) XUtil.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
         if (manager == null) {
             return null;
         }
@@ -27,7 +28,7 @@ public class ClipboardUtils {
     }
 
     public void set(String value) {
-        ClipboardManager manager = (ClipboardManager) App.me().getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipboardManager manager = (ClipboardManager) XUtil.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
         if (manager == null) {
             return;
         }

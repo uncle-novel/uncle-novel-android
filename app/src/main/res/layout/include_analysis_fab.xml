@@ -19,16 +19,22 @@
     tools:ignore="RtlHardcoded">
 
     <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/fab_checked_all"
+        android:id="@+id/fab_to_bottom"
         style="@style/FabMenu.Buttons"
-        android:src="@drawable/ic_checked"
-        app:fab_label="全选" />
+        android:src="@drawable/ic_fab_to_bottom"
+        app:fab_label="到底部" />
 
     <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/fab_un_checked_all"
+        android:id="@+id/fab_to_top"
         style="@style/FabMenu.Buttons"
-        android:src="@drawable/ic_unchecked"
-        app:fab_label="全不选" />
+        android:src="@drawable/ic_fab_to_top"
+        app:fab_label="到顶部" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_edit_info"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_fab_edit_info"
+        app:fab_label="编辑书籍信息" />
 
     <com.github.clans.fab.FloatingActionButton
         android:id="@+id/fab_download"

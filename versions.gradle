@@ -161,12 +161,9 @@ static def addRepos(RepositoryHandler handler) {
 
 ext.addRepos = this.&addRepos
 
-
 // 自动添加XAOP和XRouter插件
 project.buildscript.configurations.each { configuration ->
     if (configuration.name == "classpath") {
-        // XAOP插件
-        configuration.dependencies.add(getProject().dependencies.create('com.github.xuexiangjys.XAOP:xaop-plugin:1.1.0'))
         // XRouter插件
         configuration.dependencies.add(getProject().dependencies.create('com.github.xuexiangjys.XRouter:xrouter-plugin:1.0.1'))
     }

@@ -10,10 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.hwangjr.rxbus.RxBus;
+import com.unclezs.novel.app.App;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseActivity;
 import com.unclezs.novel.app.base.BaseFragment;
@@ -21,12 +26,13 @@ import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
-import com.unclezs.novel.app.views.fragment.download.DownloadFragment;
+import com.unclezs.novel.app.views.fragment.download.DownloadManagerFragment;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
 import com.unclezs.novel.app.views.fragment.other.DownloadConfigFragment;
 import com.unclezs.novel.app.views.fragment.other.SearchBookFragment;
 import com.unclezs.novel.app.views.fragment.other.SponsorFragment;
 import com.unclezs.novel.app.views.fragment.profile.ProfileFragment;
+import com.xuexiang.constant.PermissionConstants;
 import com.xuexiang.xui.adapter.FragmentAdapter;
 import com.xuexiang.xui.utils.ResUtils;
 import com.xuexiang.xui.widget.dialog.DialogLoader;
@@ -34,6 +40,7 @@ import com.xuexiang.xutil.XUtil;
 import com.xuexiang.xutil.app.ActivityUtils;
 import com.xuexiang.xutil.common.ClickUtils;
 import com.xuexiang.xutil.common.CollectionUtils;
+import com.xuexiang.xutil.system.PermissionUtils;
 
 import butterknife.BindView;
 
@@ -73,6 +80,19 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PermissionUtils.permission(PermissionConstants.STORAGE)
+            .callback(new PermissionUtils.SimpleCallback() {
+                @Override
+                public void onGranted() {
+
+                }
+
+                @Override
+                public void onDenied() {
+                    finish();
+                }
+            })
+            .request();
         initViews();
         initListeners();
     }
@@ -94,7 +114,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         //主页内容填充
         BaseFragment[] fragments = new BaseFragment[]{
             new AnalysisFragment(),
-            new DownloadFragment(),
+            new DownloadManagerFragment(),
             new ProfileFragment()
         };
         FragmentAdapter<BaseFragment> adapter = new FragmentAdapter<>(getSupportFragmentManager(), fragments);
@@ -117,7 +137,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
 
         // 侧边栏点击事件
         navView.setNavigationItemSelectedListener(this::handleNavigationItemClicked);
-        //主页事件监听
+        // 主页事件监听
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -289,8 +309,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
 
     @Override
     public void onExit() {
+        RxBus.get().post(App.BUS_TAG_EXIT, App.BUS_TAG_EXIT);
         XUtil.exitApp();
     }
-
-
 }

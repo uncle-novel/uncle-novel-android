@@ -36,9 +36,9 @@ project.configurations.each { configuration ->
         configuration.dependencies.add(getProject().dependencies.create('com.github.xuexiangjys.XRouter:xrouter-compiler:1.0.1'))
     }
 
-    if (configuration.name == "debugImplementation") {
-        // 内存泄漏监测leak
-        configuration.dependencies.add(getProject().dependencies.create('com.squareup.leakcanary:leakcanary-android:2.6'))
-    }
+//    if (configuration.name == "debugImplementation") {
+//        // 内存泄漏监测leak
+//        configuration.dependencies.add(getProject().dependencies.create('com.squareup.leakcanary:leakcanary-android:2.6'))
+//    }
 }
 

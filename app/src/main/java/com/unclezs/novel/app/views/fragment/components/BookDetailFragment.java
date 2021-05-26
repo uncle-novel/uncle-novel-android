@@ -1,23 +1,33 @@
 package com.unclezs.novel.app.views.fragment.components;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
+import com.hwangjr.rxbus.RxBus;
 import com.unclezs.novel.analyzer.model.Novel;
+import com.unclezs.novel.analyzer.util.SerializationUtils;
 import com.unclezs.novel.analyzer.util.StringUtils;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.presenter.BookDetailPresenter;
-import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
+import com.unclezs.novel.app.views.fragment.download.DownloadingFragment;
 import com.unclezs.novel.app.widget.Tag;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xpage.enums.CoreAnim;
 import com.xuexiang.xui.utils.ResUtils;
+import com.xuexiang.xui.widget.actionbar.TitleBar;
+import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
 import com.xuexiang.xui.widget.imageview.ImageLoader;
 import com.xuexiang.xui.widget.imageview.strategy.DiskCacheStrategyEnum;
 
@@ -30,9 +40,10 @@ import cn.hutool.core.text.CharSequenceUtil;
  * @date 2021/05/21 21:06
  */
 @SuppressLint("NonConstantResourceId")
-@Page(name = "小说详情", params = BookDetailFragment.INFO)
+@Page(name = "小说详情")
 public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     public static final String INFO = "novel";
+    public static final String INFO_FOR_EDIT = "edit";
     @BindView(R.id.cover)
     ImageView cover;
     @BindView(R.id.title)
@@ -49,7 +60,14 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     Tag wordCount;
     @BindView(R.id.state)
     Tag state;
+    @BindView(R.id.action_analysis)
+    Button actionAnalysis;
+    @BindView(R.id.action_download)
+    Button actionDownload;
+    @BindView(R.id.edit_title)
+    AppCompatImageView editTitle;
     private Novel novel;
+    private boolean isEdit;
 
     @Override
     protected int getLayoutId() {
@@ -60,6 +78,14 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     protected void initViews() {
         if (getArguments() != null) {
             novel = (Novel) getArguments().getSerializable(INFO);
+            isEdit = getArguments().getBoolean(INFO_FOR_EDIT, false);
+            if (isEdit) {
+                actionAnalysis.setVisibility(View.GONE);
+                actionDownload.setVisibility(View.GONE);
+                RxBus.get().post(AnalysisFragment.KEY_NOVEL_INFO, novel);
+            } else {
+                editTitle.setVisibility(View.GONE);
+            }
             if (StringUtils.isNotBlank(novel.getCoverUrl())) {
                 ImageLoader.get().loadImage(cover, novel.getCoverUrl(), ResUtils.getDrawable(R.drawable.no_cover), DiskCacheStrategyEnum.NONE);
             }
@@ -94,7 +120,6 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
 
     @OnClick(R.id.action_analysis)
     public void toAnalysis() {
-        XToastUtils.success(novel.getTitle());
         PageOption.to(AnalysisFragment.class)
             .setNewActivity(true)
             .putBoolean(AnalysisFragment.KEY_SHOW_TITLE_BAR, true)
@@ -103,8 +128,31 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
             .open(this);
     }
 
+
+    @OnClick(R.id.edit_title)
+    public void editTitle() {
+        new MaterialDialog.Builder(requireContext())
+            .title("编辑")
+            .content("修改小说的名称")
+            .inputType(InputType.TYPE_CLASS_TEXT)
+            .input(
+                "请输入小说的名称",
+                novel.getTitle(),
+                false,
+                ((dialog, input) -> {
+                    String template = input.toString();
+                    novel.setTitle(template);
+                    title.setText(template);
+                }))
+            .positiveText("确定")
+            .negativeText("取消")
+            .cancelable(true)
+            .show();
+    }
+
     @OnClick(R.id.action_download)
     public void toDownload() {
-        XToastUtils.error(novel.getTitle());
+        Novel novelCopy = SerializationUtils.deepClone(this.novel);
+        RxBus.get().post(DownloadingFragment.BUS_ACTION_ADD_TASK, novelCopy);
     }
 }

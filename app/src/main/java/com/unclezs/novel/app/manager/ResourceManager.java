@@ -1,6 +1,6 @@
 package com.unclezs.novel.app.manager;
 
-import android.content.Context;
+import com.xuexiang.xutil.XUtil;
 
 import java.io.File;
 
@@ -13,10 +13,11 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class ResourceManager {
-    private static File fileDir;
+    private static final String DOWNLOAD_DIR = "Uncle小说";
+    private static final File FILE_DIR;
 
-    public static void init(Context context) {
-        fileDir = context.getFilesDir();
+    static {
+        FILE_DIR = XUtil.getContext().getFilesDir();
     }
 
 
@@ -27,7 +28,7 @@ public class ResourceManager {
      * @return 文件
      */
     public static File file(String path) {
-        return FileUtil.file(fileDir, path);
+        return FileUtil.file(FILE_DIR, path);
     }
 
     public static String fileString(String path) {

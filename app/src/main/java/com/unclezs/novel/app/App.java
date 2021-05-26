@@ -5,7 +5,6 @@ import android.content.Context;
 
 import androidx.multidex.MultiDex;
 
-import com.unclezs.novel.app.manager.ResourceManager;
 import com.unclezs.novel.app.utils.MMKVUtils;
 import com.unclezs.novel.app.utils.sdkinit.ANRWatchDogInit;
 import com.unclezs.novel.app.utils.sdkinit.UMengInit;
@@ -22,11 +21,7 @@ import io.reactivex.plugins.RxJavaPlugins;
  */
 @DataBase(name = "app", type = DataBaseType.INTERNAL)
 public class App extends Application {
-    private static App app;
-
-    public static App me() {
-        return app;
-    }
+    public static final String BUS_TAG_EXIT = "BUS_TAG_EXIT";
 
     /**
      * @return 当前app是否是调试开发模式
@@ -40,14 +35,11 @@ public class App extends Application {
         super.attachBaseContext(base);
         // 解决4.x运行崩溃的问题
         MultiDex.install(this);
-        // 资源文件初始化
-        ResourceManager.init(this);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        App.app = this;
         initLibs();
         initRxErrorHandler();
     }
@@ -74,6 +66,5 @@ public class App extends Application {
         // ANR监控
         ANRWatchDogInit.init();
     }
-
 
 }

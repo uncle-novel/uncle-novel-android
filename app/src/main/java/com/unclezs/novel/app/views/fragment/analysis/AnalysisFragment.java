@@ -2,12 +2,17 @@ package com.unclezs.novel.app.views.fragment.analysis;
 
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.Gravity;
 import android.view.View;
 
+import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.clans.fab.FloatingActionMenu;
+import com.hwangjr.rxbus.RxBus;
+import com.hwangjr.rxbus.annotation.Subscribe;
+import com.hwangjr.rxbus.annotation.Tag;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.unclezs.novel.analyzer.model.Chapter;
 import com.unclezs.novel.analyzer.model.Novel;
@@ -19,12 +24,12 @@ import com.unclezs.novel.app.model.ChapterWrapper;
 import com.unclezs.novel.app.presenter.AnalysisPresenter;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.adapter.ChapterListAdapter;
+import com.unclezs.novel.app.views.fragment.components.BookDetailFragment;
 import com.unclezs.novel.app.views.fragment.components.ChapterTextFragment;
 import com.unclezs.novel.app.views.fragment.rule.RuleEditorFragment;
-import com.unclezs.novel.app.views.fragment.rule.RuleManagerFragment;
 import com.xuexiang.xpage.annotation.Page;
+import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xpage.enums.CoreAnim;
-import com.xuexiang.xrouter.launcher.XRouter;
 import com.xuexiang.xui.utils.WidgetUtils;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
@@ -59,7 +64,6 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     SmartRefreshLayout refreshLayout;
     @BindView(R.id.state_layout)
     StatefulLayout stateLayout;
-    private Novel novel;
     private boolean showTitleBar;
     private ChapterListAdapter adapter;
     private TitleBar titleBar;
@@ -76,7 +80,14 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
 
     @Override
     protected void initArgs() {
-        XRouter.getInstance().inject(this);
+        super.initArgs();
+        RxBus.get().register(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        RxBus.get().unregister(this);
     }
 
     /**
@@ -95,9 +106,10 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     @Override
     protected void initViews() {
         Bundle bundle = getArguments();
+        Novel novel = null;
         if (bundle != null) {
             this.showTitleBar = bundle.getBoolean(KEY_SHOW_TITLE_BAR);
-            this.novel = (Novel) bundle.getSerializable(KEY_NOVEL_INFO);
+            novel = (Novel) bundle.getSerializable(KEY_NOVEL_INFO);
         }
         titleBar.setVisibility(showTitleBar ? View.VISIBLE : View.GONE);
 
@@ -132,13 +144,13 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
 
             @Override
             public void onItemDismiss(RecyclerView.ViewHolder srcHolder) {
-                int position = adapter.onRemoveItem(srcHolder);
-                XToastUtils.toast("现在的第" + (position + 1) + "被删除。");
+                adapter.onRemoveItem(srcHolder);
             }
 
         });
         adapter = new ChapterListAdapter();
         adapter.setOnItemClickListener((itemView, item, position) -> readChapter(item.getChapter()));
+        adapter.setOnItemLongClickListener((itemView, item, position) -> showItemPopupMenu(itemView, position));
         chapterView.setAdapter(adapter);
 
         // 长按拖拽，默认关闭。
@@ -163,24 +175,75 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         return new AnalysisPresenter();
     }
 
+    private void showItemPopupMenu(View view, int position) {
+        PopupMenu popupMenu = new PopupMenu(requireContext(), view.findViewById(R.id.title), Gravity.CENTER);
+        popupMenu.inflate(R.menu.menu_chapter_list);
+        popupMenu.setOnMenuItemClickListener(item -> {
+            final int id = item.getItemId();
+            int pos = position;
+            switch (id) {
+                case R.id.selected_all:
+                    adapter.getData().forEach(chapterWrapper -> chapterWrapper.setSelected(true));
+                    adapter.notifyDataSetChanged();
+                    break;
+                case R.id.unselected_all:
+                    adapter.getData().forEach(chapterWrapper -> chapterWrapper.setSelected(false));
+                    adapter.notifyDataSetChanged();
+                    break;
+                case R.id.selected_up:
+                    do {
+                        adapter.getItem(pos--).setSelected(true);
+                    } while (pos >= 0 && !adapter.getItem(pos).isSelected());
+                    adapter.notifyDataSetChanged();
+                    break;
+                case R.id.unselected_up:
+                    do {
+                        adapter.getItem(pos--).setSelected(false);
+                    } while (pos >= 0 && adapter.getItem(pos).isSelected());
+                    adapter.notifyDataSetChanged();
+                    break;
+                case R.id.selected_down:
+                    do {
+                        adapter.getItem(pos++).setSelected(true);
+                    } while (pos < adapter.getItemCount() && !adapter.getItem(pos).isSelected());
+                    adapter.notifyDataSetChanged();
+                    break;
+                case R.id.unselected_down:
+                    do {
+                        adapter.getItem(pos++).setSelected(false);
+                    } while (pos < adapter.getItemCount() && adapter.getItem(pos).isSelected());
+                    adapter.notifyDataSetChanged();
+                    break;
+                default:
+            }
+            return false;
+        });
+        popupMenu.show();
+    }
 
-    @OnClick({R.id.fab_un_checked_all, R.id.fab_checked_all, R.id.fab_download, R.id.fab_rename, R.id.fab_config})
+
+    @OnClick({R.id.fab_edit_info, R.id.fab_to_top, R.id.fab_to_bottom, R.id.fab_download, R.id.fab_rename, R.id.fab_config})
     public void handleFabClicked(View view) {
         final int id = view.getId();
         switch (id) {
-            case R.id.fab_checked_all:
-                adapter.getData().forEach(chapterWrapper -> chapterWrapper.setSelected(true));
-                adapter.notifyDataSetChanged();
+            case R.id.fab_edit_info:
+                PageOption.to(BookDetailFragment.class)
+                    .setNewActivity(true)
+                    .putSerializable(BookDetailFragment.INFO, presenter.getNovel())
+                    .putBoolean(BookDetailFragment.INFO_FOR_EDIT, true)
+                    .open(this);
                 break;
-            case R.id.fab_un_checked_all:
-                adapter.getData().forEach(chapterWrapper -> chapterWrapper.setSelected(false));
-                adapter.notifyDataSetChanged();
+            case R.id.fab_to_bottom:
+                chapterView.scrollToPosition(adapter.getItemCount() - 1);
+                break;
+            case R.id.fab_to_top:
+                chapterView.scrollToPosition(0);
                 break;
             case R.id.fab_rename:
                 renameChapters();
                 break;
             case R.id.fab_download:
-                openNewPage(RuleManagerFragment.class);
+                presenter.submitDownload();
                 break;
             case R.id.fab_config:
                 openNewPage(RuleEditorFragment.class, RuleEditorFragment.KEY_RULE, presenter.getRule());
@@ -203,15 +266,13 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
                 ((dialog, input) -> {
                     String template = input.toString();
                     int index = 1;
-                    List<ChapterWrapper> selectedChapters = adapter.getData().stream().filter(ChapterWrapper::isSelected).collect(Collectors.toList());
+                    List<Chapter> selectedChapters = getSelectedChapters();
                     for (int i = 0; i < selectedChapters.size(); i++) {
-                        ChapterWrapper chapter = selectedChapters.get(i);
-                        if (chapter.isSelected()) {
-                            String name = chapter.getChapter().getName();
-                            name = StringUtils.remove(name, "[0-9]", "第.*?章");
-                            String newName = template.replace("{{章节序号}}", String.valueOf(index++)).replace("{{章节名}}", name);
-                            chapter.getChapter().setName(newName);
-                        }
+                        Chapter chapter = selectedChapters.get(i);
+                        String name = chapter.getName();
+                        name = StringUtils.remove(name, "[0-9]", "第.*?章");
+                        String newName = template.replace("{{章节序号}}", String.valueOf(index++)).replace("{{章节名}}", name);
+                        chapter.setName(newName);
                     }
                     adapter.notifyDataSetChanged();
                 }))
@@ -274,4 +335,12 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
 
     }
 
+    public List<Chapter> getSelectedChapters() {
+        return adapter.getData().stream().filter(ChapterWrapper::isSelected).map(ChapterWrapper::getChapter).collect(Collectors.toList());
+    }
+
+    @Subscribe(tags = {@Tag(KEY_NOVEL_INFO)})
+    public void setNovel(Novel novel) {
+        presenter.setNovel(novel);
+    }
 }

@@ -35,7 +35,7 @@ public class RuleManager {
         } else {
             String ruleJson = ResourceUtils.readStringFromAssert(RULES_FILE_NAME);
             RuleHelper.loadRules(ruleJson);
-            saveRule();
+            saveRule(RuleHelper.rules());
         }
         RULES = new ArrayList<>(RuleHelper.rules());
         // 绑定监听
@@ -156,6 +156,10 @@ public class RuleManager {
     }
 
     public static void saveRule() {
-        ResourceManager.saveString(GsonUtils.toJson(RULES), RULES_FILE_NAME);
+        saveRule(RULES);
+    }
+
+    private static void saveRule(List<AnalyzerRule> rules) {
+        ResourceManager.saveString(GsonUtils.toJson(rules), RULES_FILE_NAME);
     }
 }

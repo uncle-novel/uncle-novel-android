@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 import com.unclezs.novel.analyzer.request.RequestParams;
 import com.unclezs.novel.analyzer.request.spi.HttpProvider;
 import com.unclezs.novel.analyzer.util.uri.UrlUtils;
-import com.unclezs.novel.app.App;
+import com.xuexiang.xutil.XUtil;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
@@ -27,15 +27,13 @@ public class WebViewHttpClient implements HttpProvider {
     @Override
     @SuppressLint("SetJavaScriptEnabled")
     public String content(RequestParams requestParams) throws IOException {
-        Handler handler = new Handler(Looper.getMainLooper());
         AtomicReference<String> result = new AtomicReference<>();
         CountDownLatch countDownLatch = new CountDownLatch(1);
         AtomicReference<WebView> webViewRef = new AtomicReference<>();
-        handler.post(() -> {
-            WebView webView = new WebView(App.me());
+        XUtil.runOnUiThread(() -> {
+            WebView webView = new WebView(XUtil.getContext());
             webViewRef.set(webView);
             webView.getSettings().setJavaScriptEnabled(true);
-//            webView.getSettings().setUserAgentString(requestParams.getHeader(RequestParams.USER_AGENT));
             // 设置cookie
             CookieManager cookieManager = CookieManager.getInstance();
             cookieManager.setCookie(UrlUtils.getSite(requestParams.getUrl()), requestParams.getHeader(RequestParams.COOKIE));
@@ -61,7 +59,8 @@ public class WebViewHttpClient implements HttpProvider {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         } finally {
-            handler.post(() -> webViewRef.get().destroy());
+            XUtil.runOnUiThread(() -> webViewRef.get().destroy());
+            XUtil.runOnUiThread(() -> webViewRef.get().destroy());
         }
         return result.get();
     }
