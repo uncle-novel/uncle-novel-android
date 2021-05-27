@@ -54,10 +54,6 @@ public final class UMengInit {
     }
     UMConfigure.setLogEnabled(false);
     UMConfigure.preInit(application, BuildConfig.APP_ID_UMENG, getChannel(application));
-    // 用户同意了隐私协议
-    if (SettingUtils.isAgreePrivacy()) {
-      realInit(application);
-    }
   }
 
   /**

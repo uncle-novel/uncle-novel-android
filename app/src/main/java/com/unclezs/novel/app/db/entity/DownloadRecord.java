@@ -10,7 +10,7 @@ import lombok.Data;
  * @date 2021/05/26 11:15
  */
 @Data
-@DatabaseTable(tableName = "search_record")
+@DatabaseTable(tableName = "download_record")
 public class DownloadRecord {
     @DatabaseField(generatedId = true)
     private long id;

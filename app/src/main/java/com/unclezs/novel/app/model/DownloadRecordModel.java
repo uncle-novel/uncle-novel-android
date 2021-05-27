@@ -40,7 +40,7 @@ public class DownloadRecordModel {
 
     public void delete(DownloadRecord downloadRecord) {
         try {
-            dbService.deleteData(downloadRecord);
+            dbService.deleteById((int) downloadRecord.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         }

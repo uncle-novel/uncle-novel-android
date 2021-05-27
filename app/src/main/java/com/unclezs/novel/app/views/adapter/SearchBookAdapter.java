@@ -73,6 +73,12 @@ public class SearchBookAdapter extends XRecyclerAdapter<Novel, SearchBookAdapter
                 holder.state.setVisibility(View.VISIBLE);
                 holder.state.setText(item.getState());
             }
+            if (StringUtils.isBlank(item.getBroadcast())) {
+                holder.speaker.setVisibility(View.GONE);
+            } else {
+                holder.speaker.setVisibility(View.VISIBLE);
+                holder.speaker.setText(item.getBroadcast());
+            }
         }
     }
 
@@ -90,6 +96,7 @@ public class SearchBookAdapter extends XRecyclerAdapter<Novel, SearchBookAdapter
         private final TextView category;
         private final TextView introduce;
         private final TextView author;
+        private final TextView speaker;
         private final LinearLayout tags;
 
         public Holder(View itemView) {
@@ -101,6 +108,7 @@ public class SearchBookAdapter extends XRecyclerAdapter<Novel, SearchBookAdapter
             category = itemView.findViewById(R.id.category);
             introduce = itemView.findViewById(R.id.introduce);
             author = itemView.findViewById(R.id.author);
+            speaker = itemView.findViewById(R.id.speaker);
             tags = itemView.findViewById(R.id.tags);
         }
     }

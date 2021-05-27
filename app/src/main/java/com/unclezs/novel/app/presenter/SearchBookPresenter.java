@@ -70,8 +70,8 @@ public class SearchBookPresenter extends BasePresenter<SearchBookFragment> {
         return Collections.emptyList();
     }
 
-    public void doSearch(String keyword) {
-        model.doSearch(keyword);
+    public void doSearch(String keyword, boolean audio) {
+        model.doSearch(keyword, audio);
     }
 
     public void loadMore() {

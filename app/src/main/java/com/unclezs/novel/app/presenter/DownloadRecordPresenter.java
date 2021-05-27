@@ -7,6 +7,8 @@ import com.unclezs.novel.app.views.fragment.download.DownloadRecordFragment;
 
 import java.util.List;
 
+import cn.hutool.core.io.FileUtil;
+
 /**
  * @author blog.unclezs.com
  * @date 2021/05/27 0:38

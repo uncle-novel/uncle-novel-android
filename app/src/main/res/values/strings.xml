@@ -101,4 +101,6 @@
     <string name="unselected_all">全不选</string>
     <string name="selected_all">全选</string>
     <string name="audio">有声</string>
+    <string name="novel_audio">有声小说</string>
+    <string name="novel_text">文本小说</string>
 </resources>

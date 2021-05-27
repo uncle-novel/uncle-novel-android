@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.db.entity.DownloadRecord;
 import com.unclezs.novel.app.presenter.DownloadRecordPresenter;
-import com.unclezs.novel.app.presenter.DownloadingPresenter;
 import com.xuexiang.xui.adapter.recyclerview.BaseRecyclerAdapter;
 import com.xuexiang.xui.adapter.recyclerview.RecyclerViewHolder;
 
@@ -42,8 +41,9 @@ public class DownloadRecordAdapter extends BaseRecyclerAdapter<DownloadRecord> {
             holder.visible(R.id.epub, item.isEpub() ? View.VISIBLE : View.GONE);
             holder.visible(R.id.txt, item.isTxt() ? View.VISIBLE : View.GONE);
         }
+
         holder.viewClick(R.id.delete, (view, downloadRecord, pos) -> {
-            presenter.deleteRecord(downloadRecord,pos);
+            presenter.deleteRecord(item, mData.indexOf(item));
         }, item, position);
     }
 }

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +18,7 @@ import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.db.entity.SearchRecord;
 import com.unclezs.novel.app.presenter.SearchBookPresenter;
+import com.unclezs.novel.app.utils.SettingUtils;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.views.adapter.SearchBookAdapter;
 import com.unclezs.novel.app.views.adapter.SearchRecordTagAdapter;
@@ -49,21 +51,19 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
     SmartRefreshLayout refreshLayout;
     @BindView(R.id.state_layout)
     StatefulLayout stateLayout;
-
+    private PopupMenu popupMenu;
     private SearchRecordTagAdapter searchRecordTagAdapter;
     private SuperSearchView searchView;
     private SearchBookAdapter searchBookAdapter;
     private String keyword;
+    private boolean searchAudio = false;
 
 
     @Override
     protected TitleBar initTitle() {
-        TitleBar titleBar = super.initTitle().setLeftClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                hideCurrentPageSoftInput();
-                popToBack();
-            }
+        TitleBar titleBar = super.initTitle().setLeftClickListener(v -> {
+            hideCurrentPageSoftInput();
+            popToBack();
         });
         // 搜索框
         titleBar.setCustomTitle(createSearchView());
@@ -71,10 +71,32 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
         titleBar.addAction(new TitleBar.ImageAction(R.drawable.ic_web_more) {
             @Override
             public void performAction(View view) {
-                System.out.println("设置");
+                showPopupMenu(view);
             }
         });
         return titleBar;
+    }
+
+    private void showPopupMenu(View view) {
+        if (popupMenu == null) {
+            popupMenu = new PopupMenu(requireContext(), view, Gravity.START);
+            popupMenu.inflate(R.menu.menu_search_book);
+            popupMenu.getMenu().setGroupCheckable(R.id.novel_group, true, true);
+            if (SettingUtils.isSearchAudio()) {
+                popupMenu.getMenu().findItem(R.id.novel_audio).setChecked(true);
+            } else {
+                popupMenu.getMenu().findItem(R.id.novel_text).setChecked(true);
+            }
+            popupMenu.setOnDismissListener(menu -> {
+                searchAudio = menu.getMenu().findItem(R.id.novel_audio).isChecked();
+                SettingUtils.setSearchAudio(searchAudio);
+            });
+            popupMenu.setOnMenuItemClickListener(menuItem -> {
+                menuItem.setChecked(true);
+                return true;
+            });
+        }
+        popupMenu.show();
     }
 
 
@@ -98,6 +120,7 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
      */
     @Override
     protected void initViews() {
+        searchAudio = SettingUtils.isSearchAudio();
         searchBookAdapter = new SearchBookAdapter();
         searchBookAdapter.setOnItemClickListener((itemView, item, position) -> openNovel(item));
         booksView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -195,7 +218,7 @@ public class SearchBookFragment extends BaseFragment<SearchBookPresenter> implem
         refreshLayout.resetNoMoreData();
         searchBookAdapter.clear();
         // 执行搜索
-        presenter.doSearch(keyword);
+        presenter.doSearch(keyword, searchAudio);
     }
 
     /**

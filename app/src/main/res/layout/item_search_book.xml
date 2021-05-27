@@ -19,7 +19,10 @@
             android:layout_height="110dp"
             app:srcCompat="@drawable/no_cover"
             android:id="@+id/cover"
+            android:elevation="10dp"
             app:riv_corner_radius="5dp"
+            app:riv_border_width="1dp"
+            app:riv_border_color="#d8d8d8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="16dp"
@@ -61,6 +64,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
+                <com.unclezs.novel.app.widget.Tag
+                    android:id="@+id/speaker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="吴儒" />
 
                 <com.unclezs.novel.app.widget.Tag
                     android:id="@+id/category"

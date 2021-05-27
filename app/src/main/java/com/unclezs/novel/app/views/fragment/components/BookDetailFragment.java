@@ -1,8 +1,6 @@
 package com.unclezs.novel.app.views.fragment.components;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +24,6 @@ import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xpage.enums.CoreAnim;
 import com.xuexiang.xui.utils.ResUtils;
-import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
 import com.xuexiang.xui.widget.imageview.ImageLoader;
 import com.xuexiang.xui.widget.imageview.strategy.DiskCacheStrategyEnum;
@@ -90,7 +87,11 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
                 ImageLoader.get().loadImage(cover, novel.getCoverUrl(), ResUtils.getDrawable(R.drawable.no_cover), DiskCacheStrategyEnum.NONE);
             }
             title.setText(StringUtils.isBlank(novel.getTitle()) ? "未知" : novel.getTitle());
-            author.setText(StringUtils.isBlank(novel.getAuthor()) ? "未知" : novel.getAuthor());
+            String authorAndSpeaker = StringUtils.isBlank(novel.getAuthor()) ? "未知" : novel.getAuthor();
+            if (StringUtils.isBlank(novel.getBroadcast())) {
+                authorAndSpeaker += " - " + novel.getBroadcast();
+            }
+            author.setText(authorAndSpeaker);
             introduce.setText((StringUtils.isBlank(novel.getIntroduce()) ? "暂无简介" : novel.getIntroduce()).trim());
             if (CharSequenceUtil.isAllBlank(novel.getCategory(), novel.getWordCount(), novel.getState())) {
                 tags.setVisibility(View.GONE);

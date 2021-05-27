@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import cn.hutool.core.collection.ListUtil;
 import io.reactivex.Completable;
 import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -31,9 +32,9 @@ public class SearchBookModel {
     private final StateListener stateListener;
     private final List<SearchSpider> searchers = new ArrayList<>();
     private final Scheduler scheduler;
+    private final AtomicInteger counter = new AtomicInteger();
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private String keyword;
-    private AtomicInteger counter = new AtomicInteger();
 
     public SearchBookModel(LifecycleOwner owner, StateListener listener) {
         this.owner = owner;
@@ -41,7 +42,7 @@ public class SearchBookModel {
         scheduler = Schedulers.from(ThreadUtils.newFixedThreadPoolExecutor(5, "searcher-thread"));
     }
 
-    public void doSearch(String keyword) {
+    public void doSearch(String keyword, boolean audio) {
         this.keyword = keyword;
         if (!searchers.isEmpty()) {
             compositeDisposable.dispose();
@@ -49,10 +50,10 @@ public class SearchBookModel {
             searchers.forEach(AbstractPageable::cancel);
         }
         searchers.clear();
-        List<AnalyzerRule> rules = RuleManager.textSearchRules();
+        List<AnalyzerRule> rules = audio ? RuleManager.audioSearchRules() : RuleManager.textSearchRules();
         counter.set(rules.size());
         for (AnalyzerRule rule : rules) {
-            SearchSpider searcher = new SearchSpider(List.of(rule));
+            SearchSpider searcher = new SearchSpider(ListUtil.of(rule));
             searcher.setOnNewItemAddHandler(stateListener::addMore);
             searchers.add(searcher);
             searchOrLoadMore(searcher, false);
