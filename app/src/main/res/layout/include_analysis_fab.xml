@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.clans.fab.FloatingActionMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fab_menus"
+    style="@style/FabMenu"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintHorizontal_bias="0.932"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.936"
+    app:menu_colorNormal="@color/colorPrimary"
+    app:menu_colorPressed="@color/colorPrimaryDark"
+    app:menu_colorRipple="@color/colorPrimaryDark"
+    app:menu_labels_ellipsize="end"
+    android:visibility="gone"
+    app:menu_labels_singleLine="true"
+    tools:ignore="RtlHardcoded">
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_to_bottom"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_fab_to_bottom"
+        app:fab_label="到底部" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_to_top"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_fab_to_top"
+        app:fab_label="到顶部" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_edit_info"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_fab_edit_info"
+        app:fab_label="编辑书籍信息" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_download"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_download_20"
+        app:fab_label="下载" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_config"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_config"
+        app:fab_label="规则配置" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_rename"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_rename"
+        app:fab_label="格式化章节名" />
+</com.github.clans.fab.FloatingActionMenu>

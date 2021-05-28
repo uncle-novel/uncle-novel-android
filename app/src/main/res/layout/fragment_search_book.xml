@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/xui_actionbar_height"
+        android:orientation="vertical"
+        android:paddingStart="?attr/xui_config_content_spacing_horizontal"
+        android:paddingEnd="?attr/xui_config_content_spacing_horizontal">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextStyle.Content"
+                android:layout_margin="?attr/xui_config_content_spacing_horizontal"
+                android:text="@string/search_history" />
+
+            <com.xuexiang.xui.widget.alpha.XUIAlphaImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="?attr/xui_config_content_spacing_vertical"
+                android:padding="@dimen/config_margin_8dp"
+                android:tint="@color/xui_config_color_gray_5"
+                app:srcCompat="@drawable/icon_delete" />
+
+        </FrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/history_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_marginTop="?attr/xui_actionbar_height"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:srlEnableRefresh="false"
+        app:srlEnableAutoLoadMore="true"
+        app:srlEnableLoadMore="true">
+
+        <com.xuexiang.xui.widget.statelayout.StatefulLayout
+            android:id="@+id/state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:stf_animationEnabled="false"
+            app:stf_inAnimation="@android:anim/slide_in_left"
+            app:stf_outAnimation="@android:anim/slide_out_right">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/book_list"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:overScrollMode="never">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </com.xuexiang.xui.widget.statelayout.StatefulLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</FrameLayout>

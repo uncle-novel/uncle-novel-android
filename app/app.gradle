@@ -1,0 +1,175 @@
+import com.unclezs.novel.app.PublishApk
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google { url 'https://maven.aliyun.com/repository/google' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.xuexiangjys.XRouter:xrouter-plugin:1.0.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'img-optimizer'
+apply plugin: 'com.xuexiang.xrouter'
+
+def appUpdateUrl = "https://app.unclezs.com/publish/android/version.json"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.unclezs.novel.app"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 4
+        versionName "3.0.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("$rootDir/keystore/uncle-novel.jks")
+            storePassword findProperty("keystore.password")
+            keyAlias "uncle-novel"
+            keyPassword findProperty("keystore.password")
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+        debug {
+            storeFile file("$rootDir/keystore/debug.jks")
+            storePassword "123456"
+            keyAlias "debug"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        def apiKey = findProperty("pgyer.api_key")
+        def frontJsKey = findProperty("pgyer.frontjs_key")
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField "String", "APP_UPDATE_URL", "\"$appUpdateUrl\""
+            buildConfigField "String", "PGYER_API_KEY", "\"$apiKey\""
+            buildConfigField "String", "PGYER_FRONT_JS_KEY", "\"$frontJsKey\""
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            buildConfigField "String", "APP_UPDATE_URL", "\"$appUpdateUrl\""
+            buildConfigField "String", "PGYER_API_KEY", "\"$apiKey\""
+            buildConfigField "String", "PGYER_FRONT_JS_KEY", "\"$frontJsKey\""
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test:runner:1.3.0"
+
+    // lombok
+    compileOnly "org.projectlombok:lombok"
+    annotationProcessor "org.projectlombok:lombok"
+    // logback
+    implementation 'com.github.tony19:logback-android'
+    // uncle-novel
+    implementation 'com.unclezs:novel-analyzer'
+    // 安卓端利用jdk的js接口实现的引擎, 基于rhino，pc端基于nashorn 效果一致
+    implementation 'io.apisense:rhino-android'
+    // x系列
+    implementation 'com.github.xuexiangjys:XUI'
+    implementation "com.github.xuexiangjys.XOrmlite:xormlite-runtime"
+    annotationProcessor "com.github.xuexiangjys.XOrmlite:xormlite-compiler"
+    implementation "com.github.xuexiangjys.XUtil:xutil-core"
+    implementation "com.github.xuexiangjys:XUpdate"
+    implementation "com.github.xuexiangjys.XUpdateAPI:xupdate-easy"
+    implementation "com.github.xuexiangjys.XPage:xpage-lib"
+    annotationProcessor "com.github.xuexiangjys.XPage:xpage-compiler"
+    implementation "com.github.xuexiangjys.XRouter:xrouter-runtime"
+    annotationProcessor "com.github.xuexiangjys.XRouter:xrouter-compiler"
+    // butterknife
+    implementation "com.jakewharton:butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler"
+    // material
+    implementation 'com.google.android.material:material'
+    // androidx
+    implementation 'androidx.appcompat:appcompat'
+    implementation 'androidx.recyclerview:recyclerview'
+    implementation 'androidx.documentfile:documentfile'
+    implementation 'androidx.constraintlayout:constraintlayout'
+    // glide
+    implementation 'com.github.bumptech.glide:glide'
+    // 工具包
+    implementation "cn.hutool:hutool-core"
+    // 模板引擎
+    implementation 'org.apache.velocity:velocity-engine-core'
+    // RxBus
+    implementation 'com.hwangjr.rxbus:rxbus'
+    // 分包
+    implementation "androidx.multidex:multidex"
+    // 下拉刷新
+    implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout'
+    // WebView
+    implementation 'com.github.xuexiangjys.AgentWeb:agentweb-core'
+    // 弹性布局
+    implementation 'com.google.android:flexbox'
+    // 悬浮按钮
+    implementation 'com.github.clans:fab'
+    // 列表侧滑菜单
+    implementation 'com.yanzhenjie.recyclerview:support'
+    // 腾讯的键值对存储mmkv
+    implementation 'com.tencent:mmkv'
+    // 屏幕适配AutoSize
+    implementation 'me.jessyan:autosize'
+    // ANR异常捕获
+    implementation 'com.github.anrwatchdog:anrwatchdog'
+    // 蒲公英SDK
+    implementation 'com.pgyer:analytics'
+}
+
+
+/**
+ * 版本发布
+ */
+task publishApk(type: PublishApk) {
+    version = android.defaultConfig.versionName
+    versionCode = android.defaultConfig.versionCode
+    updateUrl = appUpdateUrl
+    downloadUrl = "https://app.unclezs.com/publish/android/apk/"
+    apk = file("$buildDir/outputs/apk/release/app-release.apk")
+    whatNew = ["1.内测版本发布", "2.欢迎关注公众号[书虫无书荒]"]
+    outDir = file("$rootDir/publish")
+
+    versionRemote = "root@app.unclezs.com:/www/wwwroot/app.unclezs.com/publish/android/"
+    apkRemote = "$versionRemote/apk/"
+}

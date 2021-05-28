@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/selected_all"
+        android:id="@+id/selected_all" />
+    <item
+        android:title="@string/unselected_all"
+        android:id="@+id/unselected_all" />
+    <item
+        android:title="@string/selected_up"
+        android:id="@+id/selected_up" />
+    <item
+        android:title="@string/unselected_up"
+        android:id="@+id/unselected_up" />
+    <item
+        android:title="@string/selected_down"
+        android:id="@+id/selected_down" />
+    <item
+        android:title="@string/unselected_down"
+        android:id="@+id/unselected_down" />
+</menu>

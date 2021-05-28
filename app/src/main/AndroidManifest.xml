@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.unclezs.novel.app">
+
+    <!--进程杀死-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!--外部磁盘读写-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <!-- 访问网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取网络状态 -->
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 网络通信-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取网络信息权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用户手机设置中允许未知来源安装包安装状态为关；-->
+    <!-- Android8.0 以后，如果要安装 apk 需要额外添加权限：-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup"
+        tools:ignore="LockedOrientationActivity">
+
+        <!--        <activity-->
+        <!--            android:name=".views.activity.SplashActivity"-->
+        <!--            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:theme="@style/AppTheme.Launch.App"-->
+        <!--            android:windowSoftInputMode="adjustPan|stateHidden">-->
+
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+        <activity
+            android:name=".views.activity.HomeActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.activity.RuleManagerActivity"
+            android:label="@string/rule_manager"
+            android:theme="@style/AppTheme" />
+
+        <!--通用浏览器-->
+        <activity
+            android:name=".views.exts.webview.AgentWebActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_browser_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <!--fragment的页面容器-->
+        <activity
+            android:name=".base.BaseActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 版本更新提示-->
+        <activity
+            android:name=".utils.update.UpdateTipDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- Webview拦截提示弹窗-->
+        <activity
+            android:name=".views.exts.webview.WebViewInterceptDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- applink的中转页面 -->
+        <activity
+            android:name=".views.exts.XPageTransferActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!--屏幕自适应设计图-->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

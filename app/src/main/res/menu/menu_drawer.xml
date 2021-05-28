@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--侧边栏-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/other"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_search"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_search"
+            android:title="@string/menu_search" />
+        <item
+            android:id="@+id/nav_rule_manager"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_rule_manager"
+            android:title="@string/rule_manager" />
+        <item
+            android:id="@+id/nav_download"
+            android:checkable="false"
+            android:icon="@drawable/ic_download"
+            android:title="@string/menu_download_config" />
+    </group>
+
+    <group
+        android:id="@+id/about"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_site"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_site"
+            android:title="@string/menu_site" />
+        <item
+            android:id="@+id/nav_sponsor"
+            android:checkable="false"
+            android:icon="@drawable/ic_support"
+            android:title="@string/support" />
+        <item
+            android:id="@+id/nav_qq"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_group"
+            android:title="@string/menu_qq" />
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_feedback"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_feedback"
+            android:title="@string/feedback" />
+        <item
+            android:id="@+id/nav_about"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_about"
+            android:title="@string/menu_about" />
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_exit"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_exit"
+            android:title="@string/exit" />
+    </group>
+</menu>

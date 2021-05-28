@@ -1,0 +1,103 @@
+apply plugin: "io.spring.dependency-management"
+
+repositories{
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven { url 'https://oss.sonatype.org/content/repositories/public' }
+    google { url 'https://maven.aliyun.com/repository/google' }
+    maven { url "https://jitpack.io" }
+    maven { url "https://raw.githubusercontent.com/Pgyer/analytics/master" }
+}
+
+dependencyManagement {
+    dependencies {
+        dependency "com.unclezs:novel-analyzer:1.0.3"
+
+        dependencySet("cn.hutool:5.5.9") {
+            entry "hutool-all"
+            entry "hutool-core"
+            entry "hutool-cache"
+            entry "hutool-system"
+        }
+        dependency "org.projectlombok:lombok:1.18.18"
+        // logback
+        dependency "org.slf4j:slf4j-api:1.7.30"
+        dependency 'com.github.tony19:logback-android:2.0.0'
+        // junit
+        dependency "junit:junit:4.13.2"
+        dependency "androidx.test:runner:1.3.0"
+        // gson
+        dependency "com.google.code.gson:gson:2.8.6"
+        // 模板引擎
+        dependency 'org.apache.velocity:velocity-engine-core:2.3'
+        // glide
+        dependency 'com.github.bumptech.glide:glide:4.12.0'
+        // androidx
+        def androidx = "1.1.0"
+        dependency "androidx.annotation:annotation:$androidx"
+        dependency "androidx.appcompat:appcompat:$androidx"
+        dependency "androidx.recyclerview:recyclerview:$androidx"
+        dependency 'androidx.constraintlayout:constraintlayout:2.0.4'
+        dependency "com.google.android.material:material:$androidx"
+        dependency 'androidx.multidex:multidex:2.0.1'
+        dependency 'androidx.documentfile:documentfile:1.0.1'
+        // rxjava
+        dependency 'io.reactivex.rxjava2:rxjava:2.2.20'
+        dependency 'io.reactivex.rxjava2:rxandroid:2.1.1'
+        dependency 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+        dependency 'com.hwangjr.rxbus:rxbus:2.0.1'
+        // x系列
+        dependency "com.github.xuexiangjys:XUI:1.1.7"
+        dependency "com.github.xuexiangjys.XOrmlite:xormlite-runtime:1.0.2"
+        dependency "com.github.xuexiangjys.XOrmlite:xormlite-compiler:1.0.2"
+        dependency "com.github.xuexiangjys.XUtil:xutil-core:2.0.0"
+        dependency "com.github.xuexiangjys:XUpdate:2.0.7"
+        dependency "com.github.xuexiangjys.XUpdateAPI:xupdate-easy:1.0.0"
+        dependency "com.github.xuexiangjys.XPage:xpage-lib:3.1.1"
+        dependency "com.github.xuexiangjys.XPage:xpage-compiler:3.1.1"
+        dependency "com.github.xuexiangjys.XRouter:xrouter-runtime:1.0.1"
+        dependency "com.github.xuexiangjys.XRouter:xrouter-compiler:1.0.1"
+        // butterknife
+        def butterknife = "10.2.3"
+        dependency "com.jakewharton:butterknife:$butterknife"
+        dependency "com.jakewharton:butterknife-compiler:$butterknife"
+        // js
+        dependency 'io.apisense:rhino-android:1.1.1'
+        // 下拉刷新
+        dependency 'com.github.xuexiangjys.SmartRefreshLayout:refresh-header:1.1.5'
+        dependency 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout:1.1.5'
+        // WebView
+        dependency 'com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.0'
+        // 弹性布局
+        dependency 'com.google.android:flexbox:1.1.0'
+        // 悬浮按钮
+        dependency 'com.github.clans:fab:1.6.4'
+        // 列表侧滑菜单
+        dependency 'com.yanzhenjie.recyclerview:support:1.3.2'
+        // 腾讯的键值对存储mmkv
+        dependency 'com.tencent:mmkv:1.0.22'
+        // 屏幕适配AutoSize
+        dependency 'me.jessyan:autosize:1.1.2'
+        // umeng统计
+        dependency 'com.umeng.umsdk:common:9.3.8'
+        dependency 'com.umeng.umsdk:asms:1.2.1'
+        // ANR异常捕获
+        dependency 'com.github.anrwatchdog:anrwatchdog:1.4.0'
+        // 蒲公英SDK
+        dependency 'com.pgyer:analytics:4.1.16'
+    }
+    generatedPomCustomization {
+        enabled = false
+    }
+    resolutionStrategy {
+        cacheChangingModulesFor 0, "seconds"
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        cacheChangingModulesFor 0, "seconds"
+        cacheDynamicVersionsFor 0, "seconds"
+    }
+}

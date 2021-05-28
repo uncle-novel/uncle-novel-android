@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.xuexiang.xui.widget.imageview.RadiusImageView
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            app:srcCompat="@drawable/no_cover"
+            android:id="@+id/cover"
+            android:elevation="10dp"
+            app:riv_corner_radius="5dp"
+            app:riv_border_width="1dp"
+            app:riv_border_color="#d8d8d8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/title"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/author"
+                android:layout_marginTop="1dp"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <LinearLayout
+                android:id="@+id/tags"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.unclezs.novel.app.widget.Tag
+                    android:id="@+id/speaker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="吴儒" />
+
+                <com.unclezs.novel.app.widget.Tag
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="玄幻小说" />
+
+                <com.unclezs.novel.app.widget.Tag
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="已完结" />
+
+                <com.unclezs.novel.app.widget.Tag
+                    android:id="@+id/word_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="644万字" />
+
+            </LinearLayout>
+
+            <com.unclezs.novel.app.widget.LinesTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:id="@+id/introduce"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginEnd="8dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
