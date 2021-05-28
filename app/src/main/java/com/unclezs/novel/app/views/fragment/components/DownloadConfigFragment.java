@@ -1,4 +1,4 @@
-package com.unclezs.novel.app.views.fragment.other;
+package com.unclezs.novel.app.views.fragment.components;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

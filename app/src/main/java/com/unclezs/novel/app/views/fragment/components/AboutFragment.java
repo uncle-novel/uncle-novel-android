@@ -15,14 +15,14 @@
  *
  */
 
-package com.unclezs.novel.app.views.fragment.other;
+package com.unclezs.novel.app.views.fragment.components;
 
 import android.widget.TextView;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.base.NullPresenter;
-import com.unclezs.novel.app.exts.webview.AgentWebActivity;
+import com.unclezs.novel.app.views.exts.webview.AgentWebActivity;
 import com.unclezs.novel.app.utils.Utils;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xui.widget.grouplist.XUIGroupListView;

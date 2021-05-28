@@ -1,4 +1,4 @@
-package com.unclezs.novel.app.exts;
+package com.unclezs.novel.app.views.exts;
 
 import android.os.Bundle;
 

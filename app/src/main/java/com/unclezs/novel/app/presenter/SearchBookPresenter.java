@@ -4,7 +4,7 @@ import com.unclezs.novel.analyzer.model.Novel;
 import com.unclezs.novel.app.base.BasePresenter;
 import com.unclezs.novel.app.db.entity.SearchRecord;
 import com.unclezs.novel.app.model.SearchBookModel;
-import com.unclezs.novel.app.views.fragment.other.SearchBookFragment;
+import com.unclezs.novel.app.views.fragment.components.SearchBookFragment;
 import com.xuexiang.xormlite.AppDataBaseRepository;
 import com.xuexiang.xormlite.db.DBService;
 import com.xuexiang.xutil.data.DateUtils;

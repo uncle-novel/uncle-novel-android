@@ -1,4 +1,4 @@
-package com.unclezs.novel.app.exts.webview;
+package com.unclezs.novel.app.views.exts.webview;
 
 import android.content.Context;
 import android.content.DialogInterface;

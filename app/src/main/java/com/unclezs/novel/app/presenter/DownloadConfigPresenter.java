@@ -4,7 +4,7 @@ import com.hwangjr.rxbus.RxBus;
 import com.unclezs.novel.app.base.BasePresenter;
 import com.unclezs.novel.app.utils.MMKVUtils;
 import com.unclezs.novel.app.views.fragment.download.DownloadingFragment;
-import com.unclezs.novel.app.views.fragment.other.DownloadConfigFragment;
+import com.unclezs.novel.app.views.fragment.components.DownloadConfigFragment;
 import com.xuexiang.xutil.file.FileUtils;
 
 import org.apache.commons.lang3.StringUtils;
