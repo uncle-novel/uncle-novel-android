@@ -10,9 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,6 +22,7 @@ import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.utils.XToastUtils;
+import com.unclezs.novel.app.utils.sdkinit.XUpdateInit;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
 import com.unclezs.novel.app.views.fragment.download.DownloadManagerFragment;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
@@ -95,6 +93,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
             .request();
         initViews();
         initListeners();
+        // 检测新的版本
+        XUpdateInit.checkUpdate(this, false);
     }
 
     @Override

@@ -12,31 +12,36 @@ import com.xuexiang.xupdate.listener.OnUpdateFailureListener;
  */
 public class CustomUpdateFailureListener implements OnUpdateFailureListener {
 
-  /**
-   * 是否需要错误提示
-   */
-  private final boolean mNeedErrorTip;
+    public static final int NO_UPGRADE_CODE = 2004;
+    /**
+     * 是否需要错误提示
+     */
+    private final boolean mNeedErrorTip;
 
-  public CustomUpdateFailureListener() {
-    this(true);
-  }
-
-  public CustomUpdateFailureListener(boolean needErrorTip) {
-    mNeedErrorTip = needErrorTip;
-  }
-
-  /**
-   * 更新失败
-   *
-   * @param error 错误
-   */
-  @Override
-  public void onFailure(UpdateError error) {
-    if (mNeedErrorTip) {
-      XToastUtils.error(error);
+    public CustomUpdateFailureListener() {
+        this(true);
     }
-    if (error.getCode() == UpdateError.ERROR.DOWNLOAD_FAILED) {
-      UpdateTipDialog.show("应用下载失败，是否考虑切换" + UpdateTipDialog.DOWNLOAD_TYPE_NAME + "下载？");
+
+    public CustomUpdateFailureListener(boolean needErrorTip) {
+        mNeedErrorTip = needErrorTip;
     }
-  }
+
+    /**
+     * 更新失败
+     *
+     * @param error 错误
+     */
+    @Override
+    public void onFailure(UpdateError error) {
+        if (mNeedErrorTip) {
+            if (error.getCode() == NO_UPGRADE_CODE) {
+                XToastUtils.success("已经是最新版本");
+            } else {
+                XToastUtils.error(error);
+            }
+        }
+        if (error.getCode() == UpdateError.ERROR.DOWNLOAD_FAILED) {
+            UpdateTipDialog.show("应用下载失败，是否考虑切换" + UpdateTipDialog.DOWNLOAD_TYPE_NAME + "下载？");
+        }
+    }
 }

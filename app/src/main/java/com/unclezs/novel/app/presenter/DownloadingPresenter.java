@@ -100,7 +100,6 @@ public class DownloadingPresenter extends BasePresenter<DownloadingFragment> {
         downloadRecord.setPath(wrapper.getSpider().getSavePath());
         // 添加到下载历史列表
         RxBus.get().post(DownloadRecordFragment.BUS_TAG_ADD_RECORD, downloadRecord);
-        XToastUtils.success("下载完成：" + wrapper.getName());
     }
 
     public void removeTask(SpiderWrapper wrapper) {
@@ -111,18 +110,20 @@ public class DownloadingPresenter extends BasePresenter<DownloadingFragment> {
     }
 
     public void restore() {
-        List<String> names = FileUtil.listFileNames(TMP_DIR);
-        List<SpiderWrapper> tasks = new ArrayList<>();
-        for (String name : names) {
-            String json = FileUtil.readUtf8String(FileUtil.file(TMP_DIR, name));
-            SpiderWrapper task = GsonUtils.parse(json, SpiderWrapper.class);
-            task.setPresenter(this);
-            task.setId(name);
-            task.init(this::onCompleted);
-            task.pause();
-            tasks.add(task);
+        if (FileUtil.exist(TMP_DIR)) {
+            List<String> names = FileUtil.listFileNames(TMP_DIR);
+            List<SpiderWrapper> tasks = new ArrayList<>();
+            for (String name : names) {
+                String json = FileUtil.readUtf8String(FileUtil.file(TMP_DIR, name));
+                SpiderWrapper task = GsonUtils.parse(json, SpiderWrapper.class);
+                task.setPresenter(this);
+                task.setId(name);
+                task.init(this::onCompleted);
+                task.pause();
+                tasks.add(task);
+            }
+            view.addTask(tasks);
         }
-        view.addTask(tasks);
     }
 
     /**

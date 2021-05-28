@@ -27,7 +27,6 @@ import org.jetbrains.annotations.NotNull;
  * @date 2021/05/19 20:05
  */
 public class SuperSearchView extends SearchView {
-    private SearchAutoComplete searchAutoComplete;
 
     public SuperSearchView(@NonNull @NotNull Context context, @Nullable @org.jetbrains.annotations.Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -36,7 +35,7 @@ public class SuperSearchView extends SearchView {
         setIconifiedByDefault(false);
         setSubmitButtonEnabled(true);
         onActionViewExpanded();
-        searchAutoComplete = findViewById(R.id.search_src_text);
+        SearchAutoComplete searchAutoComplete = findViewById(R.id.search_src_text);
         searchAutoComplete.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         searchAutoComplete.setPadding(15, 0, 0, 0);
         searchAutoComplete.setBackgroundColor(Color.TRANSPARENT);

@@ -103,4 +103,5 @@
     <string name="audio">有声</string>
     <string name="novel_audio">有声小说</string>
     <string name="novel_text">文本小说</string>
+    <string name="about_item_update">版本更新</string>
 </resources>

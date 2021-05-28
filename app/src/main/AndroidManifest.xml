@@ -5,9 +5,25 @@
 
     <!--进程杀死-->
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!--外部磁盘读写-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <!-- 访问网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取网络状态 -->
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 网络通信-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取网络信息权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用户手机设置中允许未知来源安装包安装状态为关；-->
+    <!-- Android8.0 以后，如果要安装 apk 需要额外添加权限：-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:name=".App"
@@ -129,6 +145,23 @@
         <meta-data
             android:name="design_height_in_dp"
             android:value="640" />
+
+        <meta-data
+            android:name="PGYER_API_KEY"
+            android:value="e68c2dd372fe0d8e2a9103bd73939fa8" />
+        <meta-data
+            android:name="PGYER_FRONTJS_KEY"
+            android:value="22d213278bde51f9c359d1807d474061" />
+
+        <!--添加新版本检测-->
+        <meta-data
+            android:name="PGYER_FEATURE_CHECK_UNPDATE"
+            android:value="true" />
+
+        <!-- 是否支持热更新 -->
+        <meta-data
+            android:name="PGYER_HOT_UPDATE"
+            android:value="true" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

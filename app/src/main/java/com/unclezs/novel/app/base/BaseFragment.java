@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
-
-import com.umeng.analytics.MobclickAgent;
 import com.unclezs.novel.analyzer.util.GsonUtils;
 import com.xuexiang.xpage.base.XPageActivity;
 import com.xuexiang.xpage.base.XPageFragment;
@@ -35,10 +33,10 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
     protected void initPage() {
         presenter = createPresenter();
         attachView();
-
         initTitle();
         initViews();
         initListeners();
+        setPageName(getPageTitle());
     }
 
     @Override
@@ -97,23 +95,6 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
             root.removeViewAt(0);
             initTitle();
         }
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        MobclickAgent.onPageStart(getPageName());
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        MobclickAgent.onPageEnd(getPageName());
     }
 
     //==============================页面跳转api===================================//
@@ -334,5 +315,4 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
         // 记住，要在xml的父布局加上android:focusable="true" 和 android:focusableInTouchMode="true"
         Utils.hideSoftInputClearFocus(getActivity().getCurrentFocus());
     }
-
 }

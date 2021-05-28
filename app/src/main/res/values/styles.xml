@@ -4,7 +4,6 @@
     <style name="XUITheme" parent="XUIBaseTheme">
         <!--设置默认窗口的动画样式-->
         <item name="android:windowAnimationStyle">@style/WindowAnimStyle</item>
-
         <item name="xui_actionbar_color">@color/colorPrimary</item>
     </style>
 
@@ -14,7 +13,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="xui_actionbar_height">?actionBarSize</item>
+
+        <item name="xui_actionbar_height">50dp</item>
+        <!--StatefulLayout-->
+        <item name="stf_progressbar_size">40dp</item>
+        <item name="stf_tip_img_size">50dp</item>
     </style>
 
     <style name="AppTheme.Launch">
@@ -31,7 +34,8 @@
         <item name="xui_config_splash_company_logo">@drawable/launcher_text</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+    </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!--DialogTheme，用于将Activity作为Dialog的主题-->

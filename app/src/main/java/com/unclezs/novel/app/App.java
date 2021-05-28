@@ -5,9 +5,11 @@ import android.content.Context;
 
 import androidx.multidex.MultiDex;
 
+import com.pgyer.pgyersdk.PgyerSDKManager;
+import com.pgyer.pgyersdk.pgyerenum.FeatureEnum;
 import com.unclezs.novel.app.utils.MMKVUtils;
 import com.unclezs.novel.app.utils.sdkinit.ANRWatchDogInit;
-import com.unclezs.novel.app.utils.sdkinit.UMengInit;
+import com.unclezs.novel.app.utils.sdkinit.PygerInit;
 import com.unclezs.novel.app.utils.sdkinit.XBasicLibInit;
 import com.unclezs.novel.app.utils.sdkinit.XUpdateInit;
 import com.xuexiang.xormlite.annotation.DataBase;
@@ -35,6 +37,7 @@ public class App extends Application {
         super.attachBaseContext(base);
         // 解决4.x运行崩溃的问题
         MultiDex.install(this);
+        PygerInit.init(this);
     }
 
     @Override
@@ -61,8 +64,6 @@ public class App extends Application {
         MMKVUtils.init(this);
         // 版本更新初始化
         XUpdateInit.init(this);
-        // 运营统计数据
-        UMengInit.init(this);
         // ANR监控
         ANRWatchDogInit.init();
     }

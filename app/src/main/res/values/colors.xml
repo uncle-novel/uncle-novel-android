@@ -5,7 +5,7 @@
     <color name="colorAccent">#3b4252</color>
 
     <color name="config_color_select_bg">#FFF1F1F1</color>
-
+    <color name="update_theme_color">#FFFFAC5D</color>
     <color name="xpage_default_actionbar_color">@color/colorPrimary</color>
 
     <!--Toast，可自定义喜欢的颜色-->
@@ -25,6 +25,5 @@
     <color name="app_color_theme_7">#5A9AEF</color> <!-- Blue Jeans -->
     <color name="app_color_theme_8">#AC8FEF</color> <!-- Lavender -->
     <color name="app_color_theme_9">#EE85C1</color> <!-- Pink Rose -->
-
 
 </resources>

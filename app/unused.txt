@@ -1,3 +1,138 @@
+a.a.a.a:
+    public static final boolean a
+    public static final java.lang.String b
+    public static final java.lang.String c
+    public static final java.lang.String d
+    public static final int e
+    public static final java.lang.String f
+a.b.a.a.a:
+    public void <init>(a.b.a.a.f)
+a.b.a.a.c:
+    public void <init>(a.b.a.a.f,android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutVersionCallBack)
+a.b.a.a.f:
+    public static final java.lang.String a
+    public void a()
+    public void a(android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutVersionCallBack)
+    public void b()
+    private java.lang.Object g()
+a.b.a.a:
+    public static final int a
+    public static final int b
+    public static final int c
+    public static final int d
+    public static final int e
+    public static final int f
+    public static final int g
+    public static final char h
+    public static final boolean i
+    public static java.lang.String a(byte[])
+a.b.a.b.d:
+    public static final java.lang.String a
+    public static boolean b
+    public static void a(java.lang.Exception)
+a.b.a.b.f:
+    public static boolean e()
+a.b.a.b.h:
+    public void b(a.b.a.b.k)
+a.b.a.b.j:
+    public static final java.lang.String a
+    public void b(a.b.a.b.k)
+a.b.a.b:
+    public static java.lang.String a(byte[])
+    public static byte[] a(java.lang.String)
+    public static byte[] b(java.lang.String)
+a.b.a.c.a:
+    public a.b.a.c.a a(int)
+a.b.a.c:
+    public static final java.lang.String a
+    public static final int b
+    public static final int c
+    public static final int d
+    public static final int e
+    public static final int f
+    public static final int g
+    public synchronized java.lang.String b(android.content.Context)
+    public int d()
+    public static boolean f()
+    public synchronized int j(android.content.Context)
+    private boolean p(android.content.Context)
+a.b.a.d.a$a:
+    public abstract void a()
+a.b.a.d.a:
+    public void a()
+a.b.a.d:
+    public static java.security.KeyPair a()
+    public static java.security.KeyPair a(int)
+    public static java.security.PrivateKey a(java.io.InputStream)
+    public static java.security.PrivateKey a(java.lang.String)
+    public static java.security.PrivateKey a(byte[])
+    public static byte[] a(byte[],java.security.PrivateKey)
+    public static byte[] a(byte[],java.security.PublicKey)
+    public static java.lang.String b(java.lang.String,java.lang.String)
+    public static java.security.PublicKey b(java.io.InputStream)
+    public static java.security.PublicKey b(byte[])
+    public static java.lang.String c(java.io.InputStream)
+    public static java.security.PrivateKey c(java.lang.String)
+    public static java.security.PrivateKey c(java.lang.String,java.lang.String)
+    public static java.security.PublicKey d(java.lang.String)
+    public static java.security.PublicKey d(java.lang.String,java.lang.String)
+a.b.a.e.c:
+    public static final java.lang.String a
+    public static final java.lang.String b
+    public static final java.lang.String c
+    public static final java.lang.String d
+    public static final java.lang.String e
+    public static final java.lang.String f
+a.b.a.f.a:
+    public java.lang.String d()
+a.b.a.f:
+    public static final java.lang.String a
+    public static void d()
+a.b.a.g:
+    public void <init>(java.lang.String,java.lang.String,a.b.a.i)
+a.b.a.h.a:
+    public static final java.lang.String a
+a.b.a.h:
+    public static final java.lang.String a
+    public static void a(java.lang.String,java.lang.String,a.b.a.i)
+a.b.a.i.a:
+    public static final java.lang.String b
+    public static final java.lang.String c
+    public static java.lang.String d
+    public static final java.lang.String f
+    public static final java.lang.String g
+    public static boolean k
+a.b.a.i.b:
+    public static int b(android.content.Context,float)
+a.b.a.i.c:
+    public static final java.lang.String a
+a.b.a.i.d:
+    public static java.lang.String b
+a.b.a.i.e:
+    public static final java.lang.String a
+    public a.b.a.i.e a(int)
+    public a.b.a.i.e a(java.lang.String)
+    public a.b.a.i.e a(java.lang.String,java.lang.String)
+    public a.b.a.i.e a(java.util.Map)
+    public a.b.a.i.e a(java.util.Map,android.content.Context,java.io.File,java.util.List)
+    public static java.lang.String a(java.util.Map,java.lang.String)
+    public a.b.a.i.e b(java.lang.String,java.lang.String)
+a.b.a.i.f:
+    public java.lang.String a()
+    public void a(java.lang.String,java.io.File,boolean)
+    public void a(java.lang.String,java.lang.String)
+    public void a(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String,boolean)
+    public void a(java.lang.String,java.lang.String,java.io.InputStream,boolean)
+    public java.lang.String c()
+    public void e()
+a.b.a.i.h:
+    public static java.lang.String a
+    public boolean a(java.lang.String)
+a.b.a.l:
+    public static final java.lang.String a
+a.b.a.m:
+    public java.lang.String a(long)
+    public java.lang.String b(long)
 android.support.v4.app.INotificationSideChannel$Stub$Proxy:
     public java.lang.String getInterfaceDescriptor()
 android.support.v4.os.IResultReceiver$Default:
@@ -1487,7 +1622,6 @@ cn.hutool.core.io.FileUtil:
     public static java.io.File createTempFile(java.lang.String,java.lang.String,java.io.File,boolean)
     public static boolean del(java.lang.String)
     public static boolean exist(java.io.File)
-    public static boolean exist(java.lang.String)
     public static boolean exist(java.lang.String,java.lang.String)
     public static java.lang.String extName(java.lang.String)
     public static varargs java.io.File file(java.io.File,java.lang.String[])
@@ -3824,6 +3958,1364 @@ cn.wanghaomiao.xpath.model.JXNode:
     public cn.wanghaomiao.xpath.model.JXNode setText(boolean)
     public cn.wanghaomiao.xpath.model.JXNode setTextVal(java.lang.String)
     public static cn.wanghaomiao.xpath.model.JXNode t(java.lang.String)
+com.arialyy.annotations.AriaConstance:
+    public static final int DOWNLOAD
+    public static final int DOWNLOAD_GROUP
+    public static final java.lang.String NO_URL
+    public static final int UPLOAD
+    public static final int UPLOAD_GROUP
+com.arialyy.annotations.Download$onNoSupportBreakPoint:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onPre:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskCancel:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskComplete:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskFail:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskPre:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskResume:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskRunning:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskStart:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onTaskStop:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Download$onWait:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onPre:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskCancel:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskComplete:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskFail:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskPre:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskRunning:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskStart:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onSubTaskStop:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskCancel:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskComplete:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskFail:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskPre:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskResume:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskRunning:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskStart:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onTaskStop:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.DownloadGroup$onWait:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.M3U8$onPeerComplete:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.M3U8$onPeerFail:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.M3U8$onPeerStart:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onNoSupportBreakPoint:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onPre:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskCancel:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskComplete:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskFail:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskResume:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskRunning:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskStart:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onTaskStop:
+    public abstract java.lang.String[] value()
+com.arialyy.annotations.Upload$onWait:
+    public abstract java.lang.String[] value()
+com.arialyy.aria.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+com.arialyy.aria.core.Aria:
+    public static com.arialyy.aria.core.upload.UploadReceiver upload(java.lang.Object)
+com.arialyy.aria.core.AriaConfig:
+    public static final java.lang.String DOWNLOAD_TEMP_DIR
+    public static final java.lang.String IGNORE_CLASS_KLASS
+    public static final java.lang.String IGNORE_CLASS_MONITOR
+    private static final java.lang.String TAG
+    public static final java.lang.String UPLOAD_TEMP_DIR
+com.arialyy.aria.core.AriaManager:
+    private static final java.lang.String TAG
+    public void delRecord(int,java.lang.String,boolean)
+    public android.content.Context getAPP()
+    public com.arialyy.aria.core.config.AppConfig getAppConfig()
+    public com.arialyy.aria.core.config.DGroupConfig getDGroupConfig()
+    public com.arialyy.aria.core.config.DownloadConfig getDownloadConfig()
+    public java.util.Map getReceiver()
+    public com.arialyy.aria.core.config.UploadConfig getUploadConfig()
+    public com.arialyy.aria.core.AriaManager setDownloadQueueMod(com.arialyy.aria.core.common.QueueMod)
+    public com.arialyy.aria.core.AriaManager setUploadQueueMod(com.arialyy.aria.core.common.QueueMod)
+    com.arialyy.aria.core.upload.UploadReceiver upload(java.lang.Object)
+com.arialyy.aria.core.FtpUrlEntity:
+    public java.net.InetAddress validAddr
+com.arialyy.aria.core.IdEntity:
+    public java.lang.String knowHost
+    public java.lang.String prvPass
+    public java.lang.String pubKey
+    public java.lang.String storePass
+com.arialyy.aria.core.ProtocolType:
+    public static final java.lang.String Default
+    public static final java.lang.String SSL
+    public static final java.lang.String SSLv3
+    public static final java.lang.String TLS
+    public static final java.lang.String TLSv1
+    public static final java.lang.String TLSv1_1
+    public static final java.lang.String TLSv1_2
+com.arialyy.aria.core.TaskRecord:
+    public java.lang.String uGroupHash
+com.arialyy.aria.core.ThreadRecord:
+    public java.lang.String tsUrl
+com.arialyy.aria.core.command.AbsCmdFactory:
+    public abstract com.arialyy.aria.core.command.AbsCmd createCmd(com.arialyy.aria.core.wrapper.AbsTaskWrapper,int,int)
+com.arialyy.aria.core.command.AbsGroupCmd:
+    java.lang.String childUrl
+    com.arialyy.aria.core.task.AbsGroupTask tempTask
+    void <init>(com.arialyy.aria.core.download.AbsGroupTaskWrapper)
+    boolean checkTask()
+    com.arialyy.aria.core.task.AbsTask createTask()
+com.arialyy.aria.core.command.AbsNormalCmd:
+    com.arialyy.aria.core.task.AbsTask createTask()
+    com.arialyy.aria.core.task.AbsTask createTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    com.arialyy.aria.core.task.AbsTask getTask()
+    com.arialyy.aria.core.task.AbsTask getTask(java.lang.String)
+    void removeTask()
+    void removeTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    void resumeTask()
+    void sendWaitState()
+    void sendWaitState(com.arialyy.aria.core.task.AbsTask)
+    void startTask()
+    void stopAll()
+    void stopTask()
+com.arialyy.aria.core.command.AddCmd:
+    public void executeCmd()
+com.arialyy.aria.core.command.CancelAllCmd:
+    public void executeCmd()
+    private void remove(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    private void removeAllDGTask()
+    private void removeAllDTask()
+    private void removeUTask()
+com.arialyy.aria.core.command.CancelCmd:
+    public void executeCmd()
+com.arialyy.aria.core.command.CmdHelper:
+    public static com.arialyy.aria.core.command.AbsGroupCmd createGroupCmd(com.arialyy.aria.core.download.AbsGroupTaskWrapper,int,java.lang.String)
+com.arialyy.aria.core.command.CommandManager:
+    public void add(com.arialyy.aria.core.command.AddCmd)
+    public void cancel(com.arialyy.aria.core.command.CancelCmd)
+    public void cancelAll(com.arialyy.aria.core.command.CancelAllCmd)
+    public void highestPriority(com.arialyy.aria.core.command.HighestPriorityCmd)
+    public void reStart(com.arialyy.aria.core.command.ReStartCmd)
+    public void resumeAll(com.arialyy.aria.core.command.ResumeAllCmd)
+    public void start(com.arialyy.aria.core.command.StartCmd)
+    public void stop(com.arialyy.aria.core.command.StopCmd)
+    public void stopAll(com.arialyy.aria.core.command.StopAllCmd)
+    public void subStart(com.arialyy.aria.core.command.DGSubStartCmd)
+    public void subStop(com.arialyy.aria.core.command.DGSubStopCmd)
+com.arialyy.aria.core.command.DGSubStartCmd:
+    void <init>(com.arialyy.aria.core.download.AbsGroupTaskWrapper)
+    public void executeCmd()
+com.arialyy.aria.core.command.DGSubStopCmd:
+    void <init>(com.arialyy.aria.core.download.AbsGroupTaskWrapper)
+    public void executeCmd()
+com.arialyy.aria.core.command.GroupCmdFactory:
+    public static final int SUB_TASK_START
+    public static final int SUB_TASK_STOP
+    public com.arialyy.aria.core.command.AbsGroupCmd createCmd(com.arialyy.aria.core.download.AbsGroupTaskWrapper,int,java.lang.String)
+    public static com.arialyy.aria.core.command.GroupCmdFactory getInstance()
+com.arialyy.aria.core.command.HighestPriorityCmd:
+    public void executeCmd()
+com.arialyy.aria.core.command.ICmd:
+    public abstract void executeCmd()
+com.arialyy.aria.core.command.NormalCmdFactory:
+    public static final int TASK_CANCEL
+    public static final int TASK_CANCEL_ALL
+    public static final int TASK_CREATE
+    public static final int TASK_HIGHEST_PRIORITY
+    public static final int TASK_RESTART
+    public static final int TASK_RESUME
+    public static final int TASK_RESUME_ALL
+    public static final int TASK_START
+    public static final int TASK_STOP
+    public static final int TASK_STOP_ALL
+    public synthetic bridge com.arialyy.aria.core.command.AbsCmd createCmd(com.arialyy.aria.core.wrapper.AbsTaskWrapper,int,int)
+com.arialyy.aria.core.command.ReStartCmd:
+    public void executeCmd()
+com.arialyy.aria.core.command.ResumeAllCmd:
+    public void executeCmd()
+com.arialyy.aria.core.command.ResumeThread:
+    void <init>(boolean,java.lang.String)
+com.arialyy.aria.core.command.StartCmd:
+    public void executeCmd()
+    private void findAllWaitTask()
+com.arialyy.aria.core.command.StopAllCmd:
+    public void executeCmd()
+com.arialyy.aria.core.command.StopCmd:
+    public void executeCmd()
+com.arialyy.aria.core.common.AbsBuilderTarget:
+    public long add()
+    public com.arialyy.aria.core.common.AbsBuilderTarget ignoreFilePathOccupy()
+    public long setHighestPriority()
+com.arialyy.aria.core.common.AbsNormalTarget:
+    public void cancel()
+    public void cancel(boolean)
+    public java.lang.String getConvertFileSize()
+    public long getCurrentProgress()
+    public java.lang.String getExtendField()
+    public long getFileSize()
+    public int getPercent()
+    public int getTaskState()
+    public boolean isRunning()
+    public long reStart()
+    public void reTry()
+    public void removeRecord()
+    public void save()
+    public boolean taskExists()
+com.arialyy.aria.core.common.CompleteInfo:
+    public java.lang.Object obj
+com.arialyy.aria.core.common.FtpConnectionMode:
+    public static final int DATA_CONNECTION_MODE_ACTIVITY
+    public static final int DATA_CONNECTION_MODE_PASV
+com.arialyy.aria.core.common.FtpOption$FTPServerIdentifier:
+    public static final java.lang.String SYST_AS400
+    public static final java.lang.String SYST_L8
+    public static final java.lang.String SYST_MACOS_PETER
+    public static final java.lang.String SYST_MVS
+    public static final java.lang.String SYST_NETWARE
+    public static final java.lang.String SYST_NT
+    public static final java.lang.String SYST_OS2
+    public static final java.lang.String SYST_OS400
+    public static final java.lang.String SYST_UNIX
+    public static final java.lang.String SYST_UNIX_TRIM_LEADING
+    public static final java.lang.String SYST_VMS
+com.arialyy.aria.core.common.FtpOption:
+    private java.lang.String activeExternalIPAddress
+    private java.lang.String charSet
+    private int maxPort
+    private int minPort
+    private com.arialyy.aria.core.processor.IFtpUploadInterceptor uploadInterceptor
+    public com.arialyy.aria.core.common.FtpOption charSet(java.lang.String)
+    public static java.text.DateFormatSymbols getDateFormatSymbols(java.lang.String)
+    public static java.util.Collection getSupportedLanguageCodes()
+    public com.arialyy.aria.core.common.FtpOption login(java.lang.String,java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption login(java.lang.String,java.lang.String,java.lang.String)
+    public static java.text.DateFormatSymbols lookupDateFormatSymbols(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setActiveExternalIPAddress(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setActivePortRange(int,int)
+    public com.arialyy.aria.core.common.FtpOption setAlias(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setConnectionMode(int)
+    public com.arialyy.aria.core.common.FtpOption setDefaultDateFormatStr(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setImplicit(boolean)
+    public com.arialyy.aria.core.common.FtpOption setProtocol(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setRecentDateFormatStr(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setServerIdentifier(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setServerLanguageCode(java.lang.String)
+    public void setServerTimeZoneId(java.lang.String)
+    public void setShortMonthNames(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setStorePass(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setStorePath(java.lang.String)
+    public com.arialyy.aria.core.common.FtpOption setUploadInterceptor(com.arialyy.aria.core.processor.IFtpUploadInterceptor)
+    private static java.lang.String[] splitShortMonthString(java.lang.String)
+com.arialyy.aria.core.common.HttpOption:
+    private java.lang.String attachment
+    private com.arialyy.aria.core.processor.IHttpFileLenAdapter fileLenAdapter
+    private com.arialyy.aria.core.processor.IHttpFileNameAdapter fileNameAdapter
+    private java.util.Map formFields
+    private java.util.Map headers
+    private java.util.Map params
+    private java.net.Proxy proxy
+    public com.arialyy.aria.core.common.HttpOption addHeader(java.lang.String,java.lang.String)
+    public com.arialyy.aria.core.common.HttpOption addHeaders(java.util.Map)
+    public com.arialyy.aria.core.common.HttpOption setAttachment(java.lang.String)
+    public com.arialyy.aria.core.common.HttpOption setFilNameAdapter(com.arialyy.aria.core.processor.IHttpFileNameAdapter)
+    public com.arialyy.aria.core.common.HttpOption setFileLenAdapter(com.arialyy.aria.core.processor.IHttpFileLenAdapter)
+    public com.arialyy.aria.core.common.HttpOption setFormFields(java.util.Map)
+    public com.arialyy.aria.core.common.HttpOption setParam(java.lang.String,java.lang.String)
+    public com.arialyy.aria.core.common.HttpOption setParams(java.util.Map)
+    public com.arialyy.aria.core.common.HttpOption setRequestType(com.arialyy.aria.core.common.RequestEnum)
+    public com.arialyy.aria.core.common.HttpOption setUrlProxy(java.net.Proxy)
+    public com.arialyy.aria.core.common.HttpOption useServerFileName(boolean)
+com.arialyy.aria.core.common.RecordHandler:
+    protected java.lang.String mFilePath
+com.arialyy.aria.core.common.SFtpOption:
+    private java.lang.String charSet
+    private java.lang.String password
+    private java.lang.String protocol
+    private com.arialyy.aria.core.FtpUrlEntity urlEntity
+    private java.lang.String userName
+    public com.arialyy.aria.core.common.SFtpOption charSet(java.lang.String)
+    public com.arialyy.aria.core.common.SFtpOption login(java.lang.String,java.lang.String)
+    public com.arialyy.aria.core.common.SFtpOption setKnowHostPath(java.lang.String)
+    public com.arialyy.aria.core.common.SFtpOption setProtocol(java.lang.String)
+    public com.arialyy.aria.core.common.SFtpOption setPrvKey(java.lang.String)
+    public com.arialyy.aria.core.common.SFtpOption setPrvKeyPass(java.lang.String)
+    public com.arialyy.aria.core.common.SFtpOption setPubKey(java.lang.String)
+    public void setUrlEntity(com.arialyy.aria.core.FtpUrlEntity)
+com.arialyy.aria.core.common.SubThreadConfig:
+    public static final int TYPE_FTP
+    public static final int TYPE_FTP_DG_SUB
+    public static final int TYPE_HTTP
+    public static final int TYPE_HTTP_DG_SUB
+    public static final int TYPE_M3U8_PEER
+    public java.lang.Object obj
+com.arialyy.aria.core.common.controller.BuilderController:
+    public long add()
+    public long setHighestPriority()
+com.arialyy.aria.core.common.controller.ControllerType:
+    public static final java.lang.Class CREATE_CONTROLLER
+    public static final java.lang.Class TASK_CONTROLLER
+    static void <clinit>()
+com.arialyy.aria.core.common.controller.FeatureController:
+    public static final int ACTION_ADD
+    public static final int ACTION_CANCEL
+    public static final int ACTION_CREATE
+    private static final int ACTION_DEF
+    public static final int ACTION_PRIORITY
+    public static final int ACTION_RESTART
+    public static final int ACTION_RESUME
+    public static final int ACTION_RETRY
+    public static final int ACTION_SAVE
+    public static final int ACTION_STOP
+    public void ignoreFilePathOccupy()
+    public static com.arialyy.aria.core.common.controller.FeatureController newInstance(java.lang.Class,com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+com.arialyy.aria.core.common.controller.INormalFeature:
+    public abstract void cancel()
+    public abstract void cancel(boolean)
+    public abstract long reStart()
+    public abstract void reTry()
+    public abstract void resume()
+    public abstract void resume(boolean)
+    public abstract void save()
+    public abstract void stop()
+com.arialyy.aria.core.common.controller.IStartFeature:
+    public abstract long add()
+    public abstract long create()
+    public abstract long setHighestPriority()
+com.arialyy.aria.core.common.controller.NormalController:
+    public void cancel()
+    public void cancel(boolean)
+    public long reStart()
+    public void reTry()
+    public void resume()
+    public void save()
+com.arialyy.aria.core.config.BaseConfig:
+    private static final java.lang.String TAG
+com.arialyy.aria.core.config.ConfigType:
+    public static final int APP
+    public static final int DOWNLOAD
+    public static final int D_GROUP
+    public static final int UPLOAD
+com.arialyy.aria.core.config.Configuration:
+    static final java.lang.String APP_CONFIG_FILE
+    static final java.lang.String DGROUP_CONFIG_FILE
+    static final java.lang.String DOWNLOAD_CONFIG_FILE
+    private static final java.lang.String TAG
+    static final java.lang.String UPLOAD_CONFIG_FILE
+    public static final java.lang.String XML_FILE
+com.arialyy.aria.core.download.AbsGroupTaskWrapper:
+    public abstract java.util.List getSubTaskWrapper()
+    public void setIgnoreTaskOccupy(boolean)
+    public abstract void setSubTaskWrapper(java.util.List)
+com.arialyy.aria.core.download.DGTaskWrapper:
+    public void setSubNameTemp(java.util.List)
+    public void setUnknownSize(boolean)
+com.arialyy.aria.core.download.DTaskWrapper:
+    private com.arialyy.aria.core.inf.ITaskOption m3u8Option
+    public void generateM3u8Option(java.lang.Class)
+    public java.lang.String getGroupHash()
+    public com.arialyy.aria.core.inf.ITaskOption getM3u8Option()
+    public boolean isGroupTask()
+com.arialyy.aria.core.download.DownloadReceiver:
+    public java.util.List getAllCompleteTask()
+    public java.util.List getAllCompleteTask(int,int)
+    public java.util.List getAllNotCompleteTask()
+    public java.util.List getAllNotCompleteTask(int,int)
+    public java.util.List getDGRunningTask()
+    public java.util.List getDRunningTask()
+    public com.arialyy.aria.core.download.DownloadEntity getDownloadEntity(long)
+    public com.arialyy.aria.core.download.DownloadEntity getFirstDownloadEntity(java.lang.String)
+    public com.arialyy.aria.core.download.DownloadGroupEntity getFtpDirEntity(java.lang.String)
+    public com.arialyy.aria.core.download.DownloadGroupEntity getGroupEntity(long)
+    public com.arialyy.aria.core.download.DownloadGroupEntity getGroupEntity(java.util.List)
+    public java.util.List getGroupTaskList()
+    public java.util.List getGroupTaskList(int,int)
+    public java.util.List getTaskList()
+    public java.util.List getTaskList(int,int)
+    public java.util.List getTotalTaskList()
+    public com.arialyy.aria.core.inf.ReceiverType getType()
+    public com.arialyy.aria.core.download.target.FtpBuilderTarget loadFtp(java.lang.String)
+    public com.arialyy.aria.core.download.target.FtpNormalTarget loadFtp(long)
+    public com.arialyy.aria.core.download.target.FtpDirBuilderTarget loadFtpDir(java.lang.String)
+    public com.arialyy.aria.core.download.target.FtpDirNormalTarget loadFtpDir(long)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget loadGroup(java.util.List)
+    public com.arialyy.aria.core.download.target.GroupNormalTarget loadGroup(long)
+    public void removeAllTask(boolean)
+    public void resumeAllTask()
+    public com.arialyy.aria.core.download.DownloadReceiver setMaxSpeed(int)
+    public void stopAllTask()
+    public boolean taskExists(java.lang.String)
+    public boolean taskExists(java.util.List)
+com.arialyy.aria.core.download.M3U8Entity$1:
+    final synthetic com.arialyy.aria.core.download.M3U8Entity this$0
+    void <init>(com.arialyy.aria.core.download.M3U8Entity)
+com.arialyy.aria.core.download.M3U8Entity$PeerInfo:
+    public int peerId
+    public java.lang.String peerPath
+    public void <init>(int,java.lang.String)
+com.arialyy.aria.core.download.M3U8Entity:
+    public java.lang.String keyFormat
+    public java.lang.String getCacheDir()
+    public java.util.List getCompletedPeer()
+    public java.lang.String getFilePath()
+    public java.lang.String getIv()
+    public java.lang.String getKeyFormat()
+    public java.lang.String getKeyFormatVersion()
+    public java.lang.String getKeyPath()
+    public java.lang.String getKeyUrl()
+    public java.lang.String getMethod()
+    public int getPeerIndex()
+    public int getPeerNum()
+    public void setIv(java.lang.String)
+    public void setKeyFormat(java.lang.String)
+    public void setKeyFormatVersion(java.lang.String)
+    public void setKeyPath(java.lang.String)
+    public void setKeyUrl(java.lang.String)
+    public void setLive(boolean)
+    public void setMethod(java.lang.String)
+    public void setPeerNum(int)
+com.arialyy.aria.core.download.m3u8.M3U8LiveOption:
+    private com.arialyy.aria.core.processor.ILiveTsUrlConverter liveTsUrlConverter
+    private long liveUpdateInterval
+    public com.arialyy.aria.core.download.m3u8.M3U8LiveOption setLiveTsUrlConvert(com.arialyy.aria.core.processor.ILiveTsUrlConverter)
+    public com.arialyy.aria.core.download.m3u8.M3U8LiveOption setM3U8FileUpdateInterval(long)
+com.arialyy.aria.core.download.m3u8.M3U8Option:
+    private int bandWidth
+    private com.arialyy.aria.core.processor.IBandWidthUrlConverter bandWidthUrlConverter
+    private java.lang.String keyPath
+    private com.arialyy.aria.core.processor.IKeyUrlConverter keyUrlConverter
+    private com.arialyy.aria.core.processor.ITsMergeHandler mergeHandler
+    public com.arialyy.aria.core.download.m3u8.M3U8Option generateIndexFile()
+    public com.arialyy.aria.core.download.m3u8.M3U8Option ignoreFailureTs()
+    public com.arialyy.aria.core.download.m3u8.M3U8Option merge(boolean)
+    public com.arialyy.aria.core.download.m3u8.M3U8Option setBandWidth(int)
+    public com.arialyy.aria.core.download.m3u8.M3U8Option setBandWidthUrlConverter(com.arialyy.aria.core.processor.IBandWidthUrlConverter)
+    public com.arialyy.aria.core.download.m3u8.M3U8Option setKeyPath(java.lang.String)
+    public com.arialyy.aria.core.download.m3u8.M3U8Option setKeyUrlConverter(com.arialyy.aria.core.processor.IKeyUrlConverter)
+    public com.arialyy.aria.core.download.m3u8.M3U8Option setMergeHandler(com.arialyy.aria.core.processor.ITsMergeHandler)
+    public com.arialyy.aria.core.download.m3u8.M3U8Option setUseDefConvert(boolean)
+com.arialyy.aria.core.download.m3u8.M3U8VodOption:
+    private long fileSize
+    private int jumpIndex
+    private int maxTsQueueNum
+    private com.arialyy.aria.core.processor.IVodTsUrlConverter vodUrlConverter
+    public long getFileSize()
+    public int getJumpIndex()
+    public com.arialyy.aria.core.download.m3u8.M3U8VodOption setFileSize(long)
+    public com.arialyy.aria.core.download.m3u8.M3U8VodOption setMaxTsQueueNum(int)
+    public com.arialyy.aria.core.download.m3u8.M3U8VodOption setPeerIndex(int)
+    public com.arialyy.aria.core.download.m3u8.M3U8VodOption setVodTsUrlConvert(com.arialyy.aria.core.processor.IVodTsUrlConverter)
+com.arialyy.aria.core.download.target.AbsGroupConfigHandler:
+    private com.arialyy.aria.core.manager.SubTaskManager mSubTaskManager
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    com.arialyy.aria.core.manager.SubTaskManager getSubTaskManager()
+    com.arialyy.aria.core.inf.AbsTarget getTarget()
+    public boolean isRunning()
+    com.arialyy.aria.core.inf.AbsTarget setDirPath(java.lang.String)
+    void setGroupAlias(java.lang.String)
+    public boolean taskExists()
+com.arialyy.aria.core.download.target.DNormalConfigHandler:
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.download.DownloadEntity getEntity()
+    java.lang.String getUrl()
+    public boolean isRunning()
+    void setForceDownload(boolean)
+    public boolean taskExists()
+    com.arialyy.aria.core.inf.AbsTarget updateUrl(java.lang.String)
+com.arialyy.aria.core.download.target.DTargetFactory:
+    public com.arialyy.aria.core.download.target.FtpDirBuilderTarget generateDirBuilderTarget(java.lang.String)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget generateGroupBuilderTarget(java.util.List)
+com.arialyy.aria.core.download.target.FtpBuilderTarget:
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.download.target.FtpBuilderTarget option(com.arialyy.aria.core.common.FtpOption)
+    public com.arialyy.aria.core.download.target.FtpBuilderTarget setFilePath(java.lang.String)
+    public com.arialyy.aria.core.download.target.FtpBuilderTarget setFilePath(java.lang.String,boolean)
+    public com.arialyy.aria.core.download.target.FtpBuilderTarget sftpOption(com.arialyy.aria.core.common.SFtpOption)
+com.arialyy.aria.core.download.target.FtpDirBuilderTarget:
+    private com.arialyy.aria.core.download.target.FtpDirConfigHandler mConfigHandler
+    private java.lang.String url
+    void <init>(java.lang.String)
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.download.DownloadGroupEntity getEntity()
+    public com.arialyy.aria.core.manager.SubTaskManager getSubTaskManager()
+    public com.arialyy.aria.core.download.target.FtpDirBuilderTarget option(com.arialyy.aria.core.common.FtpOption)
+    public com.arialyy.aria.core.download.target.FtpDirBuilderTarget setDirPath(java.lang.String)
+    public com.arialyy.aria.core.download.target.FtpDirBuilderTarget setGroupAlias(java.lang.String)
+com.arialyy.aria.core.download.target.FtpDirNormalTarget:
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.manager.SubTaskManager getSubTaskManager()
+    public boolean isRunning()
+    public com.arialyy.aria.core.download.target.FtpDirNormalTarget modifyDirPath(java.lang.String)
+    public com.arialyy.aria.core.download.target.FtpDirNormalTarget option(com.arialyy.aria.core.common.FtpOption)
+    public boolean taskExists()
+com.arialyy.aria.core.download.target.FtpNormalTarget:
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.download.DownloadEntity getEntity()
+    public boolean isRunning()
+    public com.arialyy.aria.core.download.target.FtpNormalTarget modifyFilePath(java.lang.String)
+    public com.arialyy.aria.core.download.target.FtpNormalTarget option(com.arialyy.aria.core.common.FtpOption)
+    public com.arialyy.aria.core.download.target.FtpNormalTarget sftpOption(com.arialyy.aria.core.common.SFtpOption)
+    public boolean taskExists()
+    public com.arialyy.aria.core.download.target.FtpNormalTarget updateUrl(java.lang.String)
+com.arialyy.aria.core.download.target.GroupBuilderTarget:
+    private com.arialyy.aria.core.download.target.HttpGroupConfigHandler mConfigHandler
+    void <init>(java.util.List)
+    public com.arialyy.aria.core.manager.SubTaskManager getSubTaskManager()
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget ignoreTaskOccupy()
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget option(com.arialyy.aria.core.common.HttpOption)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget setDirPath(java.lang.String)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget setFileSize(long)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget setGroupAlias(java.lang.String)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget setSubFileName(java.util.List)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget setSubTaskFileName(java.util.List)
+    public com.arialyy.aria.core.download.target.GroupBuilderTarget unknownSize()
+com.arialyy.aria.core.download.target.GroupNormalTarget:
+    public com.arialyy.aria.core.manager.SubTaskManager getSubTaskManager()
+    public com.arialyy.aria.core.download.target.GroupNormalTarget ignoreTaskOccupy()
+    public boolean isRunning()
+    public com.arialyy.aria.core.download.target.GroupNormalTarget modifyDirPath(java.lang.String)
+    public com.arialyy.aria.core.download.target.GroupNormalTarget modifySubFileName(java.util.List)
+    public com.arialyy.aria.core.download.target.GroupNormalTarget option(com.arialyy.aria.core.common.HttpOption)
+    public com.arialyy.aria.core.download.target.GroupNormalTarget setFileSize(long)
+    public com.arialyy.aria.core.download.target.GroupNormalTarget setGroupAlias(java.lang.String)
+    public boolean taskExists()
+    public com.arialyy.aria.core.download.target.GroupNormalTarget unknownSize()
+    public com.arialyy.aria.core.download.target.GroupNormalTarget updateUrls(java.util.List)
+com.arialyy.aria.core.download.target.HttpBuilderTarget:
+    public com.arialyy.aria.core.download.target.HttpBuilderTarget m3u8LiveOption(com.arialyy.aria.core.download.m3u8.M3U8LiveOption)
+    public com.arialyy.aria.core.download.target.HttpBuilderTarget m3u8VodOption(com.arialyy.aria.core.download.m3u8.M3U8VodOption)
+    public com.arialyy.aria.core.download.target.HttpBuilderTarget option(com.arialyy.aria.core.common.HttpOption)
+    public com.arialyy.aria.core.download.target.HttpBuilderTarget setFilePath(java.lang.String,boolean)
+com.arialyy.aria.core.download.target.HttpGroupConfigHandler:
+    void setGroupUrl(java.util.List)
+    com.arialyy.aria.core.inf.AbsTarget setSubFileName(java.util.List)
+    com.arialyy.aria.core.inf.AbsTarget updateUrls(java.util.List)
+com.arialyy.aria.core.download.target.HttpNormalTarget:
+    public java.lang.String getContentDisposition()
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.download.DownloadEntity getEntity()
+    public boolean isRunning()
+    public com.arialyy.aria.core.download.target.HttpNormalTarget m3u8LiveOption(com.arialyy.aria.core.download.m3u8.M3U8LiveOption)
+    public com.arialyy.aria.core.download.target.M3U8NormalTarget m3u8VodOption()
+    public com.arialyy.aria.core.download.target.M3U8NormalTarget m3u8VodOption(com.arialyy.aria.core.download.m3u8.M3U8VodOption)
+    public com.arialyy.aria.core.download.target.HttpNormalTarget modifyFilePath(java.lang.String)
+    public com.arialyy.aria.core.download.target.HttpNormalTarget option(com.arialyy.aria.core.common.HttpOption)
+    public boolean taskExists()
+    public com.arialyy.aria.core.download.target.HttpNormalTarget updateUrl(java.lang.String)
+com.arialyy.aria.core.download.target.M3U8NormalTarget:
+    void <init>(com.arialyy.aria.core.download.DTaskWrapper)
+    public void jumPeerIndex(int)
+com.arialyy.aria.core.download.target.TcpBuilderTarget:
+    private com.arialyy.aria.core.download.target.DNormalConfigHandler mConfigHandler
+    void <init>(java.lang.String,int)
+    public com.arialyy.aria.core.download.target.TcpBuilderTarget setFilePath(java.lang.String)
+com.arialyy.aria.core.download.tcp.TcpDelegate:
+    private java.lang.String charset
+    private long heartbeat
+    private java.lang.String heartbeatInfo
+    private java.lang.String params
+    public com.arialyy.aria.core.download.tcp.TcpDelegate setCharset(java.lang.String)
+    public com.arialyy.aria.core.download.tcp.TcpDelegate setHeartbeatInfo(java.lang.String)
+    public com.arialyy.aria.core.download.tcp.TcpDelegate setHeartbeatInterval(long)
+    public com.arialyy.aria.core.download.tcp.TcpDelegate setParam(java.lang.String)
+com.arialyy.aria.core.download.tcp.TcpTaskConfig:
+    private java.lang.String heartbeat
+    private java.lang.String params
+    public java.lang.String getCharset()
+    public java.lang.String getHeartbeat()
+    public long getHeartbeatInterval()
+    public java.lang.String getParams()
+    public void setCharset(java.lang.String)
+    public void setHeartbeat(java.lang.String)
+    public void setHeartbeatInterval(long)
+    public void setParams(java.lang.String)
+com.arialyy.aria.core.event.EventMsgUtil:
+    private static final java.lang.String TAG
+com.arialyy.aria.core.event.PeerIndexEvent:
+    public long createTime
+    public java.lang.String key
+    public int peerIndex
+    public void <init>(java.lang.String,int)
+com.arialyy.aria.core.group.AbsGroupLoader:
+    public void cancel()
+    private boolean checkSubTask(java.lang.String,java.lang.String)
+    protected abstract com.arialyy.aria.core.group.AbsSubDLoadUtil createSubLoader(com.arialyy.aria.core.download.DTaskWrapper,boolean)
+    public long getCurrentProgress()
+    private com.arialyy.aria.core.group.AbsSubDLoadUtil getDownloader(java.lang.String,boolean)
+    void startSubTask(java.lang.String)
+    void stopSubTask(java.lang.String)
+com.arialyy.aria.core.group.AbsGroupLoaderUtil:
+    public void cancel()
+    public long getCurrentLocation()
+    public long getFileSize()
+    public java.lang.String getKey()
+    protected abstract com.arialyy.aria.core.group.AbsGroupLoader getLoader()
+    public com.arialyy.aria.core.inf.IUtil setParams(com.arialyy.aria.core.wrapper.AbsTaskWrapper,com.arialyy.aria.core.listener.IEventListener)
+    public void startSubTask(java.lang.String)
+    public void stopSubTask(java.lang.String)
+com.arialyy.aria.core.group.AbsSubDLoadUtil:
+    public void cancel()
+    public long getCurrentLocation()
+    public long getFileSize()
+    void reStart()
+com.arialyy.aria.core.group.GroupRunState:
+    public boolean isRunning()
+    public void setRunning(boolean)
+com.arialyy.aria.core.group.GroupSendParams:
+    public void <init>(com.arialyy.aria.core.task.AbsGroupTask,com.arialyy.aria.core.common.AbsNormalEntity)
+com.arialyy.aria.core.group.ISubQueue:
+    public abstract void addTask(com.arialyy.aria.core.inf.IUtil)
+    public abstract void clear()
+    public abstract com.arialyy.aria.core.inf.IUtil getNextTask()
+    public abstract void modifyMaxExecNum(int)
+    public abstract void removeAllTask()
+    public abstract void removeTask(com.arialyy.aria.core.inf.IUtil)
+    public abstract void removeTaskFromExecQ(com.arialyy.aria.core.inf.IUtil)
+    public abstract void startTask(com.arialyy.aria.core.inf.IUtil)
+    public abstract void stopAllTask()
+    public abstract void stopTask(com.arialyy.aria.core.inf.IUtil)
+com.arialyy.aria.core.group.SimpleSubQueue:
+    public synthetic bridge void addTask(com.arialyy.aria.core.inf.IUtil)
+    public void clear()
+    public synthetic bridge com.arialyy.aria.core.inf.IUtil getNextTask()
+    public void modifyMaxExecNum(int)
+    public void removeAllTask()
+    public void removeTask(com.arialyy.aria.core.group.AbsSubDLoadUtil)
+    public synthetic bridge void removeTask(com.arialyy.aria.core.inf.IUtil)
+    public synthetic bridge void removeTaskFromExecQ(com.arialyy.aria.core.inf.IUtil)
+    public synthetic bridge void startTask(com.arialyy.aria.core.inf.IUtil)
+    public void stopTask(com.arialyy.aria.core.group.AbsSubDLoadUtil)
+    public synthetic bridge void stopTask(com.arialyy.aria.core.inf.IUtil)
+com.arialyy.aria.core.inf.AbsReceiver:
+    public java.lang.String getKey()
+    public static java.lang.String getKey(com.arialyy.aria.core.inf.IReceiver)
+com.arialyy.aria.core.inf.AbsTarget:
+    public com.arialyy.aria.core.inf.AbsTarget resetState()
+    public com.arialyy.aria.core.inf.AbsTarget setExtendField(java.lang.String)
+com.arialyy.aria.core.inf.IConfigHandler:
+    public abstract com.arialyy.aria.core.common.AbsEntity getEntity()
+    public abstract boolean isRunning()
+    public abstract boolean taskExists()
+com.arialyy.aria.core.inf.IEntity:
+    public static final int STATE_CANCEL
+    public static final int STATE_COMPLETE
+    public static final int STATE_FAIL
+    public static final int STATE_OTHER
+    public static final int STATE_POST_PRE
+    public static final int STATE_PRE
+    public static final int STATE_RUNNING
+    public static final int STATE_STOP
+    public static final int STATE_WAIT
+com.arialyy.aria.core.inf.IOptionConstant:
+    public static final java.lang.String bandWidth
+    public static final java.lang.String bandWidthUrlConverter
+    public static final java.lang.String cacheDir
+    public static final java.lang.String charSet
+    public static final java.lang.String clientConfig
+    public static final java.lang.String fileLenAdapter
+    public static final java.lang.String formFields
+    public static final java.lang.String ftpUrlEntity
+    public static final java.lang.String generateIndexFileTemp
+    public static final java.lang.String headers
+    public static final java.lang.String jumpIndex
+    public static final java.lang.String liveTsUrlConverter
+    public static final java.lang.String liveUpdateInterval
+    public static final java.lang.String maxTsQueueNum
+    public static final java.lang.String mergeFile
+    public static final java.lang.String mergeHandler
+    public static final java.lang.String params
+    public static final java.lang.String proxy
+    public static final java.lang.String requestEnum
+    public static final java.lang.String uploadInterceptor
+    public static final java.lang.String useServerFileName
+    public static final java.lang.String vodUrlConverter
+com.arialyy.aria.core.inf.IReceiver:
+    public abstract void destroy()
+    public abstract java.lang.String getKey()
+    public abstract java.lang.String getTargetName()
+    public abstract com.arialyy.aria.core.inf.ReceiverType getType()
+    public abstract boolean isFragment()
+    public abstract void register()
+    public abstract void unRegister()
+com.arialyy.aria.core.inf.ITargetHandler:
+    public static final int D_FTP
+    public static final int D_HTTP
+    public static final int GROUP_FTP_DIR
+    public static final int GROUP_HTTP
+    public static final int U_FTP
+    public static final int U_HTTP
+    public abstract void add()
+    public abstract void cancel()
+    public abstract void cancel(boolean)
+    public abstract void reStart()
+    public abstract void reTry()
+    public abstract void resume()
+    public abstract void save()
+    public abstract void start()
+    public abstract void stop()
+com.arialyy.aria.core.inf.IThreadStateManager:
+    public static final java.lang.String DATA_ADD_LEN
+    public static final java.lang.String DATA_ERROR_INFO
+    public static final java.lang.String DATA_RETRY
+    public static final java.lang.String DATA_THREAD_LOCATION
+    public static final java.lang.String DATA_THREAD_NAME
+    public static final int STATE_CANCEL
+    public static final int STATE_COMPLETE
+    public static final int STATE_FAIL
+    public static final int STATE_PRE
+    public static final int STATE_RUNNING
+    public static final int STATE_START
+    public static final int STATE_STOP
+    public static final int STATE_UPDATE_PROGRESS
+com.arialyy.aria.core.inf.IUtil:
+    public abstract void cancel()
+    public abstract long getCurrentLocation()
+    public abstract long getFileSize()
+    public abstract java.lang.String getKey()
+    public abstract com.arialyy.aria.core.inf.IUtil setParams(com.arialyy.aria.core.wrapper.AbsTaskWrapper,com.arialyy.aria.core.listener.IEventListener)
+com.arialyy.aria.core.inf.Suggest:
+    public static final java.lang.String TASK_CONTROLLER
+    public static final java.lang.String TO_CONTROLLER
+com.arialyy.aria.core.inf.TaskSchedulerType:
+    public static final int TYPE_CANCEL_AND_NOT_NOTIFY
+    public static final int TYPE_DEFAULT
+    public static final int TYPE_START_AND_RESET_STATE
+    public static final int TYPE_STOP_AND_WAIT
+    public static final int TYPE_STOP_NOT_NEXT
+com.arialyy.aria.core.listener.BaseDListener:
+    public void supportBreakpoint(boolean)
+com.arialyy.aria.core.listener.BaseListener:
+    static final int RUN_SAVE_INTERVAL
+    public void onCancel()
+    public com.arialyy.aria.core.listener.IEventListener setParams(com.arialyy.aria.core.task.AbsTask,android.os.Handler)
+com.arialyy.aria.core.listener.DownloadGroupListener:
+    public void onSubCancel(com.arialyy.aria.core.download.DownloadEntity)
+    public com.arialyy.aria.core.listener.IEventListener setParams(com.arialyy.aria.core.task.AbsTask,android.os.Handler)
+    public void supportBreakpoint(boolean)
+    public void supportBreakpoint(boolean,com.arialyy.aria.core.download.DownloadEntity)
+com.arialyy.aria.core.listener.IDGroupListener:
+    public abstract void onSubCancel(com.arialyy.aria.core.download.DownloadEntity)
+    public abstract void supportBreakpoint(boolean,com.arialyy.aria.core.download.DownloadEntity)
+com.arialyy.aria.core.listener.IDLoadListener:
+    public abstract void supportBreakpoint(boolean)
+com.arialyy.aria.core.listener.IEventListener:
+    public abstract void onCancel()
+    public abstract com.arialyy.aria.core.listener.IEventListener setParams(com.arialyy.aria.core.task.AbsTask,android.os.Handler)
+com.arialyy.aria.core.listener.ISchedulers:
+    public static final java.lang.String ARIA_TASK_INFO_ACTION
+    public static final int CANCEL
+    public static final int CHECK_FAIL
+    public static final int COMPLETE
+    public static final java.lang.String DATA_M3U8_PEER_INDEX
+    public static final java.lang.String DATA_M3U8_PEER_PATH
+    public static final java.lang.String DATA_M3U8_URL
+    public static final int FAIL
+    public static final int IS_M3U8_PEER
+    public static final int IS_SUB_TASK
+    public static final int M3U8_PEER_COMPLETE
+    public static final int M3U8_PEER_FAIL
+    public static final int M3U8_PEER_START
+    public static final int NO_SUPPORT_BREAK_POINT
+    public static final int POST_PRE
+    public static final int PRE
+    public static final int RESUME
+    public static final int RUNNING
+    public static final int START
+    public static final int STOP
+    public static final int SUB_CANCEL
+    public static final int SUB_COMPLETE
+    public static final int SUB_FAIL
+    public static final int SUB_PRE
+    public static final int SUB_RUNNING
+    public static final int SUB_START
+    public static final int SUB_STOP
+    public static final java.lang.String TASK_ENTITY
+    public static final java.lang.String TASK_PERCENT
+    public static final java.lang.String TASK_SPEED
+    public static final java.lang.String TASK_STATE
+    public static final java.lang.String TASK_TYPE
+    public static final int WAIT
+com.arialyy.aria.core.loader.AbsNormalLoader:
+    public final synchronized void cancel()
+    public abstract long getFileSize()
+    public java.lang.String getKey()
+    protected com.arialyy.aria.core.inf.IThreadStateManager getStateManager()
+    protected void onCancel()
+    protected void onPostCancel()
+    public void retryTask()
+com.arialyy.aria.core.loader.AbsNormalLoaderUtil:
+    public void cancel()
+    protected void fail(com.arialyy.aria.exception.AriaException,boolean)
+    public long getCurrentLocation()
+    public long getFileSize()
+    public java.lang.String getKey()
+    public abstract com.arialyy.aria.core.loader.AbsNormalLoader getLoader()
+    public boolean isCancel()
+    public boolean isStop()
+    protected void onCancel()
+    public com.arialyy.aria.core.inf.IUtil setParams(com.arialyy.aria.core.wrapper.AbsTaskWrapper,com.arialyy.aria.core.listener.IEventListener)
+com.arialyy.aria.core.loader.GroupSubThreadStateManager:
+    private boolean mergerSFtp()
+com.arialyy.aria.core.loader.ILoader:
+    public abstract void cancel()
+    public abstract java.lang.String getKey()
+    public abstract boolean isBreak()
+    public abstract boolean isRunning()
+    public abstract void stop()
+com.arialyy.aria.core.loader.ILoaderAdapter:
+    public abstract com.arialyy.aria.core.task.IThreadTask createThreadTask(com.arialyy.aria.core.common.SubThreadConfig)
+    public abstract boolean handleNewTask(com.arialyy.aria.core.TaskRecord,int)
+    public abstract com.arialyy.aria.core.loader.IRecordHandler recordHandler(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+com.arialyy.aria.core.loader.IRecordHandler:
+    public static final java.lang.String RECORD
+    public static final java.lang.String STATE
+    public static final long SUB_LEN
+    public static final java.lang.String SUB_PATH
+    public static final int TYPE_DOWNLOAD
+    public static final int TYPE_M3U8_LIVE
+    public static final int TYPE_M3U8_VOD
+    public static final int TYPE_UPLOAD
+    public abstract void onPre()
+com.arialyy.aria.core.loader.NormalLoader:
+    protected android.os.Looper getLooper()
+    protected void setMaxSpeed(int)
+com.arialyy.aria.core.loader.NormalTTBuilder:
+    public com.arialyy.aria.core.loader.AbsNormalTTBuilderAdapter getAdapter()
+com.arialyy.aria.core.loader.NormalThreadStateManager:
+    private boolean mergerSFtp()
+com.arialyy.aria.core.loader.SubLoader:
+    public void cancel()
+    public long getCurrentProgress()
+    public void retryTask()
+com.arialyy.aria.core.manager.SubTaskManager:
+    private final java.lang.String TAG
+    private com.arialyy.aria.core.download.DGTaskWrapper mEntity
+    public void <init>(com.arialyy.aria.core.download.DGTaskWrapper)
+    private boolean checkUrl(java.lang.String)
+    public void startSubTask(java.lang.String)
+    public void stopSubTask(java.lang.String)
+com.arialyy.aria.core.manager.TaskWrapperManager:
+    private static final java.lang.String TAG
+com.arialyy.aria.core.manager.ThreadTaskManager:
+    private static final int CORE_POOL_NUM
+    public void removeAllThreadTask()
+    public boolean removeSingleTaskThread(java.lang.String,com.arialyy.aria.core.task.IThreadTask)
+com.arialyy.aria.core.manager.UTaskWrapperFactory:
+    private static final java.lang.String TAG
+com.arialyy.aria.core.processor.FtpInterceptHandler$Builder:
+    private java.lang.String newFileName
+    public com.arialyy.aria.core.processor.FtpInterceptHandler build()
+    public com.arialyy.aria.core.processor.FtpInterceptHandler$Builder coverServerFile()
+    public com.arialyy.aria.core.processor.FtpInterceptHandler$Builder resetFileName(java.lang.String)
+    public com.arialyy.aria.core.processor.FtpInterceptHandler$Builder stopUpload()
+com.arialyy.aria.core.processor.FtpInterceptHandler:
+    private boolean coverServerFile
+    private java.lang.String newFileName
+    synthetic void <init>(com.arialyy.aria.core.processor.FtpInterceptHandler$1)
+    static synthetic boolean access$102(com.arialyy.aria.core.processor.FtpInterceptHandler,boolean)
+    static synthetic java.lang.String access$202(com.arialyy.aria.core.processor.FtpInterceptHandler,java.lang.String)
+    public java.lang.String getNewFileName()
+    public boolean isCoverServerFile()
+com.arialyy.aria.core.processor.IBandWidthUrlConverter:
+    public abstract java.lang.String convert(java.lang.String,java.lang.String)
+com.arialyy.aria.core.processor.IFtpUploadInterceptor:
+    public abstract com.arialyy.aria.core.processor.FtpInterceptHandler onIntercept(com.arialyy.aria.core.upload.UploadEntity,java.util.List)
+com.arialyy.aria.core.processor.IKeyUrlConverter:
+    public abstract java.lang.String convert(java.lang.String,java.lang.String,java.lang.String)
+com.arialyy.aria.core.processor.ILiveTsUrlConverter:
+    public abstract java.lang.String convert(java.lang.String,java.lang.String)
+com.arialyy.aria.core.processor.ITsMergeHandler:
+    public abstract boolean merge(com.arialyy.aria.core.download.M3U8Entity,java.util.List)
+com.arialyy.aria.core.processor.IVodTsUrlConverter:
+    public abstract java.util.List convert(java.lang.String,java.util.List)
+com.arialyy.aria.core.processor.ProxyHandler:
+    public java.lang.Object bind(java.lang.Class)
+com.arialyy.aria.core.queue.AbsTaskQueue:
+    public void cancelTask(com.arialyy.aria.core.task.AbsTask)
+    public void cancelTask(com.arialyy.aria.core.task.AbsTask,int)
+    public synthetic bridge void cancelTask(com.arialyy.aria.core.task.ITask)
+    public synthetic bridge void cancelTask(com.arialyy.aria.core.task.ITask,int)
+    public synthetic bridge com.arialyy.aria.core.task.ITask createTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    public com.arialyy.aria.core.queue.pool.BaseCachePool getCachePool()
+    public int getCurrentCachePoolNum()
+    public com.arialyy.aria.core.queue.pool.BaseExecutePool getExecutePool()
+    public abstract int getOldMaxNum()
+    public java.util.List getRunningTask(java.lang.Class)
+    public synthetic bridge com.arialyy.aria.core.task.ITask getTask(java.lang.String)
+    public void resumeTask(com.arialyy.aria.core.task.AbsTask)
+    public synthetic bridge void resumeTask(com.arialyy.aria.core.task.ITask)
+    public void setMaxTaskNum(int)
+    public synthetic bridge void startTask(com.arialyy.aria.core.task.ITask,int)
+    public void stopAllTask()
+    public void stopTask(com.arialyy.aria.core.task.AbsTask)
+    public synthetic bridge void stopTask(com.arialyy.aria.core.task.ITask)
+    public boolean taskExists(java.lang.String)
+    public boolean taskIsRunning(java.lang.String)
+com.arialyy.aria.core.queue.DGroupTaskQueue:
+    public synthetic bridge com.arialyy.aria.core.task.ITask createTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    public int getOldMaxNum()
+    public void maxTaskNum(com.arialyy.aria.core.event.DGMaxNumEvent)
+com.arialyy.aria.core.queue.DTaskQueue:
+    private static final java.lang.String TAG
+    public synthetic bridge com.arialyy.aria.core.task.ITask createTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    public int getOldMaxNum()
+    public void maxTaskNum(com.arialyy.aria.core.event.DMaxNumEvent)
+    public void setTaskHighestPriority(com.arialyy.aria.core.task.DownloadTask)
+    public synthetic bridge void stopTask(com.arialyy.aria.core.task.AbsTask)
+    public void stopTask(com.arialyy.aria.core.task.DownloadTask)
+    public synthetic bridge void stopTask(com.arialyy.aria.core.task.ITask)
+com.arialyy.aria.core.queue.ITaskQueue:
+    public abstract void cancelTask(com.arialyy.aria.core.task.ITask)
+    public abstract void cancelTask(com.arialyy.aria.core.task.ITask,int)
+    public abstract com.arialyy.aria.core.task.ITask createTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    public abstract int getCurrentCachePoolNum()
+    public abstract com.arialyy.aria.core.task.ITask getTask(java.lang.String)
+    public abstract void resumeTask(com.arialyy.aria.core.task.ITask)
+    public abstract void setMaxTaskNum(int)
+    public abstract void startTask(com.arialyy.aria.core.task.ITask,int)
+    public abstract void stopAllTask()
+    public abstract void stopTask(com.arialyy.aria.core.task.ITask)
+    public abstract boolean taskExists(java.lang.String)
+    public abstract boolean taskIsRunning(java.lang.String)
+com.arialyy.aria.core.queue.UTaskQueue:
+    private static final java.lang.String TAG
+    public synthetic bridge com.arialyy.aria.core.task.ITask createTask(com.arialyy.aria.core.wrapper.AbsTaskWrapper)
+    public int getOldMaxNum()
+    public void maxTaskNum(com.arialyy.aria.core.event.UMaxNumEvent)
+com.arialyy.aria.core.queue.pool.BaseCachePool:
+    private static final int MAX_NUM
+    public void clear()
+    public java.util.List getAllTask()
+    public boolean putTaskToFirst(com.arialyy.aria.core.task.AbsTask)
+    public boolean removeTask(java.lang.String)
+    public int size()
+com.arialyy.aria.core.queue.pool.BaseExecutePool:
+    public java.util.List getAllTask()
+    public com.arialyy.aria.core.task.AbsTask pollTask()
+    public void setMaxNum(int)
+com.arialyy.aria.core.queue.pool.IPool:
+    public abstract com.arialyy.aria.core.task.AbsTask getTask(java.lang.String)
+    public abstract com.arialyy.aria.core.task.AbsTask pollTask()
+    public abstract boolean putTask(com.arialyy.aria.core.task.AbsTask)
+    public abstract boolean removeTask(com.arialyy.aria.core.task.AbsTask)
+    public abstract boolean removeTask(java.lang.String)
+    public abstract int size()
+    public abstract boolean taskExits(java.lang.String)
+com.arialyy.aria.core.scheduler.AptNormalTaskListener:
+    public void onTaskFail(com.arialyy.aria.core.task.ITask)
+com.arialyy.aria.core.scheduler.AptSubTaskListener:
+    public void onNoSupportBreakPoint(com.arialyy.aria.core.task.ITask)
+    public void onSubTaskFail(com.arialyy.aria.core.task.ITask,com.arialyy.aria.core.common.AbsNormalEntity)
+com.arialyy.aria.core.scheduler.SubTaskListener:
+    public abstract void onNoSupportBreakPoint(com.arialyy.aria.core.task.ITask)
+com.arialyy.aria.core.task.AbsGroupTask:
+    public void startSubTask(java.lang.String)
+    public void stopSubTask(java.lang.String)
+com.arialyy.aria.core.task.AbsTask:
+    public static final java.lang.String ERROR_INFO_KEY
+    public void cancel()
+    public void cancel(int)
+    public java.lang.String getConvertCurrentProgress()
+    public java.lang.String getConvertFileSize()
+    public java.lang.String getConvertSpeed()
+    public java.lang.String getConvertTimeLeft()
+    public long getCurrentProgress()
+    public java.lang.String getExtendField()
+    public long getSpeed()
+    public int getTimeLeft()
+    public boolean isComplete()
+    public void setHighestPriority(boolean)
+com.arialyy.aria.core.task.AbsThreadTaskAdapter:
+    public void setMaxSpeed(int)
+com.arialyy.aria.core.task.DownloadGroupTask:
+    public com.arialyy.aria.core.download.DownloadGroupEntity getEntity()
+com.arialyy.aria.core.task.DownloadTask:
+    public com.arialyy.aria.core.download.DownloadEntity getDownloadEntity()
+    public java.lang.String getDownloadUrl()
+    public com.arialyy.aria.core.download.DownloadEntity getEntity()
+com.arialyy.aria.core.task.ITask:
+    public static final int DOWNLOAD
+    public static final int DOWNLOAD_GROUP
+    public static final int DOWNLOAD_GROUP_SUB
+    public static final int M3U8_PEER
+    public static final int OTHER
+    public static final int TEMP
+    public static final int UPLOAD
+    public abstract void cancel()
+    public abstract void cancel(int)
+    public abstract boolean isRunning()
+    public abstract void start()
+    public abstract void start(int)
+    public abstract void stop()
+    public abstract void stop(int)
+com.arialyy.aria.core.task.IThreadTask:
+    public abstract void cancel()
+    public abstract int getThreadId()
+    public abstract void setMaxSpeed(int)
+com.arialyy.aria.core.task.IThreadTaskAdapter:
+    public abstract void setMaxSpeed(int)
+com.arialyy.aria.core.task.IThreadTaskObserver:
+    public abstract void updateState(int,android.os.Bundle)
+com.arialyy.aria.core.task.ThreadTask:
+    public void cancel()
+    public void setMaxSpeed(int)
+com.arialyy.aria.core.task.UploadTask:
+    public com.arialyy.aria.core.upload.UploadEntity getEntity()
+com.arialyy.aria.core.upload.UTaskWrapper:
+    public void setTempUrl(java.lang.String)
+com.arialyy.aria.core.upload.UploadReceiver:
+    public java.util.List getAllCompleteTask()
+    public java.util.List getAllCompleteTask(int,int)
+    public java.util.List getAllNotCompleteTask()
+    public java.util.List getAllNotCompleteTask(int,int)
+    public com.arialyy.aria.core.upload.UploadEntity getFirstUploadEntity(java.lang.String)
+    public java.util.List getTaskList()
+    public java.util.List getTaskList(int,int)
+    public com.arialyy.aria.core.inf.ReceiverType getType()
+    public java.util.List getURunningTask()
+    public com.arialyy.aria.core.upload.UploadEntity getUploadEntity(long)
+    public java.util.List getUploadEntity(java.lang.String)
+    public com.arialyy.aria.core.upload.target.HttpBuilderTarget load(java.lang.String)
+    public com.arialyy.aria.core.upload.target.HttpNormalTarget load(long)
+    public com.arialyy.aria.core.upload.target.FtpBuilderTarget loadFtp(java.lang.String)
+    public com.arialyy.aria.core.upload.target.FtpNormalTarget loadFtp(long)
+    public void register()
+    public void removeAllTask(boolean)
+    public com.arialyy.aria.core.upload.UploadReceiver setMaxSpeed(int)
+    public void stopAllTask()
+    public boolean taskExists(java.lang.String)
+    public void unRegister()
+com.arialyy.aria.core.upload.target.FtpBuilderTarget:
+    private com.arialyy.aria.core.upload.target.UNormalConfigHandler mConfigHandler
+    private java.lang.String url
+    void <init>(java.lang.String)
+    public com.arialyy.aria.core.upload.target.FtpBuilderTarget forceUpload()
+    public com.arialyy.aria.core.upload.target.FtpBuilderTarget option(com.arialyy.aria.core.common.FtpOption)
+    public com.arialyy.aria.core.upload.target.FtpBuilderTarget setUploadUrl(java.lang.String)
+    public com.arialyy.aria.core.upload.target.FtpBuilderTarget sftpOption(com.arialyy.aria.core.common.SFtpOption)
+com.arialyy.aria.core.upload.target.FtpNormalTarget:
+    private com.arialyy.aria.core.upload.target.UNormalConfigHandler mConfigHandler
+    void <init>(long)
+    public synthetic bridge com.arialyy.aria.core.common.AbsEntity getEntity()
+    public com.arialyy.aria.core.upload.UploadEntity getEntity()
+    public boolean isRunning()
+    public com.arialyy.aria.core.upload.target.FtpNormalTarget option(com.arialyy.aria.core.common.FtpOption)
+    public com.arialyy.aria.core.upload.target.FtpNormalTarget sftpOption(com.arialyy.aria.core.common.SFtpOption)
+    public boolean taskExists()
+com.arialyy.aria.core.upload.target.HttpBuilderTarget:
+    private com.arialyy.aria.core.upload.target.UNormalConfigHandler mConfigHandler
+    void <init>(java.lang.String)
+    public com.arialyy.aria.core.upload.target.HttpBuilderTarget forceUpload()
+    public com.arialyy.aria.core.upload.target.HttpBuilderTarget option(com.arialyy.aria.core.common.HttpOption)
+    public com.arialyy.aria.core.upload.target.HttpBuilderTarget setUploadUrl(java.lang.String)
+com.arialyy.aria.core.upload.target.HttpNormalTarget:
+    private com.arialyy.aria.core.upload.target.UNormalConfigHandler mConfigHandler
+    void <init>(long)
+    public boolean isRunning()
+    public com.arialyy.aria.core.upload.target.HttpNormalTarget option(com.arialyy.aria.core.common.HttpOption)
+    public void resume()
+    public com.arialyy.aria.core.upload.target.HttpNormalTarget setUploadUrl(java.lang.String)
+    public boolean taskExists()
+com.arialyy.aria.core.upload.target.UNormalConfigHandler:
+    private com.arialyy.aria.core.upload.UploadEntity mEntity
+    private com.arialyy.aria.core.inf.AbsTarget mTarget
+    private com.arialyy.aria.core.upload.UTaskWrapper mWrapper
+    void <init>(com.arialyy.aria.core.inf.AbsTarget,long)
+    public com.arialyy.aria.core.common.AbsEntity getEntity()
+    private com.arialyy.aria.core.upload.UTaskWrapper getTaskWrapper()
+    private void initTarget(long)
+    public boolean isRunning()
+    void setFilePath(java.lang.String)
+    void setTempUrl(java.lang.String)
+    public boolean taskExists()
+com.arialyy.aria.core.upload.target.UTargetFactory:
+    public static volatile com.arialyy.aria.core.upload.target.UTargetFactory INSTANCE
+    public com.arialyy.aria.core.common.AbsBuilderTarget generateBuilderTarget(java.lang.Class,java.lang.String)
+    public com.arialyy.aria.core.common.AbsNormalTarget generateNormalTarget(java.lang.Class,long)
+    public static com.arialyy.aria.core.upload.target.UTargetFactory getInstance()
+com.arialyy.aria.core.wrapper.AbsTaskWrapper:
+    public int getCode()
+    public synthetic bridge com.arialyy.aria.core.inf.IEntity getEntity()
+    public boolean isRefreshInfo()
+    public void setIgnoreFilePathOccupy(boolean)
+    public void setRefreshInfo(boolean)
+    public void setRemoveFile(boolean)
+com.arialyy.aria.core.wrapper.ITaskWrapper:
+    public static final int DG_HTTP
+    public static final int D_FTP
+    public static final int D_FTP_DIR
+    public static final int D_HTTP
+    public static final int D_SFTP
+    public static final int D_TCP
+    public static final int ERROR
+    public static final int M3U8_LIVE
+    public static final int M3U8_VOD
+    public static final int U_FTP
+    public static final int U_HTTP
+    public static final int U_SFTP
+    public static final int U_TCP
+    public static final int U_TCP_PEER
+    public abstract com.arialyy.aria.core.inf.IEntity getEntity()
+    public abstract int getRequestType()
+com.arialyy.aria.exception.AriaFTPException:
+    private static final java.lang.String FTP_EXCEPTION
+com.arialyy.aria.exception.AriaGroupException:
+    private static final java.lang.String FTP_EXCEPTION
+com.arialyy.aria.exception.AriaHTTPException:
+    private static final java.lang.String HTTP_EXCEPTION
+com.arialyy.aria.exception.AriaM3U8Exception:
+    private static final java.lang.String M3U8_EXCEPTION
+com.arialyy.aria.exception.AriaSFTPException:
+    private static final java.lang.String SFTP_EXCEPTION
+com.arialyy.aria.exception.ExceptionFactory:
+    public static final int TYPE_FTP
+    public static final int TYPE_GROUP
+    public static final int TYPE_HTTP
+    public static final int TYPE_M3U8
+    public static final int TYPE_SFTP
+com.arialyy.aria.http.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+com.arialyy.aria.http.ChunkedInputStream:
+    private static final java.lang.String TAG
+    public void <init>(java.io.InputStream,java.lang.String)
+    public boolean isEndOfData()
+com.arialyy.aria.http.ConnectionHelp:
+    private static final java.lang.String TAG
+com.arialyy.aria.http.HttpTaskOption:
+    public java.lang.String getRedirectUrl()
+    public void setAttachment(java.lang.String)
+    public void setCharSet(java.lang.String)
+    public void setFormFields(java.util.Map)
+com.arialyy.aria.http.download.HttpDFileInfoTask:
+    private static final java.lang.String TAG
+com.arialyy.aria.orm.AbsDelegate:
+    static final java.lang.String TAG
+com.arialyy.aria.orm.DBConfig:
+    static final boolean SAVE_IN_SDCARD
+com.arialyy.aria.orm.DatabaseContext:
+    public void <init>(android.content.Context)
+com.arialyy.aria.orm.DelegateFind:
+    int getRowId(android.database.sqlite.SQLiteDatabase,java.lang.Class,java.lang.Object[],java.lang.Object[])
+    int[] getRowId(android.database.sqlite.SQLiteDatabase,java.lang.Class)
+com.arialyy.aria.orm.DelegateWrapper:
+    private static final java.lang.String TAG
+    int getRowId(java.lang.Class,java.lang.Object[],java.lang.Object[])
+    int[] getRowId(java.lang.Class)
+    boolean isExist(java.lang.String,long)
+com.arialyy.aria.orm.SqlHelper:
+    private static final java.lang.String TAG
+com.arialyy.aria.orm.SqlUtil:
+    static java.lang.String getPrimaryName(java.lang.Class)
+com.arialyy.aria.orm.annotation.NoNull:
+    public abstract boolean value()
+com.arialyy.aria.orm.annotation.Primary:
+    public abstract int value()
+com.arialyy.aria.orm.annotation.Table:
+    public abstract java.lang.String tableName()
+com.arialyy.aria.publiccomponent.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+com.arialyy.aria.util.ALog:
+    public static final boolean DEBUG
+    public static final int LOG_CLOSE
+    public static final int LOG_DEFAULT
+    public static final int LOG_LEVEL_ASSERT
+    public static final int LOG_LEVEL_DEBUG
+    public static final int LOG_LEVEL_ERROR
+    public static final int LOG_LEVEL_INFO
+    public static final int LOG_LEVEL_VERBOSE
+    public static final int LOG_LEVEL_WARN
+    public static void j(java.lang.String,java.lang.String)
+    public static void m(java.lang.String,java.util.Map)
+    public static int v(java.lang.String,java.lang.String)
+com.arialyy.aria.util.AriaServiceLoader$LazyLoader:
+    private java.util.Enumeration configs
+    private java.lang.ClassLoader loader
+    private java.util.List pending
+    private java.lang.Class service
+    final synthetic com.arialyy.aria.util.AriaServiceLoader this$0
+    private void <init>(com.arialyy.aria.util.AriaServiceLoader,java.lang.Class,java.lang.ClassLoader)
+    synthetic void <init>(com.arialyy.aria.util.AriaServiceLoader,java.lang.Class,java.lang.ClassLoader,com.arialyy.aria.util.AriaServiceLoader$1)
+    static synthetic java.lang.Object access$100(com.arialyy.aria.util.AriaServiceLoader$LazyLoader,java.lang.String)
+    private void fail(java.lang.Class,java.lang.String)
+    private void fail(java.lang.Class,java.lang.String,java.lang.Throwable)
+    private void fail(java.lang.Class,java.net.URL,int,java.lang.String)
+    private java.lang.Object loadService(java.lang.String)
+    private java.util.List parse(java.lang.Class,java.net.URL)
+    private void parseConfig()
+    private int parseLine(java.lang.Class,java.net.URL,java.io.BufferedReader,int,java.util.List)
+com.arialyy.aria.util.AriaServiceLoader:
+    private static final java.lang.String PREFIX
+    private static final java.lang.String TAG
+    private com.arialyy.aria.util.AriaServiceLoader$LazyLoader lazyLoader
+    private final java.lang.ClassLoader loader
+    private final java.lang.Class service
+    private void <init>(java.lang.Class,java.lang.ClassLoader)
+    public java.lang.Object getService(java.lang.String)
+    public static com.arialyy.aria.util.AriaServiceLoader load(java.lang.Class)
+    public static com.arialyy.aria.util.AriaServiceLoader load(java.lang.Class,java.lang.ClassLoader)
+    public void reload()
+com.arialyy.aria.util.BandwidthLimiter:
+    public synchronized void limitNextBytes()
+com.arialyy.aria.util.BufferedRandomAccessFile:
+    static final long BuffMask_
+    public static final int BuffSz_
+    static final int LogBuffSz_
+    public void <init>(java.lang.String,java.lang.String)
+    public void <init>(java.lang.String,java.lang.String,int)
+com.arialyy.aria.util.CheckUtil:
+    private static final java.lang.String TAG
+    public static boolean checkDownloadUrlsIsEmpty(java.util.List)
+    public static boolean checkIp(java.lang.String)
+    public static void checkMemberClass(java.lang.Class)
+    public static void checkPageParams(int,int)
+    public static void checkUploadPathIsEmpty(java.lang.String)
+    public static boolean ftpIsBadRequest(int)
+com.arialyy.aria.util.CommonUtil:
+    public static final java.lang.String SERVER_CHARSET
+    private static final java.lang.String TAG
+    private static long lastClickTime
+    public static boolean checkMD5(java.lang.String,java.io.InputStream)
+    public static java.lang.String convertFtpChar(java.lang.String,java.lang.String)
+    public static java.lang.String convertSFtpChar(java.lang.String,java.lang.String)
+    public static android.content.Intent createIntent(java.lang.String,java.lang.String)
+    public static java.lang.String formatTime(int)
+    public static int getCoresNum()
+    public static java.lang.reflect.Field[] getFields(java.lang.Class)
+    public static java.lang.String getMd5Code(java.util.List)
+    public static java.util.List getPkgClassName(java.lang.String,java.lang.String)
+    public static java.util.List getPkgClassNames(android.content.Context,java.lang.String)
+    public static java.lang.String getString(java.lang.String,android.content.Context,java.lang.String)
+    public static boolean isFastDoubleClick()
+    public static int keyToHashCode(java.lang.String)
+    public static java.lang.Boolean putString(java.lang.String,android.content.Context,java.lang.String,java.lang.String)
+    public static java.lang.String strCharSetConvert(java.lang.String,java.lang.String)
+com.arialyy.aria.util.ComponentUtil:
+    public static final int COMPONENT_TYPE_FTP
+    public static final int COMPONENT_TYPE_HTTP
+    public static final int COMPONENT_TYPE_M3U8
+    public static final int COMPONENT_TYPE_SFTP
+com.arialyy.aria.util.DbDataHelper:
+    public static java.util.List createHttpSubTask(java.lang.String,java.util.List)
+    public static com.arialyy.aria.core.download.DownloadGroupEntity getDGEntity(long)
+    public static com.arialyy.aria.core.download.DownloadGroupEntity getOrCreateFtpDGEntity(java.lang.String)
+com.arialyy.aria.util.FileUtil:
+    private static final java.lang.String TAG
+    private static boolean checkSDMemorySpace(java.lang.String,long)
+    private static java.util.List compareMountsWithVold(java.util.List,java.util.List)
+    public static java.lang.String createFileName(java.lang.String)
+    public static long getAvailMemory(android.content.Context)
+    private static long getAvailableExternalMemorySize(java.lang.String)
+    public static java.lang.String getFileExtensionName(java.lang.String)
+    private static java.util.List getSDPathList(android.content.Context)
+    private static java.util.List getStorageDirectories()
+    private static long getTotalExternalMemorySize(java.lang.String)
+    public static long getTotalMemory()
+    private static java.util.List getVolumeList(android.content.Context)
+    public static boolean mergeSFtpFile(java.lang.String,java.util.List,long)
+    private static java.util.List readMountsFile()
+    private static java.util.List readVoldFile()
+    public static void saveConfig(java.io.File,java.util.Properties)
+    public static void splitFile(java.lang.String,int)
+com.arialyy.aria.util.IDeleteRecord:
+    public abstract void deleteRecord(com.arialyy.aria.core.common.AbsEntity,boolean,boolean)
+    public abstract void deleteRecord(java.lang.String,boolean,boolean)
+com.arialyy.aria.util.NetUtils:
+    public static final int NETWORK_TYPE_2G
+    public static final int NETWORK_TYPE_3G
+    public static final int NETWORK_TYPE_INVALID
+    public static final int NETWORK_TYPE_WAP
+    public static final int NETWORK_TYPE_WIFI
+    public static int getNetWorkType(android.content.Context)
+    private static boolean isFastMobileNetwork(android.content.Context)
+    public static boolean isWifi(android.content.Context)
+com.arialyy.aria.util.RecordUtil:
+    private static final java.lang.String TAG
+    public static void delNormalTaskRecord(com.arialyy.aria.core.common.AbsNormalEntity,boolean)
+com.arialyy.aria.util.Regular:
+    public static final java.lang.String BANDWIDTH
+    public static final java.lang.String REG_DOUBLE_CHAR_AND_SPACE
+    public static final java.lang.String REG_FILE_NAME
+    public static final java.lang.String REG_IP_V4
+    public static final java.lang.String REG_WINLOD_REPLACE
+com.arialyy.aria.util.SSLContextUtil:
+    private static final java.lang.String TAG
+    public static javax.net.ssl.SSLContext getSSLContext(java.lang.String,java.lang.String,java.lang.String)
+com.arialyy.aria.util.WeakHandler$ChainedRef:
+    public void insertAfter(com.arialyy.aria.util.WeakHandler$ChainedRef)
+    public com.arialyy.aria.util.WeakHandler$WeakRunnable remove(java.lang.Runnable)
+com.arialyy.aria.util.WeakHandler$ExecHandler:
+    void <init>(android.os.Looper)
+    void <init>(android.os.Looper,java.lang.ref.WeakReference)
+    void <init>(java.lang.ref.WeakReference)
+com.arialyy.aria.util.WeakHandler:
+    public void <init>(android.os.Handler$Callback)
+    public void <init>(android.os.Looper)
+    public void <init>(android.os.Looper,android.os.Handler$Callback)
+    public final android.os.Looper getLooper()
+    public final boolean hasMessages(int)
+    public final boolean hasMessages(int,java.lang.Object)
+    public final boolean post(java.lang.Runnable)
+    public final boolean postAtFrontOfQueue(java.lang.Runnable)
+    public final boolean postAtTime(java.lang.Runnable,long)
+    public final boolean postAtTime(java.lang.Runnable,java.lang.Object,long)
+    public final boolean postDelayed(java.lang.Runnable,long)
+    public final void removeCallbacks(java.lang.Runnable)
+    public final void removeCallbacks(java.lang.Runnable,java.lang.Object)
+    public final void removeCallbacksAndMessages(java.lang.Object)
+    public final void removeMessages(int)
+    public final void removeMessages(int,java.lang.Object)
+    public final boolean sendEmptyMessage(int)
+    public final boolean sendEmptyMessageAtTime(int,long)
+    public final boolean sendEmptyMessageDelayed(int,long)
+    public final boolean sendMessage(android.os.Message)
+    public final boolean sendMessageAtFrontOfQueue(android.os.Message)
+    public boolean sendMessageAtTime(android.os.Message,long)
+    public final boolean sendMessageDelayed(android.os.Message,long)
+    private com.arialyy.aria.util.WeakHandler$WeakRunnable wrapRunnable(java.lang.Runnable)
 com.bumptech.glide.GenericTransitionOptions:
     public static com.bumptech.glide.GenericTransitionOptions with(int)
     public static com.bumptech.glide.GenericTransitionOptions with(com.bumptech.glide.request.transition.TransitionFactory)
@@ -3834,13 +5326,14 @@ com.bumptech.glide.Glide:
     private static final java.lang.String TAG
     private com.bumptech.glide.load.engine.prefill.BitmapPreFiller bitmapPreFiller
     public void clearDiskCache()
+    public static void enableHardwareBitmaps()
     public static java.io.File getPhotoCacheDir(android.content.Context)
     public static java.io.File getPhotoCacheDir(android.content.Context,java.lang.String)
     public static void init(android.content.Context,com.bumptech.glide.GlideBuilder)
     public static synchronized void init(com.bumptech.glide.Glide)
     public synchronized varargs void preFillBitmapPool(com.bumptech.glide.load.engine.prefill.PreFillType$Builder[])
     public com.bumptech.glide.MemoryCategory setMemoryCategory(com.bumptech.glide.MemoryCategory)
-    public static synchronized void tearDown()
+    public static void tearDown()
     public static com.bumptech.glide.RequestManager with(android.app.Activity)
     public static com.bumptech.glide.RequestManager with(android.app.Fragment)
     public static com.bumptech.glide.RequestManager with(android.view.View)
@@ -3848,6 +5341,9 @@ com.bumptech.glide.Glide:
 com.bumptech.glide.GlideBuilder$2:
     final synthetic com.bumptech.glide.GlideBuilder this$0
     void <init>(com.bumptech.glide.GlideBuilder,com.bumptech.glide.request.RequestOptions)
+com.bumptech.glide.GlideBuilder$ManualOverrideHardwareBitmapMaxFdCount:
+    final int fdCount
+    void <init>(int)
 com.bumptech.glide.GlideBuilder:
     public com.bumptech.glide.GlideBuilder addGlobalRequestListener(com.bumptech.glide.request.RequestListener)
     public com.bumptech.glide.GlideBuilder setAnimationExecutor(com.bumptech.glide.load.engine.executor.GlideExecutor)
@@ -3869,6 +5365,11 @@ com.bumptech.glide.GlideBuilder:
     public com.bumptech.glide.GlideBuilder setMemorySizeCalculator(com.bumptech.glide.load.engine.cache.MemorySizeCalculator)
     public com.bumptech.glide.GlideBuilder setResizeExecutor(com.bumptech.glide.load.engine.executor.GlideExecutor)
     public com.bumptech.glide.GlideBuilder setSourceExecutor(com.bumptech.glide.load.engine.executor.GlideExecutor)
+com.bumptech.glide.GlideExperiments$Builder:
+    com.bumptech.glide.GlideExperiments$Builder add(com.bumptech.glide.GlideExperiments$Experiment)
+    com.bumptech.glide.GlideExperiments$Builder update(com.bumptech.glide.GlideExperiments$Experiment,boolean)
+com.bumptech.glide.GlideExperiments:
+    com.bumptech.glide.GlideExperiments$Experiment get(java.lang.Class)
 com.bumptech.glide.ListPreloader$PreloadTargetQueue:
     void <init>(int)
 com.bumptech.glide.ListPreloader:
@@ -3899,9 +5400,11 @@ com.bumptech.glide.Registry:
     public com.bumptech.glide.Registry replace(java.lang.Class,java.lang.Class,com.bumptech.glide.load.model.ModelLoaderFactory)
 com.bumptech.glide.RequestBuilder:
     protected void <init>(java.lang.Class,com.bumptech.glide.RequestBuilder)
+    private com.bumptech.glide.RequestBuilder cloneWithNullErrorAndThumbnail()
     public com.bumptech.glide.request.FutureTarget downloadOnly(int,int)
     public com.bumptech.glide.request.target.Target downloadOnly(com.bumptech.glide.request.target.Target)
     public com.bumptech.glide.RequestBuilder error(com.bumptech.glide.RequestBuilder)
+    public com.bumptech.glide.RequestBuilder error(java.lang.Object)
     protected com.bumptech.glide.RequestBuilder getDownloadOnlyRequest()
     public com.bumptech.glide.request.FutureTarget into(int,int)
     public com.bumptech.glide.RequestBuilder load(android.graphics.Bitmap)
@@ -3926,6 +5429,7 @@ com.bumptech.glide.RequestBuilder:
     public com.bumptech.glide.request.FutureTarget submit(int,int)
     public com.bumptech.glide.RequestBuilder thumbnail(float)
     public com.bumptech.glide.RequestBuilder thumbnail(com.bumptech.glide.RequestBuilder)
+    public com.bumptech.glide.RequestBuilder thumbnail(java.util.List)
     public varargs com.bumptech.glide.RequestBuilder thumbnail(com.bumptech.glide.RequestBuilder[])
     public com.bumptech.glide.RequestBuilder transition(com.bumptech.glide.TransitionOptions)
 com.bumptech.glide.RequestManager$ClearTarget:
@@ -4102,8 +5606,9 @@ com.bumptech.glide.load.data.AssetPathFetcher:
 com.bumptech.glide.load.data.ExifOrientationStream:
     private static final int SEGMENT_START_POSITION
 com.bumptech.glide.load.data.HttpUrlFetcher:
-    private static final int INVALID_STATUS_CODE
+    static final int INVALID_STATUS_CODE
     private static final int MAXIMUM_REDIRECTS
+    static final java.lang.String REDIRECT_HEADER_FIELD
     private static final java.lang.String TAG
 com.bumptech.glide.load.data.InputStreamRewinder:
     private static final int MARK_READ_LIMIT
@@ -4288,7 +5793,6 @@ com.bumptech.glide.load.engine.prefill.BitmapPreFiller:
     private final com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool
     private com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner current
     private final com.bumptech.glide.load.DecodeFormat defaultFormat
-    private final android.os.Handler handler
     private final com.bumptech.glide.load.engine.cache.MemoryCache memoryCache
     public void <init>(com.bumptech.glide.load.engine.cache.MemoryCache,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,com.bumptech.glide.load.DecodeFormat)
     varargs com.bumptech.glide.load.engine.prefill.PreFillQueue generateAllocationOrder(com.bumptech.glide.load.engine.prefill.PreFillType[])
@@ -4400,8 +5904,8 @@ com.bumptech.glide.load.model.stream.BaseGlideUrlLoader:
     protected void <init>(com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.load.model.ModelCache)
 com.bumptech.glide.load.model.stream.HttpGlideUrlLoader$Factory:
     public void teardown()
-com.bumptech.glide.load.model.stream.HttpUriLoader$Factory:
-    public void teardown()
+com.bumptech.glide.load.model.stream.HttpUriLoader:
+    public void <init>(com.bumptech.glide.load.model.ModelLoader)
 com.bumptech.glide.load.model.stream.MediaStoreImageThumbLoader$Factory:
     public void teardown()
 com.bumptech.glide.load.model.stream.MediaStoreVideoThumbLoader$Factory:
@@ -4484,6 +5988,11 @@ com.bumptech.glide.load.resource.bitmap.HardwareConfigState:
     private static final int MINIMUM_DECODES_BETWEEN_FD_CHECKS
     static final int MIN_HARDWARE_DIMENSION_O
     private static final int MIN_HARDWARE_DIMENSION_P
+    public static final int NO_MAX_FD_COUNT
+    private static final java.lang.String TAG
+    public boolean areHardwareBitmapsBlocked()
+    public void blockHardwareBitmaps()
+    public void unblockHardwareBitmaps()
 com.bumptech.glide.load.resource.bitmap.LazyBitmapDrawableResource:
     public static com.bumptech.glide.load.resource.bitmap.LazyBitmapDrawableResource obtain(android.content.Context,android.graphics.Bitmap)
     public static com.bumptech.glide.load.resource.bitmap.LazyBitmapDrawableResource obtain(android.content.res.Resources,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap)
@@ -4622,7 +6131,6 @@ com.bumptech.glide.request.BaseRequestOptions:
     public com.bumptech.glide.request.BaseRequestOptions fallback(android.graphics.drawable.Drawable)
     public com.bumptech.glide.request.BaseRequestOptions format(com.bumptech.glide.load.DecodeFormat)
     public com.bumptech.glide.request.BaseRequestOptions frame(long)
-    protected boolean isAutoCloneEnabled()
     public final boolean isDiskCacheStrategySet()
     public final boolean isLocked()
     public final boolean isSkipMemoryCacheSet()
@@ -4637,6 +6145,8 @@ com.bumptech.glide.request.BaseRequestOptions:
     public varargs com.bumptech.glide.request.BaseRequestOptions transform(com.bumptech.glide.load.Transformation[])
     public varargs com.bumptech.glide.request.BaseRequestOptions transforms(com.bumptech.glide.load.Transformation[])
     public com.bumptech.glide.request.BaseRequestOptions useUnlimitedSourceGeneratorsPool(boolean)
+com.bumptech.glide.request.ExperimentalRequestListener:
+    public abstract boolean onResourceReady(java.lang.Object,java.lang.Object,com.bumptech.glide.request.target.Target,com.bumptech.glide.load.DataSource,boolean,boolean)
 com.bumptech.glide.request.RequestFutureTarget:
     public void <init>(int,int)
     void <init>(int,int,boolean,com.bumptech.glide.request.RequestFutureTarget$Waiter)
@@ -4771,6 +6281,12 @@ com.bumptech.glide.util.ContentLengthInputStream:
     public static java.io.InputStream obtain(java.io.InputStream,java.lang.String)
     private static int parseContentLength(java.lang.String)
 com.bumptech.glide.util.ExceptionCatchingInputStream:
+    static void clearQueue()
+    public java.io.IOException getException()
+    public static com.bumptech.glide.util.ExceptionCatchingInputStream obtain(java.io.InputStream)
+    public void release()
+    void setInputStream(java.io.InputStream)
+com.bumptech.glide.util.ExceptionPassthroughInputStream:
     static void clearQueue()
 com.bumptech.glide.util.Executors:
     public static void shutdownAndAwaitTermination(java.util.concurrent.ExecutorService)
@@ -5589,157 +7105,36 @@ com.just.agentweb.widget.indicator.WebIndicator:
     public static final int MAX_UNIFORM_SPEED_DURATION
     public static final int STARTED
     public static final int UN_START
-com.meituan.android.walle.ApkUtil:
-    public static final int APK_CHANNEL_BLOCK_ID
-    public static final int APK_SIGNATURE_SCHEME_V2_BLOCK_ID
-    public static final long APK_SIG_BLOCK_MAGIC_HI
-    public static final long APK_SIG_BLOCK_MAGIC_LO
-    private static final int APK_SIG_BLOCK_MIN_SIZE
-    public static final java.lang.String DEFAULT_CHARSET
-    private static final int UINT16_MAX_VALUE
-    private static final int ZIP_EOCD_COMMENT_LENGTH_FIELD_OFFSET
-    private static final int ZIP_EOCD_REC_MIN_SIZE
-    private static final int ZIP_EOCD_REC_SIG
-com.meituan.android.walle.BuildConfig:
-    public static final java.lang.String APPLICATION_ID
-    public static final java.lang.String BUILD_TYPE
-    public static final boolean DEBUG
-    public static final java.lang.String FLAVOR
-    public static final int VERSION_CODE
-    public static final java.lang.String VERSION_NAME
-com.meituan.android.walle.ChannelInfo:
-    public java.util.Map getExtraInfo()
-com.meituan.android.walle.ChannelReader:
-    public static final java.lang.String CHANNEL_KEY
-com.meituan.android.walle.Pair:
-    public java.lang.Object getSecond()
-com.meituan.android.walle.WalleChannelReader:
-    public static java.lang.String get(android.content.Context,java.lang.String)
-    public static java.lang.String getChannel(android.content.Context)
-    public static java.util.Map getChannelInfoMap(android.content.Context)
-com.scwang.smartrefresh.header.BezierCircleHeader:
-    protected static final int TARGET_DEGREE
-com.scwang.smartrefresh.header.BuildConfig:
-    public static final java.lang.String APPLICATION_ID
-    public static final java.lang.String BUILD_TYPE
-    public static final boolean DEBUG
-    public static final java.lang.String FLAVOR
-    public static final int VERSION_CODE
-    public static final java.lang.String VERSION_NAME
-com.scwang.smartrefresh.header.FunGameBattleCityHeader:
-    protected static final int DEFAULT_BULLET_NUM_SPACING
-    protected static final int DEFAULT_ENEMY_TANK_NUM_SPACING
-    protected static final int DEFAULT_TANK_MAGIC_TOTAL_NUM
-    protected static final float TANK_BARREL_RATIO
-com.scwang.smartrefresh.header.FunGameHitBlockHeader:
-    protected static final int BLOCK_HORIZONTAL_NUM
-    protected static final float BLOCK_POSITION_RATIO
-    protected static final int BLOCK_VERTICAL_NUM
-    protected static final float BLOCK_WIDTH_RATIO
-    protected static final int DEFAULT_ANGLE
-    static final float DIVIDING_LINE_SIZE
-    protected static final float RACKET_POSITION_RATIO
-    protected static final int SPEED
-com.scwang.smartrefresh.header.MaterialHeader:
-    protected static final int CIRCLE_BG_LIGHT
-    protected static final int CIRCLE_DIAMETER
-    protected static final int CIRCLE_DIAMETER_LARGE
-    protected static final float MAX_PROGRESS_ANGLE
-    public static final int SIZE_DEFAULT
-    public static final int SIZE_LARGE
-    public varargs com.scwang.smartrefresh.header.MaterialHeader setColorSchemeColors(int[])
-    public varargs com.scwang.smartrefresh.header.MaterialHeader setColorSchemeResources(int[])
-    public com.scwang.smartrefresh.header.MaterialHeader setShowBezierWave(boolean)
-    public com.scwang.smartrefresh.header.MaterialHeader setSize(int)
-com.scwang.smartrefresh.header.PhoenixHeader:
-    protected static final int ANIMATION_DURATION
-    protected static final float SUN_INITIAL_ROTATE_GROWTH
-com.scwang.smartrefresh.header.StoreHouseHeader:
-    protected static final float mBarDarkAlpha
-    protected static final float mFromAlpha
-    protected static final float mInternalAnimationFactor
-    protected static final int mLoadingAniItemDuration
-    protected static final float mToAlpha
-    public com.scwang.smartrefresh.header.StoreHouseHeader initWithStringArray(int)
-    public com.scwang.smartrefresh.header.StoreHouseHeader setDropHeight(int)
-    public com.scwang.smartrefresh.header.StoreHouseHeader setLineWidth(int)
-    public com.scwang.smartrefresh.header.StoreHouseHeader setLoadingAniDuration(int)
-    public com.scwang.smartrefresh.header.StoreHouseHeader setScale(float)
-com.scwang.smartrefresh.header.TaurusHeader:
-    protected static final int ANIMATION_DURATION
-    protected static final float CENTER_CLOUDS_FINAL_SCALE
-    protected static final float CENTER_CLOUDS_INITIAL_SCALE
-    protected static final int LOADING_ANIMATION_COEFFICIENT
-    protected static final int MAX_WIND_LINE_WIDTH
-    protected static final int MAX_WIND_X_OFFSET
-    protected static final int MIN_WIND_LINE_WIDTH
-    protected static final int MIN_WIND_X_OFFSET
-    protected static final int RANDOM_Y_COEFFICIENT
-    protected static final float SCALE_START_PERCENT
-    protected static final float SIDE_CLOUDS_FINAL_SCALE
-    protected static final float SIDE_CLOUDS_INITIAL_SCALE
-    protected static final int SLOW_DOWN_ANIMATION_COEFFICIENT
-    protected static final int WIND_SET_AMOUNT
-    protected static final int X_SIDE_CLOUDS_SLOW_DOWN_COF
-    protected static final int Y_SIDE_CLOUDS_SLOW_DOWN_COF
-com.scwang.smartrefresh.header.WaterDropHeader:
-    protected static final float MAX_PROGRESS_ANGLE
-com.scwang.smartrefresh.header.WaveSwipeHeader:
-    protected static final float MAX_PROGRESS_ROTATION_RATE
-com.scwang.smartrefresh.header.flyrefresh.MountainSceneView:
-    protected static final int HEIGHT
-    protected static final int TREE_HEIGHT
-    protected static final int TREE_WIDTH
-    protected static final int WIDTH
-com.scwang.smartrefresh.header.fungame.FunGameView:
-    protected static final int STATUS_GAME_FAIL
-    protected static final int STATUS_GAME_FINISHED
-    protected static final int STATUS_GAME_OVER
-    protected static final int STATUS_GAME_PLAY
-    protected static final int STATUS_GAME_PREPARE
-    protected static final float VIEW_HEIGHT_RATIO
-com.scwang.smartrefresh.header.internal.MaterialProgressDrawable:
-    private static final int ANIMATION_DURATION
-    private static final byte ARROW_HEIGHT
-    private static final byte ARROW_HEIGHT_LARGE
-    private static final float ARROW_OFFSET_ANGLE
-    private static final byte ARROW_WIDTH
-    private static final byte ARROW_WIDTH_LARGE
-    private static final float CENTER_RADIUS
-    private static final float CENTER_RADIUS_LARGE
-    private static final byte CIRCLE_DIAMETER
-    private static final byte CIRCLE_DIAMETER_LARGE
-    private static final float COLOR_START_DELAY_OFFSET
-    public static final byte DEFAULT
-    private static final float END_TRIM_START_DELAY_OFFSET
-    private static final float FULL_ROTATION
-    public static final byte LARGE
-    private static final float MAX_PROGRESS_ARC
-    private static final byte NUM_POINTS
-    private static final float START_TRIM_DURATION_OFFSET
-    private static final float STROKE_WIDTH
-    private static final float STROKE_WIDTH_LARGE
-com.scwang.smartrefresh.header.internal.pathview.PathParser:
-    private static final java.lang.String TAG
-com.scwang.smartrefresh.header.material.CircleImageView:
-    protected static final int FILL_SHADOW_COLOR
-    protected static final int KEY_SHADOW_COLOR
-    protected static final int SHADOW_ELEVATION
-    protected static final float SHADOW_RADIUS
-    protected static final float X_OFFSET
-    protected static final float Y_OFFSET
-com.scwang.smartrefresh.header.waterdrop.Circle:
-    public int color
-com.scwang.smartrefresh.header.waterdrop.WaterDropView:
-    protected static final int BACK_ANIM_DURATION
-com.scwang.smartrefresh.header.waveswipe.WaveView:
-    protected static final long DROP_BOUNCE_ANIMATOR_DURATION
-    protected static final long DROP_CIRCLE_ANIMATOR_DURATION
-    protected static final int DROP_REMOVE_ANIMATOR_DURATION
-    protected static final long DROP_VERTEX_ANIMATION_DURATION
-    protected static final float MAX_WAVE_HEIGHT
-    protected static final int SHADOW_COLOR
-    protected static final int WAVE_ANIMATOR_DURATION
+com.pgyer.pgyersdk.PgyerSDKManager$InitSdk:
+    public com.pgyer.pgyersdk.PgyerSDKManager$InitSdk setApiKey(java.lang.String)
+    public com.pgyer.pgyersdk.PgyerSDKManager$InitSdk setEnable(com.pgyer.pgyersdk.pgyerenum.FeatureEnum)
+    public com.pgyer.pgyersdk.PgyerSDKManager$InitSdk setFrontJSToken(java.lang.String)
+com.pgyer.pgyersdk.PgyerSDKManager:
+    public static void checkSoftwareUpdate(android.app.Activity)
+    public static void checkSoftwareUpdate(android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutVersionCallBack)
+    public static void checkVersionUpdate(android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutCallBack)
+    public static void disable(com.pgyer.pgyersdk.pgyerenum.FeatureEnum)
+    public static void disableAll()
+com.pgyer.pgyersdk.api.AnalyticsSdkApi:
+    public static final java.lang.String TAG
+    private void caughtException(java.lang.Exception)
+    private void checkSoftwareUpdate(android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutVersionCallBack)
+    private void checkVersionUpdate(android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutCallBack)
+    private boolean disable()
+com.pgyer.pgyersdk.hotfix.HotFixStopUtil:
+    public static final java.lang.String TAG
+    private boolean initData()
+com.pgyer.pgyersdk.model.CheckSoftModel:
+    public int getBuildBuildVersion()
+    public java.lang.String getBuildShortcutUrl()
+    public java.lang.String getBuildUpdateDescription()
+    public java.lang.String getBuildVersion()
+    public java.lang.String getBuildVersionNo()
+    public java.lang.String getDownloadURL()
+    public java.lang.String getForceUpdateVersion()
+    public java.lang.String getForceUpdateVersionNo()
+    public boolean isBuildHaveNewVersion()
+    public boolean isNeedForceUpdate()
 com.scwang.smartrefresh.layout.BuildConfig:
     public static final java.lang.String APPLICATION_ID
     public static final java.lang.String BUILD_TYPE
@@ -5754,6 +7149,8 @@ com.scwang.smartrefresh.layout.SmartRefreshLayout$9:
 com.scwang.smartrefresh.layout.SmartRefreshLayout$LayoutParams:
     public void <init>(android.view.ViewGroup$MarginLayoutParams)
 com.scwang.smartrefresh.layout.SmartRefreshLayout$RefreshKernelImpl:
+    public com.scwang.smartrefresh.layout.api.RefreshContent getRefreshContent()
+    public com.scwang.smartrefresh.layout.api.RefreshKernel requestDefaultTranslationContentFor(com.scwang.smartrefresh.layout.api.RefreshInternal,boolean)
     public com.scwang.smartrefresh.layout.api.RefreshKernel requestRemeasureHeightFor(com.scwang.smartrefresh.layout.api.RefreshInternal)
 com.scwang.smartrefresh.layout.SmartRefreshLayout:
     public boolean autoLoadMore()
@@ -5774,6 +7171,7 @@ com.scwang.smartrefresh.layout.SmartRefreshLayout:
     public com.scwang.smartrefresh.layout.SmartRefreshLayout finishRefresh()
     public com.scwang.smartrefresh.layout.SmartRefreshLayout finishRefresh(boolean)
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh()
+    public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh(int)
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh(int,boolean)
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh(boolean)
     public com.scwang.smartrefresh.layout.SmartRefreshLayout setDisableContentWhenLoading(boolean)
@@ -5798,8 +7196,12 @@ com.scwang.smartrefresh.layout.SmartRefreshLayout:
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout setEnableLoadMoreWhenContentNotFull(boolean)
     public com.scwang.smartrefresh.layout.SmartRefreshLayout setEnableOverScrollBounce(boolean)
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout setEnableOverScrollBounce(boolean)
+    public com.scwang.smartrefresh.layout.SmartRefreshLayout setEnableOverScrollDrag(boolean)
+    public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout setEnableOverScrollDrag(boolean)
     public com.scwang.smartrefresh.layout.SmartRefreshLayout setEnablePureScrollMode(boolean)
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout setEnablePureScrollMode(boolean)
+    public com.scwang.smartrefresh.layout.SmartRefreshLayout setEnableRefresh(boolean)
+    public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout setEnableRefresh(boolean)
     public com.scwang.smartrefresh.layout.SmartRefreshLayout setEnableScrollContentWhenLoaded(boolean)
     public synthetic bridge com.scwang.smartrefresh.layout.api.RefreshLayout setEnableScrollContentWhenLoaded(boolean)
     public com.scwang.smartrefresh.layout.SmartRefreshLayout setEnableScrollContentWhenRefreshed(boolean)
@@ -5898,6 +7300,8 @@ com.scwang.smartrefresh.layout.adapter.SmartViewHolder:
     public com.scwang.smartrefresh.layout.adapter.SmartViewHolder viewClick(int,com.scwang.smartrefresh.layout.adapter.SmartViewHolder$OnViewItemClickListener,int)
     public com.scwang.smartrefresh.layout.adapter.SmartViewHolder visible(int,int)
 com.scwang.smartrefresh.layout.api.RefreshKernel:
+    public abstract com.scwang.smartrefresh.layout.api.RefreshContent getRefreshContent()
+    public abstract com.scwang.smartrefresh.layout.api.RefreshKernel requestDefaultTranslationContentFor(com.scwang.smartrefresh.layout.api.RefreshInternal,boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshKernel requestRemeasureHeightFor(com.scwang.smartrefresh.layout.api.RefreshInternal)
 com.scwang.smartrefresh.layout.api.RefreshLayout:
     public abstract boolean autoLoadMore()
@@ -5915,6 +7319,7 @@ com.scwang.smartrefresh.layout.api.RefreshLayout:
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout finishLoadMore(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout finishLoadMoreWithNoMoreData()
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh()
+    public abstract com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh(int)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh(int,boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout finishRefresh(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshFooter getRefreshFooter()
@@ -5933,7 +7338,9 @@ com.scwang.smartrefresh.layout.api.RefreshLayout:
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableLoadMore(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableLoadMoreWhenContentNotFull(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableOverScrollBounce(boolean)
+    public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableOverScrollDrag(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnablePureScrollMode(boolean)
+    public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableRefresh(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableScrollContentWhenLoaded(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setEnableScrollContentWhenRefreshed(boolean)
     public abstract com.scwang.smartrefresh.layout.api.RefreshLayout setFooterHeight(float)
@@ -6381,7 +7788,7 @@ com.unclezs.novel.app.App:
     public static final java.lang.String BUS_TAG_EXIT
 com.unclezs.novel.app.BuildConfig:
     public static final java.lang.String APPLICATION_ID
-    public static final java.lang.String APP_ID_UMENG
+    public static final java.lang.String APP_UPDATE_URL
     public static final java.lang.String BUILD_TYPE
     public static final boolean DEBUG
     public static final int VERSION_CODE
@@ -6478,7 +7885,6 @@ com.unclezs.novel.app.utils.SettingUtils:
     public static boolean isFirstOpen()
     public static void setIsFirstOpen(boolean)
 com.unclezs.novel.app.utils.Utils:
-    private static final java.lang.String PRIVACY_URL
     public static boolean isColorDark(int)
 com.unclezs.novel.app.utils.XToastUtils:
     public static void error(int)
@@ -6486,6 +7892,7 @@ com.unclezs.novel.app.utils.XToastUtils:
     public static void error(java.lang.CharSequence,int)
     public static void info(int)
     public static void info(int,int)
+    public static void info(java.lang.CharSequence)
     public static void info(java.lang.CharSequence,int)
     public static void success(int)
     public static void success(int,int)
@@ -6505,23 +7912,12 @@ com.unclezs.novel.app.utils.sdkinit.ANRWatchDogInit:
     private static final int ANR_DURATION
     private static final java.lang.String TAG
     public static com.github.anrwatchdog.ANRWatchDog getANRWatchDog()
-com.unclezs.novel.app.utils.sdkinit.UMengInit:
-    private static final java.lang.String DEFAULT_CHANNEL_ID
-    public static void init()
-    public static void init(android.content.Context)
-    private static void realInit(android.app.Application)
-com.unclezs.novel.app.utils.sdkinit.XUpdateInit:
-    private static final java.lang.String KEY_UPDATE_URL
-    public static void checkUpdate(android.content.Context,boolean)
-com.unclezs.novel.app.utils.update.CustomUpdateParser:
-    public com.xuexiang.xupdate.entity.UpdateEntity parseJson(java.lang.String)
+com.unclezs.novel.app.utils.update.CustomUpdateFailureListener:
+    public static final int NO_UPGRADE_CODE
 com.unclezs.novel.app.utils.update.UpdateTipDialog:
     public static final java.lang.String DOWNLOAD_TYPE_NAME
     private static final java.lang.String DOWNLOAD_URL
     public static final java.lang.String KEY_CONTENT
-com.unclezs.novel.app.utils.update.XHttpUpdateHttpServiceImpl:
-    public void asyncGet(java.lang.String,java.util.Map,com.xuexiang.xupdate.proxy.IUpdateHttpService$Callback)
-    public void asyncPost(java.lang.String,java.util.Map,com.xuexiang.xupdate.proxy.IUpdateHttpService$Callback)
 com.unclezs.novel.app.views.activity.HomeActivity_ViewBinding:
     public void <init>(com.unclezs.novel.app.views.activity.HomeActivity)
 com.unclezs.novel.app.views.adapter.SearchBookAdapter:
@@ -7954,6 +9350,7 @@ com.xuexiang.xui.widget.dialog.BaseDialog:
     public com.xuexiang.xui.widget.dialog.BaseDialog setDialogSize(int,int)
 com.xuexiang.xui.widget.dialog.DialogLoader:
     public com.xuexiang.xui.widget.dialog.DialogLoader setIDialogStrategy(com.xuexiang.xui.widget.dialog.strategy.IDialogStrategy)
+    public android.app.Dialog showConfirmDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,int,android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,java.lang.String[],android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showInputDialog(android.content.Context,int,java.lang.String,java.lang.String,com.xuexiang.xui.widget.dialog.strategy.InputInfo,com.xuexiang.xui.widget.dialog.strategy.InputCallback,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
@@ -8158,6 +9555,7 @@ com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder:
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder negativeColorAttr(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder negativeColorRes(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder negativeFocus(boolean)
+    public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder negativeText(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder neutralColor(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder neutralColor(android.content.res.ColorStateList)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder neutralColorAttr(int)
@@ -8172,6 +9570,7 @@ com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder:
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder positiveColorAttr(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder positiveColorRes(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder positiveFocus(boolean)
+    public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder positiveText(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder progress(boolean,int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder progress(boolean,int,boolean)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder progressIndeterminateStyle(boolean)
@@ -8181,6 +9580,7 @@ com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder:
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder stackingBehavior(com.xuexiang.xui.widget.dialog.materialdialog.StackingBehavior)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder tag(java.lang.Object)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder theme(com.xuexiang.xui.widget.dialog.materialdialog.Theme)
+    public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder title(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder titleColor(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder titleColorAttr(int)
     public com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder titleColorRes(int)
@@ -8192,6 +9592,7 @@ com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog$Builder:
 com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog:
     public void clearSelectedIndices()
     public void clearSelectedIndices(boolean)
+    public final android.widget.TextView getContentView()
     public final android.view.View getCustomView()
     public android.widget.ImageView getIconView()
     public final java.util.ArrayList getItems()
@@ -8216,6 +9617,7 @@ com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog:
     public final void setActionButton(com.xuexiang.xui.widget.dialog.materialdialog.DialogAction,java.lang.CharSequence)
     public final void setContent(int)
     public final varargs void setContent(int,java.lang.Object[])
+    public final void setContent(java.lang.CharSequence)
     public void setIcon(int)
     public void setIcon(android.graphics.drawable.Drawable)
     public void setIconAttribute(int)
@@ -8267,6 +9669,7 @@ com.xuexiang.xui.widget.dialog.materialdialog.simplelist.MaterialSimpleListItem:
     public java.lang.Object getTag()
 com.xuexiang.xui.widget.dialog.strategy.IDialogStrategy:
     public static final int NO_ICON
+    public abstract android.app.Dialog showConfirmDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
     public abstract android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,int,android.content.DialogInterface$OnClickListener)
     public abstract android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,java.lang.String[],android.content.DialogInterface$OnClickListener)
     public abstract android.app.Dialog showInputDialog(android.content.Context,int,java.lang.String,java.lang.String,com.xuexiang.xui.widget.dialog.strategy.InputInfo,com.xuexiang.xui.widget.dialog.strategy.InputCallback,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
@@ -8298,6 +9701,7 @@ com.xuexiang.xui.widget.dialog.strategy.impl.AlertDialogStrategy$3:
 com.xuexiang.xui.widget.dialog.strategy.impl.AlertDialogStrategy:
     public void <init>(int)
     private android.app.AlertDialog$Builder getBuilder(android.content.Context,int)
+    public android.app.Dialog showConfirmDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,int,android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,java.lang.String[],android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showInputDialog(android.content.Context,int,java.lang.String,java.lang.String,com.xuexiang.xui.widget.dialog.strategy.InputInfo,com.xuexiang.xui.widget.dialog.strategy.InputCallback,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
@@ -8323,6 +9727,12 @@ com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy$14:
 com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy$1:
     final synthetic com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy this$0
     void <init>(com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy,android.content.DialogInterface$OnClickListener)
+com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy$2:
+    final synthetic com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy this$0
+    void <init>(com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy,android.content.DialogInterface$OnClickListener)
+com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy$3:
+    final synthetic com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy this$0
+    void <init>(com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy,android.content.DialogInterface$OnClickListener)
 com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy$8:
     final synthetic com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy this$0
     void <init>(com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy,android.content.DialogInterface$OnClickListener)
@@ -8330,6 +9740,7 @@ com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy$9:
     final synthetic com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy this$0
     void <init>(com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy,android.content.DialogInterface$OnClickListener)
 com.xuexiang.xui.widget.dialog.strategy.impl.MaterialDialogStrategy:
+    public android.app.Dialog showConfirmDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,int,android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showContextMenuDialog(android.content.Context,java.lang.String,java.lang.String[],android.content.DialogInterface$OnClickListener)
     public android.app.Dialog showInputDialog(android.content.Context,int,java.lang.String,java.lang.String,com.xuexiang.xui.widget.dialog.strategy.InputInfo,com.xuexiang.xui.widget.dialog.strategy.InputCallback,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener)
@@ -10826,7 +12237,9 @@ com.xuexiang.xui.widget.toast.XToast:
     public static android.widget.Toast info(android.content.Context,int)
     public static android.widget.Toast info(android.content.Context,int,int)
     public static android.widget.Toast info(android.content.Context,int,int,boolean)
+    public static android.widget.Toast info(android.content.Context,java.lang.CharSequence)
     public static android.widget.Toast info(android.content.Context,java.lang.CharSequence,int)
+    public static android.widget.Toast info(android.content.Context,java.lang.CharSequence,int,boolean)
     public static android.widget.Toast normal(android.content.Context,int)
     public static android.widget.Toast normal(android.content.Context,int,int)
     public static android.widget.Toast normal(android.content.Context,int,int,android.graphics.drawable.Drawable)
@@ -10852,33 +12265,11 @@ com.xuexiang.xupdate.BuildConfig:
     public static final int VERSION_CODE
     public static final java.lang.String VERSION_NAME
 com.xuexiang.xupdate.UpdateManager$1:
-    final synthetic com.xuexiang.xupdate.UpdateManager this$0
-    final synthetic com.xuexiang.xupdate.listener.IUpdateParseCallback val$callback
-    void <init>(com.xuexiang.xupdate.UpdateManager,com.xuexiang.xupdate.listener.IUpdateParseCallback)
     public void onParseResult(com.xuexiang.xupdate.entity.UpdateEntity)
 com.xuexiang.xupdate.UpdateManager$2:
-    final synthetic com.xuexiang.xupdate.UpdateManager this$0
-    final synthetic com.xuexiang.xupdate.listener.IUpdateParseCallback val$callback
-    void <init>(com.xuexiang.xupdate.UpdateManager,com.xuexiang.xupdate.listener.IUpdateParseCallback)
     public void onParseResult(com.xuexiang.xupdate.entity.UpdateEntity)
 com.xuexiang.xupdate.UpdateManager$Builder:
-    java.lang.String apkCacheDir
-    android.content.Context context
-    boolean isAutoMode
-    boolean isGet
-    boolean isWifiOnly
-    com.xuexiang.xupdate.service.OnFileDownloadListener onFileDownloadListener
-    java.util.Map params
-    com.xuexiang.xupdate.entity.PromptEntity promptEntity
-    com.xuexiang.xupdate.proxy.IUpdateChecker updateChecker
-    com.xuexiang.xupdate.proxy.IUpdateDownloader updateDownLoader
-    com.xuexiang.xupdate.proxy.IUpdateHttpService updateHttpService
-    com.xuexiang.xupdate.proxy.IUpdateParser updateParser
-    com.xuexiang.xupdate.proxy.IUpdatePrompter updatePrompter
-    java.lang.String updateUrl
-    void <init>(android.content.Context)
     public com.xuexiang.xupdate.UpdateManager$Builder apkCacheDir(java.lang.String)
-    public com.xuexiang.xupdate.UpdateManager build()
     public com.xuexiang.xupdate.UpdateManager$Builder isAutoMode(boolean)
     public com.xuexiang.xupdate.UpdateManager$Builder isGet(boolean)
     public com.xuexiang.xupdate.UpdateManager$Builder isWifiOnly(boolean)
@@ -10894,69 +12285,64 @@ com.xuexiang.xupdate.UpdateManager$Builder:
     public com.xuexiang.xupdate.UpdateManager$Builder supportBackgroundUpdate(boolean)
     public com.xuexiang.xupdate.UpdateManager$Builder themeColor(int)
     public com.xuexiang.xupdate.UpdateManager$Builder topResId(int)
-    public void update()
     public void update(com.xuexiang.xupdate.proxy.IUpdateProxy)
     public com.xuexiang.xupdate.UpdateManager$Builder updateChecker(com.xuexiang.xupdate.proxy.IUpdateChecker)
     public com.xuexiang.xupdate.UpdateManager$Builder updateDownLoader(com.xuexiang.xupdate.proxy.IUpdateDownloader)
     public com.xuexiang.xupdate.UpdateManager$Builder updateHttpService(com.xuexiang.xupdate.proxy.IUpdateHttpService)
     public com.xuexiang.xupdate.UpdateManager$Builder updateParser(com.xuexiang.xupdate.proxy.IUpdateParser)
     public com.xuexiang.xupdate.UpdateManager$Builder updatePrompter(com.xuexiang.xupdate.proxy.IUpdatePrompter)
-    public com.xuexiang.xupdate.UpdateManager$Builder updateUrl(java.lang.String)
 com.xuexiang.xupdate.UpdateManager:
-    private java.lang.ref.WeakReference mContext
-    private com.xuexiang.xupdate.entity.PromptEntity mPromptEntity
-    private com.xuexiang.xupdate.entity.UpdateEntity mUpdateEntity
-    private void <init>(com.xuexiang.xupdate.UpdateManager$Builder)
-    synthetic void <init>(com.xuexiang.xupdate.UpdateManager$Builder,com.xuexiang.xupdate.UpdateManager$1)
     static synthetic com.xuexiang.xupdate.entity.UpdateEntity access$002(com.xuexiang.xupdate.UpdateManager,com.xuexiang.xupdate.entity.UpdateEntity)
     static synthetic com.xuexiang.xupdate.entity.UpdateEntity access$100(com.xuexiang.xupdate.UpdateManager,com.xuexiang.xupdate.entity.UpdateEntity)
-    public void checkVersion()
-    private void doUpdate()
     public void download(java.lang.String,com.xuexiang.xupdate.service.OnFileDownloadListener)
-    public void findNewVersion(com.xuexiang.xupdate.entity.UpdateEntity,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public android.content.Context getContext()
-    public com.xuexiang.xupdate.proxy.IUpdateHttpService getIUpdateHttpService()
-    public boolean isAsyncParser()
-    public void noNewVersion(java.lang.Throwable)
-    public void onAfterCheck()
-    public void onBeforeCheck()
-    public com.xuexiang.xupdate.entity.UpdateEntity parseJson(java.lang.String)
-    public void parseJson(java.lang.String,com.xuexiang.xupdate.listener.IUpdateParseCallback)
-    private com.xuexiang.xupdate.entity.UpdateEntity refreshParams(com.xuexiang.xupdate.entity.UpdateEntity)
     public com.xuexiang.xupdate.UpdateManager setIUpdateProxy(com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public void update()
     public void update(com.xuexiang.xupdate.entity.UpdateEntity)
 com.xuexiang.xupdate.XUpdate:
-    java.lang.String mApkCacheDir
-    private void logForParams(java.util.Map)
-    public static com.xuexiang.xupdate.UpdateManager$Builder newBuild(android.content.Context)
     public static com.xuexiang.xupdate.UpdateManager$Builder newBuild(android.content.Context,java.lang.String)
-    public com.xuexiang.xupdate.XUpdate params(java.util.Map)
+    public com.xuexiang.xupdate.XUpdate param(java.lang.String,java.lang.Object)
     public com.xuexiang.xupdate.XUpdate setApkCacheDir(java.lang.String)
-    public com.xuexiang.xupdate.XUpdate setIFileEncryptor(com.xuexiang.xupdate.proxy.IFileEncryptor)
     public com.xuexiang.xupdate.XUpdate setILogger(com.xuexiang.xupdate.logs.ILogger)
-    public com.xuexiang.xupdate.XUpdate setIUpdateChecker(com.xuexiang.xupdate.proxy.IUpdateChecker)
-    public com.xuexiang.xupdate.XUpdate setIUpdateParser(com.xuexiang.xupdate.proxy.IUpdateParser)
-    public com.xuexiang.xupdate.XUpdate setIUpdatePrompter(com.xuexiang.xupdate.proxy.IUpdatePrompter)
-    public com.xuexiang.xupdate.XUpdate setOnInstallListener(com.xuexiang.xupdate.listener.OnInstallListener)
-    public com.xuexiang.xupdate.XUpdate setOnUpdateFailureListener(com.xuexiang.xupdate.listener.OnUpdateFailureListener)
-    public com.xuexiang.xupdate.XUpdate supportSilentInstall(boolean)
 com.xuexiang.xupdate._XUpdate:
     public static java.lang.String encryptFile(java.io.File)
-    public static java.lang.String getApkCacheDir()
-    public static com.xuexiang.xupdate.proxy.IUpdateChecker getIUpdateChecker()
-    public static com.xuexiang.xupdate.proxy.IUpdateDownloader getIUpdateDownLoader()
-    public static com.xuexiang.xupdate.proxy.IUpdateHttpService getIUpdateHttpService()
-    public static com.xuexiang.xupdate.proxy.IUpdateParser getIUpdateParser()
-    public static com.xuexiang.xupdate.proxy.IUpdatePrompter getIUpdatePrompter()
     public static com.xuexiang.xupdate.listener.OnInstallListener getOnInstallListener()
     public static com.xuexiang.xupdate.listener.OnUpdateFailureListener getOnUpdateFailureListener()
-    public static java.util.Map getParams()
-    public static boolean isAutoMode()
-    public static boolean isGet()
-    public static boolean isShowUpdatePrompter()
-    public static boolean isWifiOnly()
     public static void startInstallApk(android.content.Context,java.io.File)
+com.xuexiang.xupdate.aria.AriaDownloader:
+    public static void enable(android.content.Context)
+com.xuexiang.xupdate.aria.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final java.lang.String LIBRARY_PACKAGE_NAME
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+com.xuexiang.xupdate.easy.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final java.lang.String LIBRARY_PACKAGE_NAME
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+com.xuexiang.xupdate.easy.EasyUpdate:
+    public static void checkUpdate(android.content.Context,com.xuexiang.xupdate.entity.UpdateEntity)
+    public static com.xuexiang.xupdate.UpdateManager$Builder create(android.content.Context,java.lang.String)
+    public static void disableDownloadProxy(android.content.Context)
+    public static void enableDownloadProxy(android.content.Context,com.xuexiang.xupdate.easy.service.IDownloadServiceProxy)
+    public static void setUpdateConfigProvider(com.xuexiang.xupdate.easy.config.IUpdateConfigProvider)
+com.xuexiang.xupdate.easy.config.UpdateConfig:
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setDownloadServiceProxy(com.xuexiang.xupdate.easy.service.IDownloadServiceProxy)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setFileEncryptor(com.xuexiang.xupdate.proxy.IFileEncryptor)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setIsPostJson(boolean)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setIsSupportSilentInstall(boolean)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setOnInstallListener(com.xuexiang.xupdate.listener.OnInstallListener)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setOnUpdateFailureListener(com.xuexiang.xupdate.listener.OnUpdateFailureListener)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setParams(java.util.Map)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setTimeout(long)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setUpdateDownloader(com.xuexiang.xupdate.proxy.IUpdateDownloader)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setUpdateParser(com.xuexiang.xupdate.proxy.IUpdateParser)
+    public com.xuexiang.xupdate.easy.config.UpdateConfig setUpdatePrompter(com.xuexiang.xupdate.proxy.IUpdatePrompter)
 com.xuexiang.xupdate.listener.IUpdateParseCallback:
     public abstract void onParseResult(com.xuexiang.xupdate.entity.UpdateEntity)
 com.xuexiang.xupdate.logs.LogcatLogger:
@@ -10966,7 +12352,6 @@ com.xuexiang.xupdate.logs.UpdateLog:
     private static final int MAX_LOG_PRIORITY
     private static final int MIN_LOG_PRIORITY
     public static void dTag(java.lang.String,java.lang.String)
-    public static void e(java.lang.String)
     public static void e(java.lang.String,java.lang.Throwable)
     public static void eTag(java.lang.String,java.lang.String)
     public static void eTag(java.lang.String,java.lang.String,java.lang.Throwable)
@@ -10982,110 +12367,17 @@ com.xuexiang.xupdate.logs.UpdateLog:
 com.xuexiang.xupdate.proxy.IFileEncryptor:
     public abstract java.lang.String encryptFile(java.io.File)
 com.xuexiang.xupdate.proxy.IUpdateChecker:
-    public abstract void checkVersion(boolean,java.lang.String,java.util.Map,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public abstract void noNewVersion(java.lang.Throwable)
-    public abstract void onAfterCheck()
-    public abstract void onBeforeCheck()
     public abstract void processCheckResult(java.lang.String,com.xuexiang.xupdate.proxy.IUpdateProxy)
-com.xuexiang.xupdate.proxy.IUpdateHttpService$Callback:
-    public abstract void onError(java.lang.Throwable)
-    public abstract void onSuccess(java.lang.String)
-com.xuexiang.xupdate.proxy.IUpdateHttpService$DownloadCallback:
-    public abstract void onError(java.lang.Throwable)
-    public abstract void onProgress(float,long)
-    public abstract void onStart()
-    public abstract void onSuccess(java.io.File)
-com.xuexiang.xupdate.proxy.IUpdateHttpService:
-    public abstract void asyncGet(java.lang.String,java.util.Map,com.xuexiang.xupdate.proxy.IUpdateHttpService$Callback)
-    public abstract void asyncPost(java.lang.String,java.util.Map,com.xuexiang.xupdate.proxy.IUpdateHttpService$Callback)
-com.xuexiang.xupdate.proxy.IUpdateParser:
-    public abstract boolean isAsyncParser()
-    public abstract com.xuexiang.xupdate.entity.UpdateEntity parseJson(java.lang.String)
-    public abstract void parseJson(java.lang.String,com.xuexiang.xupdate.listener.IUpdateParseCallback)
-com.xuexiang.xupdate.proxy.IUpdatePrompter:
-    public abstract void showPrompt(com.xuexiang.xupdate.entity.UpdateEntity,com.xuexiang.xupdate.proxy.IUpdateProxy,com.xuexiang.xupdate.entity.PromptEntity)
-com.xuexiang.xupdate.proxy.IUpdateProxy:
-    public abstract void checkVersion()
-    public abstract void findNewVersion(com.xuexiang.xupdate.entity.UpdateEntity,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public abstract android.content.Context getContext()
-    public abstract com.xuexiang.xupdate.proxy.IUpdateHttpService getIUpdateHttpService()
-    public abstract boolean isAsyncParser()
-    public abstract void noNewVersion(java.lang.Throwable)
-    public abstract void onAfterCheck()
-    public abstract void onBeforeCheck()
-    public abstract com.xuexiang.xupdate.entity.UpdateEntity parseJson(java.lang.String)
-    public abstract void parseJson(java.lang.String,com.xuexiang.xupdate.listener.IUpdateParseCallback)
-    public abstract void update()
-com.xuexiang.xupdate.proxy.impl.AbstractUpdateParser:
-    public boolean isAsyncParser()
-    public void parseJson(java.lang.String,com.xuexiang.xupdate.listener.IUpdateParseCallback)
-com.xuexiang.xupdate.proxy.impl.AbstractUpdateProxy:
-    public void noNewVersion(java.lang.Throwable)
-    public void onAfterCheck()
-    public void onBeforeCheck()
-com.xuexiang.xupdate.proxy.impl.DefaultPrompterProxyImpl:
-    public void <init>(com.xuexiang.xupdate.proxy.IUpdateProxy)
-com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker$1:
-    final synthetic com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker this$0
-    final synthetic com.xuexiang.xupdate.proxy.IUpdateProxy val$updateProxy
-    void <init>(com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public void onError(java.lang.Throwable)
-    public void onSuccess(java.lang.String)
-com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker$2:
-    final synthetic com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker this$0
-    final synthetic com.xuexiang.xupdate.proxy.IUpdateProxy val$updateProxy
-    void <init>(com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public void onError(java.lang.Throwable)
-    public void onSuccess(java.lang.String)
 com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker$3:
-    final synthetic com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker this$0
-    final synthetic java.lang.String val$result
-    final synthetic com.xuexiang.xupdate.proxy.IUpdateProxy val$updateProxy
-    void <init>(com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker,java.lang.String,com.xuexiang.xupdate.proxy.IUpdateProxy)
     public void onParseResult(com.xuexiang.xupdate.entity.UpdateEntity)
-com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker:
-    static synthetic void access$000(com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker,java.lang.String,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    static synthetic void access$100(com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker,com.xuexiang.xupdate.proxy.IUpdateProxy,java.lang.Throwable)
-    public void checkVersion(boolean,java.lang.String,java.util.Map,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public void noNewVersion(java.lang.Throwable)
-    public void onAfterCheck()
-    public void onBeforeCheck()
-    private void onCheckError(com.xuexiang.xupdate.proxy.IUpdateProxy,java.lang.Throwable)
-    private void onCheckSuccess(java.lang.String,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public void processCheckResult(java.lang.String,com.xuexiang.xupdate.proxy.IUpdateProxy)
-com.xuexiang.xupdate.proxy.impl.DefaultUpdateParser:
-    protected com.xuexiang.xupdate.entity.CheckVersionResult doLocalCompare(com.xuexiang.xupdate.entity.CheckVersionResult)
-    public com.xuexiang.xupdate.entity.UpdateEntity parseJson(java.lang.String)
-com.xuexiang.xupdate.proxy.impl.DefaultUpdatePrompter:
-    public void showPrompt(com.xuexiang.xupdate.entity.UpdateEntity,com.xuexiang.xupdate.proxy.IUpdateProxy,com.xuexiang.xupdate.entity.PromptEntity)
-com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack$1:
-    void <init>(com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack)
-com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack$2:
-    void <init>(com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack,float,long)
-com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack$3:
-    void <init>(com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack,java.io.File)
-com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack$4:
-    void <init>(com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack,java.lang.Throwable)
-com.xuexiang.xupdate.service.DownloadService$FileDownloadCallBack:
-    private void dispatchOnError(java.lang.Throwable)
-    private void dispatchOnProgress(float,long)
-    private void dispatchOnStart()
-    public void onError(java.lang.Throwable)
-    public void onProgress(float,long)
-    public void onStart()
-    public void onSuccess(java.io.File)
 com.xuexiang.xupdate.service.DownloadService:
     private static final java.lang.String CHANNEL_ID
     private static final int DOWNLOAD_NOTIFY_ID
-    static synthetic androidx.core.app.NotificationCompat$Builder access$202(com.xuexiang.xupdate.service.DownloadService,androidx.core.app.NotificationCompat$Builder)
-    static synthetic void access$500(com.xuexiang.xupdate.service.DownloadService,com.xuexiang.xupdate.entity.DownloadEntity)
-    private void setUpNotification(com.xuexiang.xupdate.entity.DownloadEntity)
 com.xuexiang.xupdate.utils.ApkInstallUtils:
     private static final int APP_INSTALL_AUTO
     private static final int APP_INSTALL_EXTERNAL
     private static final int APP_INSTALL_INTERNAL
     public static final int REQUEST_CODE_INSTALL_APP
-    public static void setSupportSilentInstall(boolean)
 com.xuexiang.xupdate.utils.ColorUtils$RandomColor:
     int alpha
     int lower
@@ -11134,16 +12426,8 @@ com.xuexiang.xupdate.utils.UpdateUtils:
     private static final java.lang.String IGNORE_VERSION
     private static final java.lang.String KEY_XUPDATE
     private static final java.lang.String PREFS_FILE
-    public static boolean checkNetwork()
-    public static boolean checkWifi()
     public static int compareVersionName(java.lang.String,java.lang.String)
-    public static java.lang.Object fromJson(java.lang.String,java.lang.Class)
     public static java.lang.String getVersionName(android.content.Context)
-    public static boolean isIgnoreVersion(android.content.Context,java.lang.String)
-    public static boolean isMainThread()
-    public static void processUpdateEntity(com.xuexiang.xupdate.entity.UpdateEntity,java.lang.String,com.xuexiang.xupdate.proxy.IUpdateProxy)
-    public static java.lang.Object requireNonNull(java.lang.Object,java.lang.String)
-    public static java.lang.String toJson(java.lang.Object)
 com.xuexiang.xupdate.widget.BaseDialog:
     public void <init>(android.content.Context)
     public void <init>(android.content.Context,int)
@@ -11190,16 +12474,10 @@ com.xuexiang.xupdate.widget.UpdateDialog:
     public com.xuexiang.xupdate.widget.UpdateDialog setIPrompterProxy(com.xuexiang.xupdate.proxy.IPrompterProxy)
     public com.xuexiang.xupdate.widget.UpdateDialog setPromptEntity(com.xuexiang.xupdate.entity.PromptEntity)
     public com.xuexiang.xupdate.widget.UpdateDialog setUpdateEntity(com.xuexiang.xupdate.entity.UpdateEntity)
-com.xuexiang.xupdate.widget.UpdateDialogActivity:
-    private static void setsIPrompterProxy(com.xuexiang.xupdate.proxy.IPrompterProxy)
-    public static void show(android.content.Context,com.xuexiang.xupdate.entity.UpdateEntity,com.xuexiang.xupdate.proxy.IPrompterProxy,com.xuexiang.xupdate.entity.PromptEntity)
 com.xuexiang.xupdate.widget.UpdateDialogFragment:
     public static final java.lang.String KEY_UPDATE_ENTITY
     public static final java.lang.String KEY_UPDATE_PROMPT_ENTITY
     public static final int REQUEST_CODE_REQUEST_PERMISSIONS
-    private static void setsIPrompterProxy(com.xuexiang.xupdate.proxy.IPrompterProxy)
-    public void show(androidx.fragment.app.FragmentManager)
-    public static void show(androidx.fragment.app.FragmentManager,com.xuexiang.xupdate.entity.UpdateEntity,com.xuexiang.xupdate.proxy.IPrompterProxy,com.xuexiang.xupdate.entity.PromptEntity)
 com.xuexiang.xutil.BuildConfig:
     public static final java.lang.String APPLICATION_ID
     public static final java.lang.String BUILD_TYPE
@@ -13076,6 +14354,108 @@ com.yanzhenjie.recyclerview.widget.StickyNestedScrollView:
     public void clearOnViewStickyListener()
     public void notifyStickyAttributeChanged()
     public void removeOnViewStickyListener(com.yanzhenjie.recyclerview.widget.StickyNestedScrollView$OnViewStickyListener)
+com.zhy.http.okhttp.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+com.zhy.http.okhttp.OkHttpUtils$METHOD:
+    public static final java.lang.String DELETE
+    public static final java.lang.String HEAD
+    public static final java.lang.String PATCH
+    public static final java.lang.String PUT
+com.zhy.http.okhttp.OkHttpUtils:
+    public static final long DEFAULT_MILLISECONDS
+    public static com.zhy.http.okhttp.builder.OtherRequestBuilder delete()
+    public static com.zhy.http.okhttp.builder.HeadBuilder head()
+    public static com.zhy.http.okhttp.builder.OtherRequestBuilder patch()
+    public static com.zhy.http.okhttp.builder.PostFileBuilder postFile()
+    public static com.zhy.http.okhttp.builder.OtherRequestBuilder put()
+com.zhy.http.okhttp.builder.GetBuilder:
+    public com.zhy.http.okhttp.builder.GetBuilder addParams(java.lang.String,java.lang.String)
+    public synthetic bridge com.zhy.http.okhttp.builder.OkHttpRequestBuilder addParams(java.lang.String,java.lang.String)
+    public synthetic bridge com.zhy.http.okhttp.builder.OkHttpRequestBuilder params(java.util.Map)
+com.zhy.http.okhttp.builder.HasParamsable:
+    public abstract com.zhy.http.okhttp.builder.OkHttpRequestBuilder addParams(java.lang.String,java.lang.String)
+    public abstract com.zhy.http.okhttp.builder.OkHttpRequestBuilder params(java.util.Map)
+com.zhy.http.okhttp.builder.OkHttpRequestBuilder:
+    public com.zhy.http.okhttp.builder.OkHttpRequestBuilder addHeader(java.lang.String,java.lang.String)
+    public abstract com.zhy.http.okhttp.request.RequestCall build()
+    public com.zhy.http.okhttp.builder.OkHttpRequestBuilder headers(java.util.Map)
+    public com.zhy.http.okhttp.builder.OkHttpRequestBuilder id(int)
+com.zhy.http.okhttp.builder.OtherRequestBuilder:
+    private java.lang.String content
+    private java.lang.String method
+    private okhttp3.RequestBody requestBody
+    public void <init>(java.lang.String)
+    public com.zhy.http.okhttp.request.RequestCall build()
+    public com.zhy.http.okhttp.builder.OtherRequestBuilder requestBody(java.lang.String)
+    public com.zhy.http.okhttp.builder.OtherRequestBuilder requestBody(okhttp3.RequestBody)
+com.zhy.http.okhttp.builder.PostFileBuilder:
+    private java.io.File file
+    private okhttp3.MediaType mediaType
+    public com.zhy.http.okhttp.request.RequestCall build()
+    public com.zhy.http.okhttp.builder.OkHttpRequestBuilder file(java.io.File)
+    public com.zhy.http.okhttp.builder.OkHttpRequestBuilder mediaType(okhttp3.MediaType)
+com.zhy.http.okhttp.builder.PostFormBuilder$FileInput:
+    public void <init>(java.lang.String,java.lang.String,java.io.File)
+com.zhy.http.okhttp.builder.PostFormBuilder:
+    public com.zhy.http.okhttp.builder.PostFormBuilder addFile(java.lang.String,java.lang.String,java.io.File)
+    public synthetic bridge com.zhy.http.okhttp.builder.OkHttpRequestBuilder addParams(java.lang.String,java.lang.String)
+    public com.zhy.http.okhttp.builder.PostFormBuilder addParams(java.lang.String,java.lang.String)
+    public com.zhy.http.okhttp.builder.PostFormBuilder files(java.lang.String,java.util.Map)
+    public synthetic bridge com.zhy.http.okhttp.builder.OkHttpRequestBuilder params(java.util.Map)
+com.zhy.http.okhttp.cookie.CookieJarImpl:
+    public void <init>(com.zhy.http.okhttp.cookie.store.CookieStore)
+    public com.zhy.http.okhttp.cookie.store.CookieStore getCookieStore()
+com.zhy.http.okhttp.cookie.store.CookieStore:
+    public abstract java.util.List getCookies()
+    public abstract boolean remove(okhttp3.HttpUrl,okhttp3.Cookie)
+    public abstract boolean removeAll()
+com.zhy.http.okhttp.cookie.store.MemoryCookieStore:
+    public java.util.List getCookies()
+    public boolean remove(okhttp3.HttpUrl,okhttp3.Cookie)
+    public boolean removeAll()
+com.zhy.http.okhttp.cookie.store.PersistentCookieStore:
+    private static final java.lang.String COOKIE_NAME_PREFIX
+    private static final java.lang.String COOKIE_PREFS
+    private static final java.lang.String LOG_TAG
+    public void <init>(android.content.Context)
+    protected okhttp3.Cookie decodeCookie(java.lang.String)
+    public java.util.List getCookies()
+    protected byte[] hexStringToByteArray(java.lang.String)
+    public boolean removeAll()
+com.zhy.http.okhttp.https.HttpsUtils$MyTrustManager:
+    public void <init>(javax.net.ssl.X509TrustManager)
+com.zhy.http.okhttp.https.HttpsUtils$SSLParams:
+    public javax.net.ssl.SSLSocketFactory sSLSocketFactory
+    public javax.net.ssl.X509TrustManager trustManager
+com.zhy.http.okhttp.https.HttpsUtils$UnSafeHostnameVerifier:
+    final synthetic com.zhy.http.okhttp.https.HttpsUtils this$0
+    private void <init>(com.zhy.http.okhttp.https.HttpsUtils)
+com.zhy.http.okhttp.https.HttpsUtils$UnSafeTrustManager:
+    synthetic void <init>(com.zhy.http.okhttp.https.HttpsUtils$1)
+com.zhy.http.okhttp.https.HttpsUtils:
+    static synthetic javax.net.ssl.X509TrustManager access$100(javax.net.ssl.TrustManager[])
+    private static javax.net.ssl.X509TrustManager chooseTrustManager(javax.net.ssl.TrustManager[])
+    public static com.zhy.http.okhttp.https.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream[],java.io.InputStream,java.lang.String)
+    private static javax.net.ssl.KeyManager[] prepareKeyManager(java.io.InputStream,java.lang.String)
+    private static varargs javax.net.ssl.TrustManager[] prepareTrustManager(java.io.InputStream[])
+com.zhy.http.okhttp.log.LoggerInterceptor:
+    public static final java.lang.String TAG
+    public void <init>(java.lang.String)
+    public void <init>(java.lang.String,boolean)
+com.zhy.http.okhttp.request.PostFileRequest:
+    public void <init>(java.lang.String,java.lang.Object,java.util.Map,java.util.Map,java.io.File,okhttp3.MediaType,int)
+com.zhy.http.okhttp.request.RequestCall:
+    public void cancel()
+    public com.zhy.http.okhttp.request.RequestCall connTimeOut(long)
+    public okhttp3.Response execute()
+    public okhttp3.Request getRequest()
+    public com.zhy.http.okhttp.request.RequestCall readTimeOut(long)
+    public com.zhy.http.okhttp.request.RequestCall writeTimeOut(long)
 io.github.inflationx.viewpump.InflateRequest$Builder:
     private android.util.AttributeSet attrs
     private android.content.Context context
@@ -21384,10 +22764,7 @@ okhttp3.Call$Factory:
     public abstract okhttp3.Call newCall(okhttp3.Request)
 okhttp3.Call:
     public abstract okhttp3.Call clone()
-    public abstract void enqueue(okhttp3.Callback)
-    public abstract boolean isCanceled()
     public abstract boolean isExecuted()
-    public abstract okhttp3.Request request()
     public abstract okio.Timeout timeout()
 okhttp3.CertificatePinner$Builder:
     public varargs okhttp3.CertificatePinner$Builder add(java.lang.String,java.lang.String[])
@@ -21416,57 +22793,24 @@ okhttp3.ConnectionPool:
 okhttp3.ConnectionSpec$Builder:
     public okhttp3.ConnectionSpec$Builder allEnabledCipherSuites()
     public okhttp3.ConnectionSpec$Builder allEnabledTlsVersions()
-okhttp3.Cookie$Builder:
-    java.lang.String domain
-    boolean hostOnly
-    boolean httpOnly
-    java.lang.String name
-    boolean persistent
-    boolean secure
-    java.lang.String value
-    public okhttp3.Cookie build()
-    public okhttp3.Cookie$Builder domain(java.lang.String)
-    private okhttp3.Cookie$Builder domain(java.lang.String,boolean)
-    public okhttp3.Cookie$Builder expiresAt(long)
-    public okhttp3.Cookie$Builder hostOnlyDomain(java.lang.String)
-    public okhttp3.Cookie$Builder httpOnly()
-    public okhttp3.Cookie$Builder name(java.lang.String)
-    public okhttp3.Cookie$Builder path(java.lang.String)
-    public okhttp3.Cookie$Builder secure()
-    public okhttp3.Cookie$Builder value(java.lang.String)
 okhttp3.Cookie:
-    void <init>(okhttp3.Cookie$Builder)
-    public java.lang.String domain()
-    public long expiresAt()
-    public boolean hostOnly()
-    public boolean httpOnly()
     public boolean matches(okhttp3.HttpUrl)
-    public java.lang.String path()
     private static boolean pathMatch(okhttp3.HttpUrl,java.lang.String)
-    public boolean persistent()
-    public boolean secure()
 okhttp3.Credentials:
     public static java.lang.String basic(java.lang.String,java.lang.String)
     public static java.lang.String basic(java.lang.String,java.lang.String,java.nio.charset.Charset)
 okhttp3.Dispatcher:
     public void <init>(java.util.concurrent.ExecutorService)
     public synchronized void cancelAll()
-    void enqueue(okhttp3.RealCall$AsyncCall)
-    private okhttp3.RealCall$AsyncCall findExistingCallWithHost(java.lang.String)
     public synchronized int getMaxRequests()
     public synchronized int getMaxRequestsPerHost()
-    public synchronized java.util.List queuedCalls()
     public synchronized int queuedCallsCount()
-    public synchronized java.util.List runningCalls()
     public synchronized void setIdleCallback(java.lang.Runnable)
     public void setMaxRequests(int)
     public void setMaxRequestsPerHost(int)
 okhttp3.FormBody$Builder:
-    public okhttp3.FormBody$Builder add(java.lang.String,java.lang.String)
     public okhttp3.FormBody$Builder addEncoded(java.lang.String,java.lang.String)
-    public okhttp3.FormBody build()
 okhttp3.FormBody:
-    void <init>(java.util.List,java.util.List)
     public java.lang.String encodedName(int)
     public java.lang.String encodedValue(int)
     public java.lang.String name(int)
@@ -21480,7 +22824,6 @@ okhttp3.Headers$Builder:
     public okhttp3.Headers$Builder add(java.lang.String,java.time.Instant)
     public okhttp3.Headers$Builder add(java.lang.String,java.util.Date)
     public okhttp3.Headers$Builder addAll(okhttp3.Headers)
-    public okhttp3.Headers$Builder addUnsafeNonAscii(java.lang.String,java.lang.String)
     public okhttp3.Headers$Builder set(java.lang.String,java.time.Instant)
     public okhttp3.Headers$Builder set(java.lang.String,java.util.Date)
 okhttp3.Headers:
@@ -21525,7 +22868,6 @@ okhttp3.HttpUrl:
     static final java.lang.String QUERY_COMPONENT_REENCODE_SET
     static final java.lang.String QUERY_ENCODE_SET
     static final java.lang.String USERNAME_ENCODE_SET
-    static java.lang.String canonicalize(java.lang.String,java.lang.String,boolean,boolean,boolean,boolean,java.nio.charset.Charset)
     public java.lang.String fragment()
     public static okhttp3.HttpUrl get(java.net.URI)
     public static okhttp3.HttpUrl get(java.net.URL)
@@ -21551,28 +22893,15 @@ okhttp3.Interceptor$Chain:
 okhttp3.MediaType:
     private static final java.lang.String QUOTED
     private static final java.lang.String TOKEN
-    public java.lang.String subtype()
-    public java.lang.String type()
 okhttp3.MultipartBody$Builder:
     public okhttp3.MultipartBody$Builder addFormDataPart(java.lang.String,java.lang.String)
-    public okhttp3.MultipartBody$Builder addFormDataPart(java.lang.String,java.lang.String,okhttp3.RequestBody)
-    public okhttp3.MultipartBody$Builder addPart(okhttp3.Headers,okhttp3.RequestBody)
-    public okhttp3.MultipartBody$Builder addPart(okhttp3.MultipartBody$Part)
     public okhttp3.MultipartBody$Builder addPart(okhttp3.RequestBody)
-    public okhttp3.MultipartBody build()
-    public okhttp3.MultipartBody$Builder setType(okhttp3.MediaType)
 okhttp3.MultipartBody$Part:
-    private void <init>(okhttp3.Headers,okhttp3.RequestBody)
     public okhttp3.RequestBody body()
-    public static okhttp3.MultipartBody$Part create(okhttp3.Headers,okhttp3.RequestBody)
     public static okhttp3.MultipartBody$Part create(okhttp3.RequestBody)
     public static okhttp3.MultipartBody$Part createFormData(java.lang.String,java.lang.String)
-    public static okhttp3.MultipartBody$Part createFormData(java.lang.String,java.lang.String,okhttp3.RequestBody)
     public okhttp3.Headers headers()
 okhttp3.MultipartBody:
-    private final okhttp3.MediaType originalType
-    void <init>(okio.ByteString,okhttp3.MediaType,java.util.List)
-    static void appendQuotedString(java.lang.StringBuilder,java.lang.String)
     public java.lang.String boundary()
     public okhttp3.MultipartBody$Part part(int)
     public java.util.List parts()
@@ -21606,43 +22935,22 @@ okhttp3.OkHttpClient$Builder:
     public okhttp3.OkHttpClient$Builder readTimeout(java.time.Duration)
     public okhttp3.OkHttpClient$Builder socketFactory(javax.net.SocketFactory)
     public okhttp3.OkHttpClient$Builder sslSocketFactory(javax.net.ssl.SSLSocketFactory)
-    public okhttp3.OkHttpClient$Builder writeTimeout(long,java.util.concurrent.TimeUnit)
     public okhttp3.OkHttpClient$Builder writeTimeout(java.time.Duration)
 okhttp3.OkHttpClient:
     public okhttp3.Cache cache()
     public okhttp3.WebSocket newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
 okhttp3.RealCall$AsyncCall:
-    void <init>(okhttp3.RealCall,okhttp3.Callback)
-    okhttp3.RealCall get()
-    java.lang.String host()
     okhttp3.Request request()
-    void reuseCallsPerHostFrom(okhttp3.RealCall$AsyncCall)
 okhttp3.RealCall:
     public synthetic bridge okhttp3.Call clone()
-    public void enqueue(okhttp3.Callback)
     public synchronized boolean isExecuted()
-    public okhttp3.Request request()
     public okio.Timeout timeout()
 okhttp3.Request$Builder:
     public okhttp3.Request$Builder cacheControl(okhttp3.CacheControl)
-    public okhttp3.Request$Builder delete()
-    public okhttp3.Request$Builder delete(okhttp3.RequestBody)
-    public okhttp3.Request$Builder head()
-    public okhttp3.Request$Builder patch(okhttp3.RequestBody)
-    public okhttp3.Request$Builder post(okhttp3.RequestBody)
-    public okhttp3.Request$Builder put(okhttp3.RequestBody)
-    public okhttp3.Request$Builder tag(java.lang.Class,java.lang.Object)
-    public okhttp3.Request$Builder tag(java.lang.Object)
     public okhttp3.Request$Builder url(java.net.URL)
-okhttp3.Request:
-    public java.lang.Object tag()
-    public java.lang.Object tag(java.lang.Class)
 okhttp3.RequestBody$1:
     void <init>(okhttp3.MediaType,okio.ByteString)
-okhttp3.RequestBody$3:
-    void <init>(okhttp3.MediaType,java.io.File)
 okhttp3.RequestBody:
-    public static okhttp3.RequestBody create(okhttp3.MediaType,java.io.File)
     public static okhttp3.RequestBody create(okhttp3.MediaType,okio.ByteString)
 okhttp3.Response$Builder:
     public okhttp3.Response$Builder removeHeader(java.lang.String)
@@ -21658,10 +22966,7 @@ okhttp3.ResponseBody$BomAwareReader:
 okhttp3.ResponseBody:
     private java.io.Reader reader
     public final java.io.Reader charStream()
-    private java.nio.charset.Charset charset()
-    public static okhttp3.ResponseBody create(okhttp3.MediaType,java.lang.String)
     public static okhttp3.ResponseBody create(okhttp3.MediaType,okio.ByteString)
-    public final java.lang.String string()
 okhttp3.WebSocket$Factory:
     public abstract okhttp3.WebSocket newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
 okhttp3.WebSocket:
@@ -21999,7 +23304,6 @@ okio.Buffer:
     public final okio.Buffer readFrom(java.io.InputStream,long)
     private void readFrom(java.io.InputStream,long,boolean)
     public long readLongLe()
-    public java.lang.String readString(java.nio.charset.Charset)
     public final okio.Buffer$UnsafeCursor readUnsafe()
     public final okio.Buffer$UnsafeCursor readUnsafe(okio.Buffer$UnsafeCursor)
     public int readUtf8CodePoint()
@@ -22014,7 +23318,6 @@ okio.Buffer:
     public synthetic bridge okio.BufferedSink writeLongLe(long)
     public okio.Buffer writeShortLe(int)
     public synthetic bridge okio.BufferedSink writeShortLe(int)
-    public okio.Buffer writeString(java.lang.String,java.nio.charset.Charset)
     public synthetic bridge okio.BufferedSink writeString(java.lang.String,int,int,java.nio.charset.Charset)
     public synthetic bridge okio.BufferedSink writeString(java.lang.String,java.nio.charset.Charset)
     public final okio.Buffer writeTo(java.io.OutputStream)
@@ -22046,7 +23349,6 @@ okio.BufferedSource:
     public abstract long readAll(okio.Sink)
     public abstract long readLongLe()
     public abstract java.lang.String readString(long,java.nio.charset.Charset)
-    public abstract java.lang.String readString(java.nio.charset.Charset)
     public abstract java.lang.String readUtf8()
     public abstract java.lang.String readUtf8(long)
     public abstract int readUtf8CodePoint()
@@ -22133,7 +23435,6 @@ okio.RealBufferedSource:
     public long readAll(okio.Sink)
     public long readLongLe()
     public java.lang.String readString(long,java.nio.charset.Charset)
-    public java.lang.String readString(java.nio.charset.Charset)
     public java.lang.String readUtf8()
     public java.lang.String readUtf8(long)
     public int readUtf8CodePoint()
@@ -26690,65 +27991,6 @@ org.reactivestreams.FlowAdapters:
     public static org.reactivestreams.Processor toProcessor(java.util.concurrent.Flow$Processor)
     public static org.reactivestreams.Publisher toPublisher(java.util.concurrent.Flow$Publisher)
     public static org.reactivestreams.Subscriber toSubscriber(java.util.concurrent.Flow$Subscriber)
-org.repackage.com.heytap.openid.sdk.OpenIDSDK:
-    public static java.lang.String b(android.content.Context)
-    public static java.lang.String d(android.content.Context)
-    public static java.lang.String e(android.content.Context)
-org.repackage.com.miui.deviceid.BuildConfig:
-    public static final boolean a
-    public static final java.lang.String b
-    public static final java.lang.String c
-    public static final java.lang.String d
-    public static final int e
-    public static final java.lang.String f
-org.repackage.com.miui.deviceid.IdentifierManager:
-    private static final java.lang.String a
-    public static java.lang.String a(android.content.Context)
-    public static java.lang.String c(android.content.Context)
-    public static java.lang.String d(android.content.Context)
-org.repackage.com.vivo.identifier.BuildConfig:
-    public static final boolean a
-    public static final java.lang.String b
-    public static final java.lang.String c
-    public static final java.lang.String d
-    public static final int e
-    public static final java.lang.String f
-org.repackage.com.vivo.identifier.DataBaseOperation:
-    private static final java.lang.String a
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final int h
-    private static final int i
-    private static final int j
-    private static final int k
-org.repackage.com.vivo.identifier.IdentifierIdClient:
-    private static final java.lang.String a
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final int i
-    private static final int j
-    private static final int k
-    private static final int l
-    private static final int m
-    private static final int n
-    public java.lang.String a(java.lang.String)
-    public java.lang.String b(java.lang.String)
-    public java.lang.String c()
-org.repackage.com.vivo.identifier.IdentifierIdObserver:
-    private static final java.lang.String a
-org.repackage.com.vivo.identifier.IdentifierManager:
-    public static java.lang.String a(android.content.Context,java.lang.String)
-    public static java.lang.String b(android.content.Context,java.lang.String)
-    public static java.lang.String c(android.content.Context)
 org.seimicrawler.xpath.JXDocument:
     public static org.seimicrawler.xpath.JXDocument create(org.jsoup.nodes.Document)
     public static org.seimicrawler.xpath.JXDocument create(org.jsoup.select.Elements)
@@ -27285,6 +28527,14 @@ cn.hutool.core.util.PageUtil:
 cn.hutool.core.util.XmlUtil:
     private static java.lang.String defaultDocumentBuilderFactory
     private static boolean namespaceAware
+com.arialyy.aria.core.command.GroupCmdFactory:
+    private static volatile com.arialyy.aria.core.command.GroupCmdFactory INSTANCE
+com.arialyy.aria.core.download.CheckFtpDirEntityUtil:
+    static final synthetic boolean $assertionsDisabled
+com.arialyy.aria.orm.DBConfig:
+    static boolean DEBUG
+com.arialyy.aria.util.BandwidthLimiter:
+    public static int maxBandWith
 com.bumptech.glide.module.AppliesOptions:
     public abstract void applyOptions(android.content.Context,com.bumptech.glide.GlideBuilder)
 com.bumptech.glide.module.RegistersComponents:

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
@@ -22,6 +24,7 @@ import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.model.ChapterWrapper;
 import com.unclezs.novel.app.presenter.AnalysisPresenter;
+import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.views.adapter.ChapterListAdapter;
 import com.unclezs.novel.app.views.fragment.components.BookDetailFragment;
@@ -30,14 +33,18 @@ import com.unclezs.novel.app.views.fragment.rule.RuleEditorFragment;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xpage.enums.CoreAnim;
+import com.xuexiang.xui.utils.DensityUtils;
+import com.xuexiang.xui.utils.DividerUtils;
 import com.xuexiang.xui.utils.WidgetUtils;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
+import com.xuexiang.xui.widget.progress.materialprogressbar.MaterialProgressBar;
 import com.xuexiang.xui.widget.statelayout.StatefulLayout;
 import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 import com.yanzhenjie.recyclerview.touch.OnItemMoveListener;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import butterknife.BindView;
@@ -129,10 +136,16 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
                 return false;
             }
         });
-        // 初始化事件
-        analysisInput.setQuery("https://www.biquyue.com/book_1076/", false);
+        // 自动读取剪贴板
+        analysisInput.setOnQueryTextFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                String content = ClipboardUtils.get();
+                if (!Objects.equals(content, analysisInput.getQuery().toString()) && UrlUtils.isHttpUrl(content)) {
+                    analysisInput.setQuery(content, false);
+                }
+            }
+        });
         analysisInput.clearFocus();
-
 
         WidgetUtils.initRecyclerView(chapterView);
         // 监听拖拽和侧滑删除，更新UI和数据源。
@@ -310,6 +323,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     public void addMore(Chapter chapter) {
         if (adapter.isEmpty()) {
             stateLayout.showContent();
+            fabMenu.setVisibility(View.VISIBLE);
         }
         adapter.add(new ChapterWrapper(chapter));
         refreshLayout.finishLoadMore();
@@ -330,9 +344,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
                 stateLayout.showContent();
             }
         }
-        fabMenu.setVisibility(View.VISIBLE);
         analysisInput.clearFocus();
-
     }
 
     public List<Chapter> getSelectedChapters() {

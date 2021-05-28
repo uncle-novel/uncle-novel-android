@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.exts.webview.AgentWebActivity;
+import com.unclezs.novel.app.utils.Utils;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xui.widget.grouplist.XUIGroupListView;
 import com.xuexiang.xutil.app.AppUtils;
@@ -61,6 +62,7 @@ public class AboutFragment extends BaseFragment {
             .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_github)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_project_github)))
             .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_author_github)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_author_github)))
             .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_add_qq_group)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_add_qq_group)))
+            .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_update)), v -> Utils.checkUpdate(getContext(), true))
             .addItemView(mAboutGroupListView.createItemView(getResources().getString(R.string.about_item_disclaimers)), v -> AgentWebActivity.goWeb(getContext(), getString(R.string.url_disclaimers)))
             .addTo(mAboutGroupListView);
 

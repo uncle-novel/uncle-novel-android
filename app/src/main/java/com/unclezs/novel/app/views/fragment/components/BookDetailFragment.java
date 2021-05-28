@@ -88,7 +88,7 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
             }
             title.setText(StringUtils.isBlank(novel.getTitle()) ? "未知" : novel.getTitle());
             String authorAndSpeaker = StringUtils.isBlank(novel.getAuthor()) ? "未知" : novel.getAuthor();
-            if (StringUtils.isBlank(novel.getBroadcast())) {
+            if (StringUtils.isNotBlank(novel.getBroadcast())) {
                 authorAndSpeaker += " - " + novel.getBroadcast();
             }
             author.setText(authorAndSpeaker);
