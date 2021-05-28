@@ -6455,18 +6455,6 @@ com.unclezs.novel.app.base.BaseFragment:
 com.unclezs.novel.app.base.IView:
     public abstract android.content.Context getContext()
     public abstract androidx.lifecycle.LifecycleOwner getLifecycleOwner()
-com.unclezs.novel.app.views.exts.webview.AgentWebFragment:
-    public static final java.lang.String KEY_URL
-com.unclezs.novel.app.views.exts.webview.LollipopFixedWebView:
-    public void <init>(android.content.Context,android.util.AttributeSet,int,int)
-    public void <init>(android.content.Context,android.util.AttributeSet,int,boolean)
-com.unclezs.novel.app.views.exts.webview.UIController:
-    public void onSelectItemsPrompt(android.webkit.WebView,java.lang.String,java.lang.String[],android.os.Handler$Callback)
-    public void onShowMessage(java.lang.String,java.lang.String)
-com.unclezs.novel.app.views.exts.webview.WebViewInterceptDialog:
-    public static final java.lang.String APP_LINK_ACTION
-    public static final java.lang.String APP_LINK_HOST
-    private static final java.lang.String KEY_INTERCEPT_URL
 com.unclezs.novel.app.manager.ResourceManager:
     public static void saveString(java.lang.String,java.io.File)
 com.unclezs.novel.app.manager.RuleManager:
@@ -6563,25 +6551,34 @@ com.unclezs.novel.app.views.activity.HomeActivity_ViewBinding:
 com.unclezs.novel.app.views.adapter.SearchBookAdapter:
     public void <init>(java.util.Collection)
     public void setItems(java.util.List)
+com.unclezs.novel.app.views.exts.webview.AgentWebFragment:
+    public static final java.lang.String KEY_URL
+com.unclezs.novel.app.views.exts.webview.LollipopFixedWebView:
+    public void <init>(android.content.Context,android.util.AttributeSet,int,int)
+    public void <init>(android.content.Context,android.util.AttributeSet,int,boolean)
+com.unclezs.novel.app.views.exts.webview.UIController:
+    public void onSelectItemsPrompt(android.webkit.WebView,java.lang.String,java.lang.String[],android.os.Handler$Callback)
+    public void onShowMessage(java.lang.String,java.lang.String)
+com.unclezs.novel.app.views.exts.webview.WebViewInterceptDialog:
+    public static final java.lang.String APP_LINK_ACTION
+    public static final java.lang.String APP_LINK_HOST
+    private static final java.lang.String KEY_INTERCEPT_URL
 com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment:
     public static final java.lang.String KEY_NOVEL_INFO
     public static final java.lang.String KEY_SHOW_TITLE_BAR
 com.unclezs.novel.app.views.fragment.components.BookDetailFragment:
     public static final java.lang.String INFO
     public static final java.lang.String SHOW_ACTION
-com.unclezs.novel.app.views.fragment.components.BookDetailFragment_ViewBinding$3:
-    final synthetic com.unclezs.novel.app.views.fragment.components.BookDetailFragment_ViewBinding this$0
-    void <init>(com.unclezs.novel.app.views.fragment.components.BookDetailFragment_ViewBinding,com.unclezs.novel.app.views.fragment.components.BookDetailFragment)
 com.unclezs.novel.app.views.fragment.components.ChapterTextFragment:
     public static final java.lang.String KEY_CHAPTER
+com.unclezs.novel.app.views.fragment.components.DownloadConfigFragment:
+    public static final int SAVE_PATH_REQUEST_CODE
 com.unclezs.novel.app.views.fragment.download.DownloadRecordFragment:
     public static final java.lang.String BUS_TAG_ADD_RECORD
     public com.unclezs.novel.app.views.adapter.DownloadRecordAdapter getAdapter()
 com.unclezs.novel.app.views.fragment.download.DownloadingFragment:
     public static final java.lang.String BUS_ACTION_ADD_TASK
     public static final java.lang.String BUS_ACTION_MAX_TASK_NUM_CHANGE
-com.unclezs.novel.app.views.fragment.components.DownloadConfigFragment:
-    public static final int SAVE_PATH_REQUEST_CODE
 com.unclezs.novel.app.views.fragment.rule.RuleEditorFragment:
     public static final java.lang.String KEY_RULE
     public static final java.lang.String KEY_RULE_ADD

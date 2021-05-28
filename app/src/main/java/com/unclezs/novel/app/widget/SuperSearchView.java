@@ -37,7 +37,7 @@ public class SuperSearchView extends SearchView {
         onActionViewExpanded();
         SearchAutoComplete searchAutoComplete = findViewById(R.id.search_src_text);
         searchAutoComplete.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
-        searchAutoComplete.setPadding(15, 0, 0, 0);
+        searchAutoComplete.setPadding(25, 0, 0, 0);
         searchAutoComplete.setBackgroundColor(Color.TRANSPARENT);
         setBackground(ResUtils.getDrawable(R.drawable.bg_analysis_input));
         // 移除搜索图标
