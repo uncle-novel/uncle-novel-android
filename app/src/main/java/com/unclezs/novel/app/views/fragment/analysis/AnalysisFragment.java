@@ -238,7 +238,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
                 PageOption.to(BookDetailFragment.class)
                     .setNewActivity(true)
                     .putSerializable(BookDetailFragment.INFO, presenter.getNovel())
-                    .putBoolean(BookDetailFragment.INFO_FOR_EDIT, true)
+                    .putBoolean(BookDetailFragment.SHOW_ACTION, false)
                     .open(this);
                 break;
             case R.id.fab_to_bottom:

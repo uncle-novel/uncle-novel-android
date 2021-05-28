@@ -34,13 +34,7 @@ public class RuleManager {
             String ruleJson = ResourceManager.fileString(RULES_FILE_NAME);
             RuleHelper.loadRules(ruleJson);
         } else {
-            if (App.isDebug()) {
-                String ruleJson = ResourceUtils.readStringFromAssert(RULES_FILE_NAME);
-                RuleHelper.loadRules(ruleJson);
-                saveRule(RuleHelper.rules());
-            } else {
-                saveRule(new ArrayList<>());
-            }
+            saveRule(new ArrayList<>());
         }
         RULES = new ArrayList<>(RuleHelper.rules());
         // 绑定监听

@@ -8,8 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.widget.AppCompatImageView;
-
 import com.hwangjr.rxbus.RxBus;
 import com.unclezs.novel.analyzer.model.Novel;
 import com.unclezs.novel.analyzer.util.SerializationUtils;
@@ -40,7 +38,7 @@ import cn.hutool.core.text.CharSequenceUtil;
 @Page(name = "小说详情")
 public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     public static final String INFO = "novel";
-    public static final String INFO_FOR_EDIT = "edit";
+    public static final String SHOW_ACTION = "show_action";
     @BindView(R.id.cover)
     ImageView cover;
     @BindView(R.id.title)
@@ -61,10 +59,7 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     Button actionAnalysis;
     @BindView(R.id.action_download)
     Button actionDownload;
-    @BindView(R.id.edit_title)
-    AppCompatImageView editTitle;
     private Novel novel;
-    private boolean isEdit;
 
     @Override
     protected int getLayoutId() {
@@ -75,17 +70,16 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     protected void initViews() {
         if (getArguments() != null) {
             novel = (Novel) getArguments().getSerializable(INFO);
-            isEdit = getArguments().getBoolean(INFO_FOR_EDIT, false);
-            if (isEdit) {
+            boolean showAction = getArguments().getBoolean(SHOW_ACTION, true);
+            if (!showAction) {
                 actionAnalysis.setVisibility(View.GONE);
                 actionDownload.setVisibility(View.GONE);
                 RxBus.get().post(AnalysisFragment.KEY_NOVEL_INFO, novel);
-            } else {
-                editTitle.setVisibility(View.GONE);
             }
             if (StringUtils.isNotBlank(novel.getCoverUrl())) {
                 ImageLoader.get().loadImage(cover, novel.getCoverUrl(), ResUtils.getDrawable(R.drawable.no_cover), DiskCacheStrategyEnum.NONE);
             }
+            title.setOnClickListener(e -> editTitle());
             title.setText(StringUtils.isBlank(novel.getTitle()) ? "未知" : novel.getTitle());
             String authorAndSpeaker = StringUtils.isBlank(novel.getAuthor()) ? "未知" : novel.getAuthor();
             if (StringUtils.isNotBlank(novel.getBroadcast())) {
@@ -130,7 +124,6 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
     }
 
 
-    @OnClick(R.id.edit_title)
     public void editTitle() {
         new MaterialDialog.Builder(requireContext())
             .title("编辑")

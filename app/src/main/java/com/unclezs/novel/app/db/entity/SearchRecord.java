@@ -5,6 +5,8 @@ import androidx.annotation.NonNull;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.io.Serializable;
+
 /**
  * 搜索记录
  *
@@ -12,7 +14,7 @@ import com.j256.ormlite.table.DatabaseTable;
  * @since 2019-12-04 22:57
  */
 @DatabaseTable(tableName = "search_record")
-public class SearchRecord {
+public class SearchRecord implements Serializable {
 
     @DatabaseField(generatedId = true)
     private long id;

@@ -6455,12 +6455,6 @@ com.unclezs.novel.app.base.BaseFragment:
 com.unclezs.novel.app.base.IView:
     public abstract android.content.Context getContext()
     public abstract androidx.lifecycle.LifecycleOwner getLifecycleOwner()
-com.unclezs.novel.app.db.entity.DownloadRecord:
-    public void setId(long)
-com.unclezs.novel.app.db.entity.SearchRecord:
-    public long getId()
-    public long getTime()
-    public com.unclezs.novel.app.db.entity.SearchRecord setId(long)
 com.unclezs.novel.app.exts.webview.AgentWebFragment:
     public static final java.lang.String KEY_URL
 com.unclezs.novel.app.exts.webview.LollipopFixedWebView:
@@ -6474,7 +6468,6 @@ com.unclezs.novel.app.exts.webview.WebViewInterceptDialog:
     public static final java.lang.String APP_LINK_HOST
     private static final java.lang.String KEY_INTERCEPT_URL
 com.unclezs.novel.app.manager.ResourceManager:
-    private static final java.lang.String DOWNLOAD_DIR
     public static void saveString(java.lang.String,java.io.File)
 com.unclezs.novel.app.manager.RuleManager:
     public static final java.lang.String RULES_FILE_NAME
@@ -6575,7 +6568,10 @@ com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment:
     public static final java.lang.String KEY_SHOW_TITLE_BAR
 com.unclezs.novel.app.views.fragment.components.BookDetailFragment:
     public static final java.lang.String INFO
-    public static final java.lang.String INFO_FOR_EDIT
+    public static final java.lang.String SHOW_ACTION
+com.unclezs.novel.app.views.fragment.components.BookDetailFragment_ViewBinding$3:
+    final synthetic com.unclezs.novel.app.views.fragment.components.BookDetailFragment_ViewBinding this$0
+    void <init>(com.unclezs.novel.app.views.fragment.components.BookDetailFragment_ViewBinding,com.unclezs.novel.app.views.fragment.components.BookDetailFragment)
 com.unclezs.novel.app.views.fragment.components.ChapterTextFragment:
     public static final java.lang.String KEY_CHAPTER
 com.unclezs.novel.app.views.fragment.download.DownloadRecordFragment:
@@ -12287,6 +12283,7 @@ com.xuexiang.xutil.file.CleanUtils:
     public static boolean deleteFilesInDir(java.lang.String)
     private static java.io.File getFileByPath(java.lang.String)
 com.xuexiang.xutil.file.CloseUtils:
+    public static varargs void closeIO(java.io.Closeable[])
     public static varargs void closeIOQuietly(java.io.Closeable[])
 com.xuexiang.xutil.file.FileIOUtils:
     private static boolean createOrExistsDir(java.io.File)
@@ -12583,6 +12580,7 @@ com.xuexiang.xutil.resource.ResourceUtils:
     private static final java.lang.String LINE_BREAK
     public static boolean copyFileFromAssets(java.lang.String,java.lang.String,java.lang.String)
     public static void copyFilesFromAssets(java.lang.String,java.lang.String)
+    public static android.content.res.AssetManager getAssetManager()
     public static java.lang.String getCopyFileFromAssets(java.lang.String,java.lang.String,java.lang.String)
     public static java.lang.String getFileFromAssets(java.lang.String)
     public static java.lang.String getFileFromAssets(java.lang.String,boolean)
@@ -12591,8 +12589,12 @@ com.xuexiang.xutil.resource.ResourceUtils:
     public static android.graphics.drawable.Drawable getImageDrawableFromAssets(java.lang.String)
     public static android.graphics.Bitmap getImageFromAssets(java.lang.String)
     public static android.graphics.Bitmap getImageFromAssetsFile(java.lang.String)
+    public static java.io.InputStream openAssetsFile(java.lang.String)
+    public static java.io.InputStream openAssetsFileWithException(java.lang.String)
     public static java.io.InputStream openRawResource(int)
     public static java.lang.String readInputStream(java.io.InputStream,boolean)
+    public static java.lang.String readStringFromAssert(java.lang.String)
+    public static java.lang.String readStringFromAssert(java.lang.String,java.lang.String)
 com.xuexiang.xutil.resource.ThemeUtils:
     public static android.content.res.ColorStateList getActionTextColorStateList(android.content.Context,int)
     public static android.content.res.ColorStateList getActionTextStateList(android.content.Context,int)

@@ -33,9 +33,7 @@
 
             <TextView
                 android:id="@+id/title"
-                android:text="庆余年"
-                android:singleLine="true"
-                android:ellipsize="end"
+                android:text="庆余年庆余年庆余年庆余年庆余年庆余年庆余年"
                 android:layout_gravity="center"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -44,15 +42,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_rename"
+                android:drawableTint="@color/colorPrimary"
                 android:layout_width="wrap_content" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/edit_title"
-                android:layout_width="wrap_content"
-                android:src="@drawable/ic_rename"
-                app:tint="@color/colorPrimary"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <TextView

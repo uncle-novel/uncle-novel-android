@@ -10,6 +10,7 @@ import com.unclezs.novel.analyzer.core.model.AnalyzerRule;
 import com.unclezs.novel.analyzer.model.Novel;
 import com.unclezs.novel.analyzer.spider.SearchSpider;
 import com.unclezs.novel.app.manager.RuleManager;
+import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.utils.rx.RxLifecycle;
 
 import java.util.ArrayList;
@@ -51,6 +52,10 @@ public class SearchBookModel {
         }
         searchers.clear();
         List<AnalyzerRule> rules = audio ? RuleManager.audioSearchRules() : RuleManager.textSearchRules();
+        if (rules.isEmpty()) {
+            XToastUtils.warning("未发现可用搜索书源");
+            stateListener.onFinished(false);
+        }
         counter.set(rules.size());
         for (AnalyzerRule rule : rules) {
             SearchSpider searcher = new SearchSpider(ListUtil.of(rule));

@@ -13,7 +13,6 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class ResourceManager {
-    private static final String DOWNLOAD_DIR = "Uncle小说";
     private static final File FILE_DIR;
 
     static {

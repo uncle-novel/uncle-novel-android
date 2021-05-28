@@ -107,13 +107,6 @@
                 <data android:mimeType="text/plain" />
                 <data android:mimeType="application/xhtml+xml" />
                 <data android:mimeType="application/vnd.wap.xhtml+xml" />
-                <!--   设置自己的applink   -->
-                <!--                <data-->
-                <!--                    android:host="xxx.com"-->
-                <!--                    android:scheme="http"/>-->
-                <!--                <data-->
-                <!--                    android:host="xxx.com"-->
-                <!--                    android:scheme="https"/>-->
             </intent-filter>
         </activity>
         <!--fragment的页面容器-->
