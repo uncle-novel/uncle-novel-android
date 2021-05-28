@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.base.NullPresenter;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.enums.CoreAnim;
 import com.xuexiang.xui.adapter.FragmentAdapter;
@@ -21,7 +22,7 @@ import butterknife.BindView;
  */
 @Page(anim = CoreAnim.none)
 @SuppressLint("NonConstantResourceId")
-public class DownloadManagerFragment extends BaseFragment {
+public class DownloadManagerFragment extends BaseFragment<NullPresenter> {
 
     @BindView(R.id.tab_layout)
     TabLayout mTabLayout;

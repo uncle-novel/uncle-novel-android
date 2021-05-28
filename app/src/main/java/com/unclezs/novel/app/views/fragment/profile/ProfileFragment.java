@@ -2,6 +2,7 @@ package com.unclezs.novel.app.views.fragment.profile;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.base.NullPresenter;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.views.activity.RuleManagerActivity;
 import com.unclezs.novel.app.views.fragment.other.AboutFragment;
@@ -21,7 +22,7 @@ import butterknife.BindView;
  */
 @Page(anim = CoreAnim.none)
 @SuppressWarnings("NonConstantResourceId")
-public class ProfileFragment extends BaseFragment implements SuperTextView.OnSuperTextViewClickListener {
+public class ProfileFragment extends BaseFragment<NullPresenter> implements SuperTextView.OnSuperTextViewClickListener {
     @BindView(R.id.menu_rule_manager)
     SuperTextView ruleManager;
     @BindView(R.id.menu_about)

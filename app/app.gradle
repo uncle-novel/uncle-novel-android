@@ -27,8 +27,8 @@ android {
         applicationId "com.unclezs.novel.app"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 1
-        versionName "3.0"
+        versionCode 2
+        versionName "3.0.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
@@ -92,6 +92,8 @@ dependencies {
     // lombok
     compileOnly "org.projectlombok:lombok"
     annotationProcessor "org.projectlombok:lombok"
+    // logback
+    implementation 'com.github.tony19:logback-android'
     // uncle-novel
     implementation 'com.unclezs:novel-analyzer'
     // 安卓端利用jdk的js接口实现的引擎, 基于rhino，pc端基于nashorn 效果一致
@@ -157,7 +159,7 @@ task publishApk(type: PublishApk) {
     updateUrl = appUpdateUrl
     downloadUrl = "https://app.unclezs.com/publish/android/apk/"
     apk = file("$buildDir/outputs/apk/release/app-release.apk")
-    whatNew = ["1.更新了内容", "2.啥都没有更新"]
+    whatNew = ["1.内测版本发布", "2.欢迎关注公众号[书虫无书荒]"]
     outDir = file("$rootDir/publish")
 
     versionRemote = "root@app.unclezs.com:/www/wwwroot/app.unclezs.com/publish/android/"

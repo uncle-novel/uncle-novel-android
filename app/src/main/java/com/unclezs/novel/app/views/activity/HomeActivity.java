@@ -19,6 +19,7 @@ import com.unclezs.novel.app.App;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseActivity;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.base.NullPresenter;
 import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.utils.XToastUtils;
@@ -41,6 +42,7 @@ import com.xuexiang.xutil.common.CollectionUtils;
 import com.xuexiang.xutil.system.PermissionUtils;
 
 import butterknife.BindView;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Home
@@ -48,8 +50,9 @@ import butterknife.BindView;
  * @author blog.unclezs.com
  * @date 2021/5/25 14:49
  */
+@Slf4j
 @SuppressWarnings("NonConstantResourceId")
-public class HomeActivity extends BaseActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener, ClickUtils.OnClick2ExitListener, Toolbar.OnMenuItemClickListener {
+public class HomeActivity extends BaseActivity<NullPresenter> implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener, ClickUtils.OnClick2ExitListener, Toolbar.OnMenuItemClickListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;

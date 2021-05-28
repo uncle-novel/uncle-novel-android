@@ -4,6 +4,7 @@ import com.unclezs.novel.analyzer.core.helper.RuleHelper;
 import com.unclezs.novel.analyzer.core.model.AnalyzerRule;
 import com.unclezs.novel.analyzer.util.GsonUtils;
 import com.unclezs.novel.analyzer.util.StringUtils;
+import com.unclezs.novel.app.App;
 import com.xuexiang.xutil.resource.ResourceUtils;
 
 import java.io.File;
@@ -33,9 +34,13 @@ public class RuleManager {
             String ruleJson = ResourceManager.fileString(RULES_FILE_NAME);
             RuleHelper.loadRules(ruleJson);
         } else {
-            String ruleJson = ResourceUtils.readStringFromAssert(RULES_FILE_NAME);
-            RuleHelper.loadRules(ruleJson);
-            saveRule(RuleHelper.rules());
+            if (App.isDebug()) {
+                String ruleJson = ResourceUtils.readStringFromAssert(RULES_FILE_NAME);
+                RuleHelper.loadRules(ruleJson);
+                saveRule(RuleHelper.rules());
+            } else {
+                saveRule(new ArrayList<>());
+            }
         }
         RULES = new ArrayList<>(RuleHelper.rules());
         // 绑定监听

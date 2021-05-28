@@ -26,9 +26,6 @@ public class LinesTextView extends AppCompatTextView {
     }
 
     private void calculateLines() {
-        int mHeight = getMeasuredHeight();
-        int lHeight = getLineHeight();
-        int lines = mHeight / lHeight;
-        setLines(lines);
+        setLines(getMeasuredHeight() / getLineHeight());
     }
 }

@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.base.NullPresenter;
 import com.unclezs.novel.app.exts.webview.AgentWebActivity;
 import com.unclezs.novel.app.utils.Utils;
 import com.xuexiang.xpage.annotation.Page;
@@ -39,7 +40,7 @@ import butterknife.BindView;
  */
 @Page(name = "关于")
 @SuppressWarnings("NonConstantResourceId")
-public class AboutFragment extends BaseFragment {
+public class AboutFragment extends BaseFragment<NullPresenter> {
 
     @BindView(R.id.tv_version)
     TextView mVersionTextView;

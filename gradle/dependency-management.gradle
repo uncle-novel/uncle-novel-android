@@ -21,8 +21,9 @@ dependencyManagement {
             entry "hutool-system"
         }
         dependency "org.projectlombok:lombok:1.18.18"
+        // logback
         dependency "org.slf4j:slf4j-api:1.7.30"
-        dependency "ch.qos.logback:logback-classic:1.2.3"
+        dependency 'com.github.tony19:logback-android:2.0.0'
         // junit
         dependency "junit:junit:4.13.2"
         dependency "androidx.test:runner:1.3.0"

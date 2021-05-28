@@ -267,3 +267,8 @@
 }
 
 -keep class com.xuexiang.xui.widget.edittext.materialedittext.** { *; }
+
+# logback
+-keep class ch.qos.** { *; }
+-keep class org.slf4j.** { *; }
+-keepattributes *Annotation*

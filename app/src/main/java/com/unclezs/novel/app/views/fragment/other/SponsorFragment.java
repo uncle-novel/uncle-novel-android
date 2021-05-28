@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.base.NullPresenter;
 import com.unclezs.novel.app.utils.ClipboardUtils;
 import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.utils.XToastUtils;
@@ -23,7 +24,7 @@ import butterknife.OnClick;
  */
 @SuppressLint("NonConstantResourceId")
 @Page(name = "支持作者\n你的支持将是我最大的动力")
-public class SponsorFragment extends BaseFragment {
+public class SponsorFragment extends BaseFragment<NullPresenter> {
     @BindView(R.id.wx_mp)
     SuperTextView wxMp;
     @BindView(R.id.wx)
