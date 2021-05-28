@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
-import javax.script.ScriptEngineManager;
-
 /**
  * @author blog.unclezs.com
  * @date 2021/05/20 0:59

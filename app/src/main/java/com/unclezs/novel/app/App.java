@@ -5,8 +5,6 @@ import android.content.Context;
 
 import androidx.multidex.MultiDex;
 
-import com.pgyer.pgyersdk.PgyerSDKManager;
-import com.pgyer.pgyersdk.pgyerenum.FeatureEnum;
 import com.unclezs.novel.app.utils.MMKVUtils;
 import com.unclezs.novel.app.utils.sdkinit.ANRWatchDogInit;
 import com.unclezs.novel.app.utils.sdkinit.PygerInit;

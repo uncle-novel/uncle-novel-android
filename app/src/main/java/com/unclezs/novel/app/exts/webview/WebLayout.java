@@ -20,25 +20,25 @@ import com.unclezs.novel.app.R;
  */
 public class WebLayout implements IWebLayout {
 
-  private final SmartRefreshLayout mSmartRefreshLayout;
-  private final WebView mWebView;
+    private final SmartRefreshLayout mSmartRefreshLayout;
+    private final WebView mWebView;
 
-  public WebLayout(Activity activity) {
-    mSmartRefreshLayout = (SmartRefreshLayout) LayoutInflater.from(activity).inflate(R.layout.fragment_pulldown_web, null);
-    mWebView = mSmartRefreshLayout.findViewById(R.id.webView);
-  }
+    public WebLayout(Activity activity) {
+        mSmartRefreshLayout = (SmartRefreshLayout) LayoutInflater.from(activity).inflate(R.layout.fragment_pulldown_web, null);
+        mWebView = mSmartRefreshLayout.findViewById(R.id.webView);
+    }
 
-  @NonNull
-  @Override
-  public ViewGroup getLayout() {
-    return mSmartRefreshLayout;
-  }
+    @NonNull
+    @Override
+    public ViewGroup getLayout() {
+        return mSmartRefreshLayout;
+    }
 
-  @Nullable
-  @Override
-  public WebView getWebView() {
-    return mWebView;
-  }
+    @Nullable
+    @Override
+    public WebView getWebView() {
+        return mWebView;
+    }
 
 
 }

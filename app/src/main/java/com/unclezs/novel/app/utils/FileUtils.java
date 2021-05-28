@@ -18,8 +18,6 @@ import java.io.File;
 import java.text.DecimalFormat;
 
 /**
- *
- *
  * @author blog.unclezs.com
  * @date 2021/5/24 13:20
  */
@@ -39,9 +37,9 @@ public class FileUtils {
 
     /**
      * file --> uri
+     *
      * @param context
      * @param file
-     *
      * @return
      */
     public static Uri getUriFromFile(Context context, File file) {
@@ -130,15 +128,10 @@ public class FileUtils {
      * Get the value of the data column for this Uri. This is useful for
      * MediaStore Uris, and other file-based ContentProviders.
      *
-     * @param context
-     *         The context.
-     * @param uri
-     *         The Uri to query.
-     * @param selection
-     *         (Optional) Filter used in the query.
-     * @param selectionArgs
-     *         (Optional) Selection arguments used in the query.
-     *
+     * @param context       The context.
+     * @param uri           The Uri to query.
+     * @param selection     (Optional) Filter used in the query.
+     * @param selectionArgs (Optional) Selection arguments used in the query.
      * @return The value of the _data column, which is typically a file path.
      */
     public static String getDataColumn(Context context, Uri uri, String selection, String[] selectionArgs) {
@@ -165,9 +158,7 @@ public class FileUtils {
     }
 
     /**
-     * @param uri
-     *         The Uri to check.
-     *
+     * @param uri The Uri to check.
      * @return Whether the Uri authority is ExternalStorageProvider.
      */
     public static boolean isExternalStorageDocument(Uri uri) {
@@ -175,9 +166,7 @@ public class FileUtils {
     }
 
     /**
-     * @param uri
-     *         The Uri to check.
-     *
+     * @param uri The Uri to check.
      * @return Whether the Uri authority is DownloadsProvider.
      */
     public static boolean isDownloadsDocument(Uri uri) {
@@ -185,9 +174,7 @@ public class FileUtils {
     }
 
     /**
-     * @param uri
-     *         The Uri to check.
-     *
+     * @param uri The Uri to check.
      * @return Whether the Uri authority is MediaProvider.
      */
     public static boolean isMediaDocument(Uri uri) {
@@ -199,7 +186,6 @@ public class FileUtils {
      * 使用第三方qq文件管理器打开
      *
      * @param uri
-     *
      * @return
      */
     public static boolean isQQMediaDocument(Uri uri) {
@@ -207,9 +193,7 @@ public class FileUtils {
     }
 
     /**
-     * @param uri
-     *         The Uri to check.
-     *
+     * @param uri The Uri to check.
      * @return Whether the Uri authority is Google Photos.
      */
     public static boolean isGooglePhotosUri(Uri uri) {

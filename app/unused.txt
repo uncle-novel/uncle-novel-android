@@ -5748,9 +5748,7 @@ com.just.agentweb.widget.indicator.WebIndicator:
     public static final int STARTED
     public static final int UN_START
 com.pgyer.pgyersdk.PgyerSDKManager$InitSdk:
-    public com.pgyer.pgyersdk.PgyerSDKManager$InitSdk setApiKey(java.lang.String)
     public com.pgyer.pgyersdk.PgyerSDKManager$InitSdk setEnable(com.pgyer.pgyersdk.pgyerenum.FeatureEnum)
-    public com.pgyer.pgyersdk.PgyerSDKManager$InitSdk setFrontJSToken(java.lang.String)
 com.pgyer.pgyersdk.PgyerSDKManager:
     public static void checkSoftwareUpdate(android.app.Activity)
     public static void checkSoftwareUpdate(android.app.Activity,com.pgyer.pgyersdk.callback.CheckoutVersionCallBack)
@@ -6434,6 +6432,8 @@ com.unclezs.novel.app.BuildConfig:
     public static final java.lang.String APP_UPDATE_URL
     public static final java.lang.String BUILD_TYPE
     public static final boolean DEBUG
+    public static final java.lang.String PGYER_API_KEY
+    public static final java.lang.String PGYER_FRONT_JS_KEY
     public static final int VERSION_CODE
     public static final java.lang.String VERSION_NAME
 com.unclezs.novel.app.base.BaseActivity:

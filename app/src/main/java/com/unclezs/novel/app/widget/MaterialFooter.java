@@ -40,85 +40,85 @@ import com.scwang.smartrefresh.layout.util.DensityUtil;
  */
 public class MaterialFooter extends ProgressBar implements RefreshFooter {
 
-  public MaterialFooter(Context context) {
-    this(context, null);
-  }
+    public MaterialFooter(Context context) {
+        this(context, null);
+    }
 
-  public MaterialFooter(Context context, AttributeSet attrs) {
-    super(context, attrs);
-    initView();
-  }
+    public MaterialFooter(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        initView();
+    }
 
-  private void initView() {
-    setVisibility(GONE);
-    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-    setPadding(0, DensityUtil.dp2px(10), 0, DensityUtil.dp2px(10));
-    setLayoutParams(params);
-  }
+    private void initView() {
+        setVisibility(GONE);
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+        setPadding(0, DensityUtil.dp2px(10), 0, DensityUtil.dp2px(10));
+        setLayoutParams(params);
+    }
 
-  @Override
-  public boolean setNoMoreData(boolean noMoreData) {
-    return false;
-  }
+    @Override
+    public boolean setNoMoreData(boolean noMoreData) {
+        return false;
+    }
 
-  @NonNull
-  @Override
-  public View getView() {
-    return this;
-  }
+    @NonNull
+    @Override
+    public View getView() {
+        return this;
+    }
 
-  @NonNull
-  @Override
-  public SpinnerStyle getSpinnerStyle() {
-    //指定为平移，不能null
-    return SpinnerStyle.Translate;
-  }
+    @NonNull
+    @Override
+    public SpinnerStyle getSpinnerStyle() {
+        //指定为平移，不能null
+        return SpinnerStyle.Translate;
+    }
 
 
-  @Override
-  public void onStartAnimator(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
-    setVisibility(VISIBLE);
-  }
+    @Override
+    public void onStartAnimator(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
+        setVisibility(VISIBLE);
+    }
 
-  @Override
-  public int onFinish(@NonNull RefreshLayout refreshLayout, boolean success) {
-    setVisibility(GONE);
-    return 100;
-  }
+    @Override
+    public int onFinish(@NonNull RefreshLayout refreshLayout, boolean success) {
+        setVisibility(GONE);
+        return 100;
+    }
 
-  @Override
-  public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState oldState, @NonNull RefreshState newState) {
+    @Override
+    public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState oldState, @NonNull RefreshState newState) {
 
-  }
+    }
 
-  @Override
-  public void setPrimaryColors(int... colors) {
+    @Override
+    public void setPrimaryColors(int... colors) {
 
-  }
+    }
 
-  @Override
-  public void onInitialized(@NonNull RefreshKernel kernel, int height, int maxDragHeight) {
+    @Override
+    public void onInitialized(@NonNull RefreshKernel kernel, int height, int maxDragHeight) {
 
-  }
+    }
 
-  @Override
-  public void onMoving(boolean isDragging, float percent, int offset, int height, int maxDragHeight) {
+    @Override
+    public void onMoving(boolean isDragging, float percent, int offset, int height, int maxDragHeight) {
 
-  }
+    }
 
-  @Override
-  public void onReleased(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
+    @Override
+    public void onReleased(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
 
-  }
+    }
 
-  @Override
-  public void onHorizontalDrag(float percentX, int offsetX, int offsetMax) {
+    @Override
+    public void onHorizontalDrag(float percentX, int offsetX, int offsetMax) {
 
-  }
+    }
 
-  @Override
-  public boolean isSupportHorizontalDrag() {
-    return false;
-  }
+    @Override
+    public boolean isSupportHorizontalDrag() {
+        return false;
+    }
 
 }

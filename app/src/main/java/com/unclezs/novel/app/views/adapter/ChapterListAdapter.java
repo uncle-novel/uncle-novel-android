@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.model.ChapterWrapper;
-import com.unclezs.novel.app.utils.XToastUtils;
 import com.xuexiang.xui.adapter.recyclerview.BaseRecyclerAdapter;
 import com.xuexiang.xui.adapter.recyclerview.RecyclerViewHolder;
 

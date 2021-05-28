@@ -1,7 +1,5 @@
 package com.unclezs.novel.app.utils.rx;
 
-import android.util.Log;
-
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
@@ -24,7 +22,7 @@ import io.reactivex.disposables.CompositeDisposable;
  * @author blog.unclezs.com
  * @date 2021/05/21 0:32
  */
-public class RxLifecycle<T> implements LifecycleObserver, ObservableTransformer<T, T>, CompletableTransformer, SingleTransformer<T,T> {
+public class RxLifecycle<T> implements LifecycleObserver, ObservableTransformer<T, T>, CompletableTransformer, SingleTransformer<T, T> {
     private final CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     public static <T> RxLifecycle<T> bindLifecycle(LifecycleOwner owner) {

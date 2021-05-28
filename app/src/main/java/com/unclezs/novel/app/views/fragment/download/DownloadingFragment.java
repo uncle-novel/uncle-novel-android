@@ -10,7 +10,6 @@ import com.hwangjr.rxbus.annotation.Subscribe;
 import com.hwangjr.rxbus.annotation.Tag;
 import com.hwangjr.rxbus.thread.EventThread;
 import com.unclezs.novel.analyzer.model.Novel;
-import com.unclezs.novel.app.App;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.model.SpiderWrapper;
@@ -21,8 +20,6 @@ import com.unclezs.novel.app.views.adapter.DownloadingTaskAdapter;
 import com.xuexiang.constant.PermissionConstants;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
-import com.xuexiang.xutil.XUtil;
-import com.xuexiang.xutil.app.ActivityLifecycleHelper;
 import com.xuexiang.xutil.system.PermissionUtils;
 
 import java.util.List;
@@ -91,7 +88,7 @@ public class DownloadingFragment extends BaseFragment<DownloadingPresenter> {
         });
     }
 
-    @Subscribe(thread = EventThread.MAIN_THREAD,tags = {@Tag(BUS_ACTION_ADD_TASK)})
+    @Subscribe(thread = EventThread.MAIN_THREAD, tags = {@Tag(BUS_ACTION_ADD_TASK)})
     public void submitDownload(Novel novel) {
         PermissionUtils.permission(PermissionConstants.STORAGE)
             .callback(new PermissionUtils.SimpleCallback() {
@@ -109,7 +106,7 @@ public class DownloadingFragment extends BaseFragment<DownloadingPresenter> {
             .request();
     }
 
-    @Subscribe(thread = EventThread.MAIN_THREAD,tags = {@Tag(BUS_ACTION_MAX_TASK_NUM_CHANGE)})
+    @Subscribe(thread = EventThread.MAIN_THREAD, tags = {@Tag(BUS_ACTION_MAX_TASK_NUM_CHANGE)})
     public void onMaxTaskNumChange(Integer num) {
         presenter.runTask();
         XToastUtils.success("更改成功");

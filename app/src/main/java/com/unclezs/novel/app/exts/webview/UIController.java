@@ -18,22 +18,22 @@ import java.lang.ref.WeakReference;
  */
 public class UIController extends AgentWebUIControllerImplBase {
 
-  private final WeakReference<Activity> mActivity;
+    private final WeakReference<Activity> mActivity;
 
-  public UIController(Activity activity) {
-    mActivity = new WeakReference<>(activity);
-  }
+    public UIController(Activity activity) {
+        mActivity = new WeakReference<>(activity);
+    }
 
-  @Override
-  public void onShowMessage(String message, String from) {
-    super.onShowMessage(message, from);
-    Log.i(TAG, "message:" + message);
-  }
+    @Override
+    public void onShowMessage(String message, String from) {
+        super.onShowMessage(message, from);
+        Log.i(TAG, "message:" + message);
+    }
 
-  @Override
-  public void onSelectItemsPrompt(WebView view, String url, String[] items, Handler.Callback callback) {
-    // 使用默认的UI
-    super.onSelectItemsPrompt(view, url, items, callback);
-  }
+    @Override
+    public void onSelectItemsPrompt(WebView view, String url, String[] items, Handler.Callback callback) {
+        // 使用默认的UI
+        super.onSelectItemsPrompt(view, url, items, callback);
+    }
 
 }

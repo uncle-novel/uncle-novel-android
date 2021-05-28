@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.pgyer.pgyersdk.PgyerSDKManager;
 import com.pgyer.pgyersdk.pgyerenum.FeatureEnum;
+import com.unclezs.novel.app.BuildConfig;
 
 import lombok.experimental.UtilityClass;
 
@@ -18,6 +19,8 @@ public class PygerInit {
     public static void init(Application application) {
         new PgyerSDKManager.InitSdk()
             .setContext(application)
+            .setApiKey(BuildConfig.PGYER_API_KEY)
+            .setFrontJSToken(BuildConfig.PGYER_FRONT_JS_KEY)
             .enable(FeatureEnum.ANALYTICE_FUNCTION_SHAKE)
             .build();
     }

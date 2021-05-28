@@ -4,7 +4,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 
-import com.unclezs.novel.app.App;
 import com.xuexiang.xutil.XUtil;
 
 import lombok.experimental.UtilityClass;

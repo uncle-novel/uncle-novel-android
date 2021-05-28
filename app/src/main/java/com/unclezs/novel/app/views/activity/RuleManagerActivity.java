@@ -3,7 +3,6 @@ package com.unclezs.novel.app.views.activity;
 import android.os.Bundle;
 
 import com.unclezs.novel.app.base.BaseActivity;
-import com.unclezs.novel.app.base.BasePresenter;
 import com.unclezs.novel.app.base.NullPresenter;
 import com.unclezs.novel.app.views.fragment.rule.RuleManagerFragment;
 

@@ -60,9 +60,9 @@ public class SearchRecord {
     @Override
     public String toString() {
         return "QueryRecord{" +
-                "Id=" + id +
-                ", content='" + content + '\'' +
-                ", time=" + time +
-                '}';
+            "Id=" + id +
+            ", content='" + content + '\'' +
+            ", time=" + time +
+            '}';
     }
 }

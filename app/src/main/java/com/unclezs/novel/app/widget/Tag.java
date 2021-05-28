@@ -3,7 +3,6 @@ package com.unclezs.novel.app.widget;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

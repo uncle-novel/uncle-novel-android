@@ -8,11 +8,8 @@ import com.unclezs.novel.app.App;
 import com.unclezs.novel.app.BuildConfig;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.utils.update.CustomUpdateFailureListener;
-import com.unclezs.novel.app.utils.update.CustomUpdateParser;
-import com.unclezs.novel.app.utils.update.CustomUpdatePrompter;
 import com.xuexiang.xupdate.XUpdate;
 import com.xuexiang.xupdate.easy.EasyUpdate;
-import com.xuexiang.xupdate.proxy.impl.DefaultUpdateChecker;
 import com.xuexiang.xupdate.utils.UpdateUtils;
 import com.xuexiang.xutil.resource.ResUtils;
 

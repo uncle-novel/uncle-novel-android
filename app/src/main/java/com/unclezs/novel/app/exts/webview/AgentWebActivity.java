@@ -25,86 +25,86 @@ import com.xuexiang.xui.widget.slideback.SlideBack;
  */
 public class AgentWebActivity extends AppCompatActivity {
 
-  private AgentWebFragment mAgentWebFragment;
+    private AgentWebFragment mAgentWebFragment;
 
-  /**
-   * 请求浏览器
-   *
-   * @param url
-   */
-  public static void goWeb(Context context, final String url) {
-    Intent intent = new Intent(context, AgentWebActivity.class);
-    intent.putExtra(AgentWebFragment.KEY_URL, url);
-    context.startActivity(intent);
-  }
+    /**
+     * 请求浏览器
+     *
+     * @param url
+     */
+    public static void goWeb(Context context, final String url) {
+        Intent intent = new Intent(context, AgentWebActivity.class);
+        intent.putExtra(AgentWebFragment.KEY_URL, url);
+        context.startActivity(intent);
+    }
 
-  @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_agent_web);
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_agent_web);
 
-    SlideBack.with(this)
+        SlideBack.with(this)
             .haveScroll(true)
             .callBack(this::finish)
             .register();
 
-    Uri uri = getIntent().getData();
-    if (uri != null) {
-      XRouter.getInstance().build(uri).navigation(this, new NavCallback() {
-        @Override
-        public void onArrival(Postcard postcard) {
-          finish();
+        Uri uri = getIntent().getData();
+        if (uri != null) {
+            XRouter.getInstance().build(uri).navigation(this, new NavCallback() {
+                @Override
+                public void onArrival(Postcard postcard) {
+                    finish();
+                }
+
+                @Override
+                public void onLost(Postcard postcard) {
+                    loadUrl(uri.toString());
+                }
+            });
+        } else {
+            String url = getIntent().getStringExtra(AgentWebFragment.KEY_URL);
+            loadUrl(url);
         }
+    }
 
-        @Override
-        public void onLost(Postcard postcard) {
-          loadUrl(uri.toString());
+    private void loadUrl(String url) {
+        if (url != null) {
+            openFragment(url);
+        } else {
+            XToastUtils.error("数据出错！");
+            finish();
         }
-      });
-    } else {
-      String url = getIntent().getStringExtra(AgentWebFragment.KEY_URL);
-      loadUrl(url);
     }
-  }
 
-  private void loadUrl(String url) {
-    if (url != null) {
-      openFragment(url);
-    } else {
-      XToastUtils.error("数据出错！");
-      finish();
+    private void openFragment(String url) {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.container_frame_layout, mAgentWebFragment = AgentWebFragment.getInstance(url));
+        ft.commit();
+
     }
-  }
 
-  private void openFragment(String url) {
-    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-    ft.add(R.id.container_frame_layout, mAgentWebFragment = AgentWebFragment.getInstance(url));
-    ft.commit();
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
-  }
-
-  @Override
-  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-  }
-
-  @Override
-  public boolean onKeyDown(int keyCode, KeyEvent event) {
-    AgentWebFragment agentWebFragment = mAgentWebFragment;
-    if (agentWebFragment != null) {
-      if (((FragmentKeyDown) agentWebFragment).onFragmentKeyDown(keyCode, event)) {
-        return true;
-      } else {
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        AgentWebFragment agentWebFragment = mAgentWebFragment;
+        if (agentWebFragment != null) {
+            if (((FragmentKeyDown) agentWebFragment).onFragmentKeyDown(keyCode, event)) {
+                return true;
+            } else {
+                return super.onKeyDown(keyCode, event);
+            }
+        }
         return super.onKeyDown(keyCode, event);
-      }
     }
-    return super.onKeyDown(keyCode, event);
-  }
 
 
-  @Override
-  protected void onDestroy() {
-    SlideBack.unregister(this);
-    super.onDestroy();
-  }
+    @Override
+    protected void onDestroy() {
+        SlideBack.unregister(this);
+        super.onDestroy();
+    }
 }

@@ -1,8 +1,6 @@
 package com.unclezs.novel.app.spi;
 
 import android.annotation.SuppressLint;
-import android.os.Handler;
-import android.os.Looper;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;

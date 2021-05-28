@@ -1,6 +1,5 @@
 package com.unclezs.novel.app.exts.webview;
 
-import android.util.Log;
 import android.webkit.JsResult;
 import android.webkit.WebView;
 
@@ -15,17 +14,17 @@ import com.just.agentweb.core.client.MiddlewareWebChromeBase;
  */
 public class MiddlewareChromeClient extends MiddlewareWebChromeBase {
 
-  public MiddlewareChromeClient() {
+    public MiddlewareChromeClient() {
 
-  }
+    }
 
-  @Override
-  public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-    return super.onJsAlert(view, url, message, result);
-  }
+    @Override
+    public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+        return super.onJsAlert(view, url, message, result);
+    }
 
-  @Override
-  public void onProgressChanged(WebView view, int newProgress) {
-    super.onProgressChanged(view, newProgress);
-  }
+    @Override
+    public void onProgressChanged(WebView view, int newProgress) {
+        super.onProgressChanged(view, newProgress);
+    }
 }

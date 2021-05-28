@@ -13,11 +13,29 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- *
  * @author xuexiang
  * @since 2019-07-09 17:02
  */
 public class InternalDataBase implements IDatabase {
+    /**
+     * 通过数据库表类名集合创建表
+     *
+     * @param connectionSource
+     * @param tableClassNames  数据库表的类名集合
+     * @throws java.sql.SQLException
+     */
+    private static void dropTablesByClassNames(ConnectionSource connectionSource, List<String> tableClassNames) throws SQLException {
+        if (tableClassNames != null && !tableClassNames.isEmpty()) {
+            for (String tableClassName : tableClassNames) {
+                try {
+                    TableUtils.dropTable(connectionSource, Class.forName(tableClassName), false);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     /**
      * 数据库创建
      *
@@ -51,25 +69,6 @@ public class InternalDataBase implements IDatabase {
             DataBaseUtils.createTablesByClassNames(connectionSource, AppDataBaseTable.getTables());
         } catch (SQLException e) {
             DBLog.e(e);
-        }
-    }
-
-    /**
-     * 通过数据库表类名集合创建表
-     *
-     * @param connectionSource
-     * @param tableClassNames 数据库表的类名集合
-     * @throws java.sql.SQLException
-     */
-    private static void dropTablesByClassNames(ConnectionSource connectionSource, List<String> tableClassNames) throws SQLException {
-        if (tableClassNames != null && !tableClassNames.isEmpty()) {
-            for (String tableClassName : tableClassNames) {
-                try {
-                    TableUtils.dropTable(connectionSource, Class.forName(tableClassName), false);
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }

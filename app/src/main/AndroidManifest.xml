@@ -146,23 +146,6 @@
             android:name="design_height_in_dp"
             android:value="640" />
 
-        <meta-data
-            android:name="PGYER_API_KEY"
-            android:value="e68c2dd372fe0d8e2a9103bd73939fa8" />
-        <meta-data
-            android:name="PGYER_FRONTJS_KEY"
-            android:value="22d213278bde51f9c359d1807d474061" />
-
-        <!--添加新版本检测-->
-        <meta-data
-            android:name="PGYER_FEATURE_CHECK_UNPDATE"
-            android:value="true" />
-
-        <!-- 是否支持热更新 -->
-        <meta-data
-            android:name="PGYER_HOT_UPDATE"
-            android:value="true" />
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"

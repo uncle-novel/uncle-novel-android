@@ -58,12 +58,16 @@ android {
     }
 
     buildTypes {
+        def apiKey = findProperty("pgyer.api_key")
+        def frontJsKey = findProperty("pgyer.frontjs_key")
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             buildConfigField "String", "APP_UPDATE_URL", "\"$appUpdateUrl\""
+            buildConfigField "String", "PGYER_API_KEY", "\"$apiKey\""
+            buildConfigField "String", "PGYER_FRONT_JS_KEY", "\"$frontJsKey\""
         }
 
         debug {
@@ -71,6 +75,8 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.release
             buildConfigField "String", "APP_UPDATE_URL", "\"$appUpdateUrl\""
+            buildConfigField "String", "PGYER_API_KEY", "\"$apiKey\""
+            buildConfigField "String", "PGYER_FRONT_JS_KEY", "\"$frontJsKey\""
         }
     }
 

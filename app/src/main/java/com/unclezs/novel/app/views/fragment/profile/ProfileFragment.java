@@ -33,6 +33,7 @@ public class ProfileFragment extends BaseFragment<NullPresenter> implements Supe
     SuperTextView menuSponsor;
     @BindView(R.id.menu_download_config)
     SuperTextView menuDownloadConfig;
+
     /**
      * @return 返回为 null意为不需要导航栏
      */
