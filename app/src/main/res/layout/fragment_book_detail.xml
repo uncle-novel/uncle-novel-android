@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xuexiang.xui.widget.button.shadowbutton.ShadowImageView
+            android:id="@+id/cover"
+            android:layout_width="140dp"
+            android:layout_height="175dp"
+            android:elevation="10dp"
+            android:src="@drawable/no_cover"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cover"
+            android:layout_width="match_parent"
+            android:id="@+id/titleBox"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:text="庆余年庆余年庆余年庆余年庆余年庆余年庆余年"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_rename"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/author"
+            android:text="猫腻"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleBox" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/author"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:id="@+id/tags"
+            android:layout_marginTop="5dp">
+
+            <com.unclezs.novel.app.widget.Tag
+                android:id="@+id/category"
+                android:text="玄幻小说"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/config_margin_8dp"
+                android:layout_height="wrap_content" />
+
+            <com.unclezs.novel.app.widget.Tag
+                android:id="@+id/word_count"
+                android:text="150万字"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/config_margin_8dp"
+                android:layout_height="wrap_content" />
+
+            <com.unclezs.novel.app.widget.Tag
+                android:id="@+id/state"
+                android:text="连载中"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tags"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:id="@+id/actions_layout"
+            android:layout_marginTop="5dp">
+
+            <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+                android:id="@+id/action_analysis"
+                android:text="@string/analysis_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_analysis_download_15"
+                android:drawableTint="@color/white"
+                app:rb_backgroundColor="@color/colorPrimary"
+                android:layout_marginEnd="@dimen/config_margin_8dp"
+                android:layout_marginStart="@dimen/config_margin_18dp" />
+
+            <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+                android:id="@+id/action_download"
+                android:text="@string/download_direct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_download_15"
+                android:drawableTint="@color/white"
+                app:rb_backgroundColor="@color/colorPrimary"
+                android:layout_marginEnd="@dimen/config_margin_18dp"
+                android:layout_marginStart="@dimen/config_margin_8dp" />
+        </LinearLayout>
+
+        <com.xuexiang.xui.widget.layout.XUILinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/actions_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:xui_borderColor="?attr/xui_config_color_separator_light"
+            app:xui_outerNormalColor="?attr/xui_config_color_background"
+            app:xui_showBorderOnlyBeforeL="true"
+            app:xui_shadowElevation="10dp"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="-5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:text="@string/introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/introduce"
+                    android:text="大叔大妈都买了"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+        </com.xuexiang.xui.widget.layout.XUILinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

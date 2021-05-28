@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="files"
+        path="Android/data/com.unclezs.novel.app/files" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+    <files-path
+        name="files"
+        path="." />
+</paths>

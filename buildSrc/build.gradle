@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+plugins {
+    id "java-gradle-plugin"
+    id "io.spring.dependency-management" version "1.0.9.RELEASE" apply false
+}
+
+apply from: "../gradle/dependency-management.gradle"
+
+dependencies {
+    annotationProcessor "org.projectlombok:lombok"
+    compileOnly "org.projectlombok:lombok"
+
+    implementation "com.google.code.gson:gson"
+    implementation "cn.hutool:hutool-all"
+
+}
