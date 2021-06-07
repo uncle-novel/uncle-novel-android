@@ -33,8 +33,6 @@ public class AnalysisPresenter extends BasePresenter<AnalysisFragment> {
     private Disposable analysisDisposable;
     private TocSpider spider;
     @Getter
-    private AnalyzerRule rule;
-    @Getter
     private Novel novel;
     private String url;
 
@@ -44,14 +42,15 @@ public class AnalysisPresenter extends BasePresenter<AnalysisFragment> {
             analysisDisposable.dispose();
             spider.cancel();
         }
-        rule = RuleManager.getOrDefault(url);
-        spider = new TocSpider(rule);
+        spider = new TocSpider(getRule());
         spider.setOnNewItemAddHandler(chapter -> XUtil.runOnUiThread(() -> view.addMore(chapter)));
         loading.set(true);
         loadMore(true);
     }
 
     public void loadMore(boolean first) {
+        AnalyzerRule rule = getRule();
+        spider.setRule(rule);
         if (analysisDisposable != null && !analysisDisposable.isDisposed()) {
             return;
         }
@@ -102,4 +101,8 @@ public class AnalysisPresenter extends BasePresenter<AnalysisFragment> {
         this.novel = novel;
     }
 
+
+    public AnalyzerRule getRule() {
+        return RuleManager.getOrDefault(url);
+    }
 }

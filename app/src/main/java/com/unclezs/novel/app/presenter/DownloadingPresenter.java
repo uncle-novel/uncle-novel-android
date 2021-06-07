@@ -26,7 +26,6 @@ import cn.hutool.core.io.FileUtil;
  * @date 2021/05/26 11:24
  */
 public class DownloadingPresenter extends BasePresenter<DownloadingFragment> {
-    public static final String DOWNLOADS_CACHE_CONFIG = "downloads.json";
     public static final String TMP_DIR = FileUtils.getDiskCacheDir("downloads");
     private final DownloadConfigPresenter downloadConfigPresenter = new DownloadConfigPresenter();
 

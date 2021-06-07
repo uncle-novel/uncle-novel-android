@@ -83,7 +83,7 @@ public class SpiderWrapper implements Serializable {
         if (this.id == null) {
             this.id = IdUtil.fastSimpleUUID();
         }
-        tmpFile = FileUtil.file(DownloadingPresenter.TMP_DIR, id);
+        setId(id);
     }
 
     /**
@@ -263,6 +263,14 @@ public class SpiderWrapper implements Serializable {
      */
     private void backup() {
         FileUtil.writeUtf8String(GsonUtils.toJson(this), tmpFile);
+    }
+
+    /**
+     * 设置ID
+     */
+    public void setId(String id) {
+        this.id = id;
+        this.tmpFile = FileUtil.file(DownloadingPresenter.TMP_DIR, id);
     }
 
     public boolean isAudio() {

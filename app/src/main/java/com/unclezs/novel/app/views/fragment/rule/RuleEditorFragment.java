@@ -76,6 +76,8 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
     SuperTextView tocFilter;
     @BindView(R.id.toc_auto_next)
     SuperTextView tocAutoNext;
+    @BindView(R.id.toc_sort)
+    SuperTextView tocSort;
     private AnalyzerRule rule;
     private boolean isAdd;
 
@@ -141,6 +143,7 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
         pageContent.setCenterEditString(rule.getContent().getNext().ruleString());
         pageToc.setCenterEditString(rule.getToc().getNext().ruleString());
         tocFilter.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getFilter()));
+        tocSort.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getSort()));
         tocAutoNext.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getAutoNext()));
     }
 
@@ -161,6 +164,7 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
         this.rule.setSite(site.getCenterEditValue());
         this.rule.getContent().setNext(CommonRule.create(this.pageContent.getCenterEditValue()));
         this.rule.getToc().setFilter(this.tocFilter.getSwitchIsChecked());
+        this.rule.getToc().setSort(this.tocSort.getSwitchIsChecked());
         this.rule.getToc().setAutoNext(this.tocAutoNext.getSwitchIsChecked());
         this.rule.getToc().setNext(CommonRule.create(this.pageToc.getCenterEditValue()));
     }

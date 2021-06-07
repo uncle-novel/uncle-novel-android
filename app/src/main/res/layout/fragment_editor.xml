@@ -133,6 +133,11 @@
                 app:sLeftTextString="@string/toc_filter" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/toc_sort"
+                style="@style/SwitchInfoItem"
+                app:sLeftTextString="乱序重排" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:id="@+id/toc_auto_next"
                 style="@style/SwitchInfoItem"
                 app:sLeftTextString="@string/toc_auto_next" />

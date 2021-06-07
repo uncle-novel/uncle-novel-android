@@ -102,6 +102,12 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         return R.layout.fragment_analysis;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        hideCurrentPageSoftInput();
+    }
+
     /**
      * 初始化控件
      */
@@ -140,8 +146,6 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
                 }
             }
         });
-        analysisInput.clearFocus();
-
         WidgetUtils.initRecyclerView(chapterView);
         // 监听拖拽和侧滑删除，更新UI和数据源。
         chapterView.setOnItemMoveListener(new OnItemMoveListener() {
@@ -170,6 +174,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         if (novel != null) {
             analysisInput.setQuery(novel.getUrl(), true);
         }
+        analysisInput.clearFocus();
     }
 
     @Override
