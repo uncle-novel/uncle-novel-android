@@ -112,16 +112,7 @@ public class PublishApk extends DefaultTask {
         File versionFile = FileUtil.file(outDir, "version.json");
         FileUtil.writeUtf8String(json, versionFile);
         // 上传到服务器
-        String local = apkFile.getAbsolutePath();
-        if (SystemUtil.getOsInfo().isWindows()) {
-            local = String.format("/cygdrive/%s", local.replace(StrUtil.BACKSLASH, StrUtil.SLASH).replace(StrUtil.COLON, CharSequenceUtil.EMPTY));
-        }
-        ExecUtils.exec("rsync", "-avz", "--chmod", "777", local, apkRemote);
-        local = versionFile.getAbsolutePath();
-        if (SystemUtil.getOsInfo().isWindows()) {
-            local = String.format("/cygdrive/%s", local.replace(StrUtil.BACKSLASH, StrUtil.SLASH).replace(StrUtil.COLON, CharSequenceUtil.EMPTY));
-        }
-        ExecUtils.exec("rsync", "-avz", "--chmod", "777", local, versionRemote);
-
+        ExecUtils.exec("scp",  apkFile.getAbsolutePath(), apkRemote);
+        ExecUtils.exec("scp", versionFile.getAbsolutePath(), versionRemote);
     }
 }
