@@ -1,4 +1,4 @@
-package com.unclezs.novel.app.pipeline;
+package com.unclezs.novel.app.core;
 
 import com.unclezs.novel.analyzer.model.Chapter;
 import com.unclezs.novel.analyzer.spider.pipline.AbstractTextPipeline;

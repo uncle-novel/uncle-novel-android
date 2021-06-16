@@ -53,4 +53,10 @@
         style="@style/FabMenu.Buttons"
         android:src="@drawable/ic_rename"
         app:fab_label="格式化章节名" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_sort"
+        style="@style/FabMenu.Buttons"
+        android:src="@drawable/ic_sort"
+        app:fab_label="重排序" />
 </com.github.clans.fab.FloatingActionMenu>

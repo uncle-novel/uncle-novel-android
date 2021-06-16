@@ -4,7 +4,7 @@ import com.unclezs.novel.analyzer.spider.Spider;
 import com.unclezs.novel.analyzer.spider.pipline.MediaFilePipeline;
 import com.unclezs.novel.analyzer.spider.pipline.TxtPipeline;
 import com.unclezs.novel.analyzer.util.GsonUtils;
-import com.unclezs.novel.app.pipeline.EbookPipeline;
+import com.unclezs.novel.app.core.EbookPipeline;
 import com.unclezs.novel.app.presenter.DownloadingPresenter;
 import com.xuexiang.xutil.XUtil;
 

@@ -20,6 +20,7 @@ import com.unclezs.novel.analyzer.util.StringUtils;
 import com.unclezs.novel.analyzer.util.uri.UrlUtils;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
+import com.unclezs.novel.app.core.ChapterComparator;
 import com.unclezs.novel.app.model.ChapterWrapper;
 import com.unclezs.novel.app.presenter.AnalysisPresenter;
 import com.unclezs.novel.app.utils.ClipboardUtils;
@@ -38,12 +39,14 @@ import com.xuexiang.xui.widget.statelayout.StatefulLayout;
 import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 import com.yanzhenjie.recyclerview.touch.OnItemMoveListener;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.hutool.core.collection.ListUtil;
 
 /**
  * 首页动态
@@ -235,7 +238,7 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
     }
 
 
-    @OnClick({R.id.fab_edit_info, R.id.fab_to_top, R.id.fab_to_bottom, R.id.fab_download, R.id.fab_rename, R.id.fab_config})
+    @OnClick({R.id.fab_sort, R.id.fab_edit_info, R.id.fab_to_top, R.id.fab_to_bottom, R.id.fab_download, R.id.fab_rename, R.id.fab_config})
     public void handleFabClicked(View view) {
         final int id = view.getId();
         switch (id) {
@@ -257,6 +260,9 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
                 break;
             case R.id.fab_download:
                 presenter.submitDownload();
+                break;
+            case R.id.fab_sort:
+                sortToc();
                 break;
             case R.id.fab_config:
                 openNewPage(RuleEditorFragment.class, RuleEditorFragment.KEY_RULE, presenter.getRule());
@@ -317,6 +323,14 @@ public class AnalysisFragment extends BaseFragment<AnalysisPresenter> {
         fabMenu.setVisibility(View.GONE);
         stateLayout.showLoading("全力解析中...");
         presenter.doAnalysis(url);
+    }
+
+    /**
+     * 排序
+     */
+    private void sortToc() {
+        List<ChapterWrapper> sorted = ListUtil.sort(new ArrayList<>(adapter.getData()), new ChapterComparator());
+        adapter.refresh(sorted);
     }
 
 
