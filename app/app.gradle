@@ -27,8 +27,8 @@ android {
         applicationId "com.unclezs.novel.app"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 7
-        versionName "3.0.7"
+        versionCode 10
+        versionName "3.0.10"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
@@ -105,7 +105,7 @@ dependencies {
     // uncle-novel
     implementation 'com.unclezs:novel-analyzer'
     // 安卓端利用jdk的js接口实现的引擎, 基于rhino，pc端基于nashorn 效果一致
-    implementation 'io.apisense:rhino-android'
+    implementation 'com.github.gedoor:rhino-android'
     // x系列
     implementation 'com.github.xuexiangjys:XUI'
     implementation "com.github.xuexiangjys.XOrmlite:xormlite-runtime"
@@ -167,9 +167,17 @@ task publishApk(type: PublishApk) {
     updateUrl = appUpdateUrl
     downloadUrl = "https://app.unclezs.com/publish/android/apk/"
     apk = file("$buildDir/outputs/apk/release/app-release.apk")
-    whatNew = ["1.修复一些问题", "2.欢迎关注公众号[书虫无书荒]"]
     outDir = file("$rootDir/publish")
 
     versionRemote = "root@app.unclezs.com:/www/wwwroot/app.unclezs.com/publish/android/"
     apkRemote = "$versionRemote/apk/"
+    whatNew = []
+    for (String line : file("$rootDir/changelog").readLines()) {
+        if (line.trim().blank || line.trim().empty) {
+            break
+        }
+        if (!line.startsWith("//")) {
+            whatNew.add(line)
+        }
+    }
 }

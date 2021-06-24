@@ -1,5 +1,6 @@
 package com.unclezs.novel.app.core;
 
+import com.unclezs.novel.analyzer.core.helper.AnalyzerHelper;
 import com.unclezs.novel.analyzer.model.Chapter;
 import com.unclezs.novel.analyzer.spider.pipline.AbstractTextPipeline;
 import com.unclezs.novel.app.utils.EbookUtils;
@@ -18,11 +19,18 @@ import lombok.Setter;
 @Setter
 public class EbookPipeline extends AbstractTextPipeline {
 
+    @Override
+    public void process(Chapter chapter) {
+        // 预处理文本格式
+        chapter.setContent(AnalyzerHelper.formatContent(chapter.getContent()));
+        // 生成章节
+        EbookUtils.generateChapter(chapter, new File(getFilePath()));
+
+    }
 
     @Override
     public void processChapter(Chapter chapter) {
-        // 生成章节
-        EbookUtils.generateChapter(chapter, new File(getFilePath()));
+        // do nothing
     }
 
     @Override

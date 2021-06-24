@@ -12,7 +12,7 @@ repositories{
 
 dependencyManagement {
     dependencies {
-        dependency "com.unclezs:novel-analyzer:1.0.3"
+        dependency "com.unclezs:novel-analyzer:1.0.10"
 
         dependencySet("cn.hutool:5.5.9") {
             entry "hutool-all"
@@ -63,7 +63,7 @@ dependencyManagement {
         dependency "com.jakewharton:butterknife:$butterknife"
         dependency "com.jakewharton:butterknife-compiler:$butterknife"
         // js
-        dependency 'io.apisense:rhino-android:1.1.1'
+        dependency 'com.github.gedoor:rhino-android:1.5'
         // 下拉刷新
         dependency 'com.github.xuexiangjys.SmartRefreshLayout:refresh-header:1.1.5'
         dependency 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout:1.1.5'

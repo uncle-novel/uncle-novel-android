@@ -128,7 +128,6 @@ public class RuleManagerFragment extends BaseFragment<RuleManagerPresenter> impl
 
     @Override
     public void onFragmentResult(int requestCode, int resultCode, Intent data) {
-        XToastUtils.error(requestCode + "");
         if (resultCode == RuleEditorFragment.RESULT_CODE && data != null) {
             Bundle bundle = data.getExtras();
             AnalyzerRule rule = (AnalyzerRule) bundle.getSerializable(RuleEditorFragment.KEY_RULE);
