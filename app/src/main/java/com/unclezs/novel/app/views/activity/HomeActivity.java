@@ -1,6 +1,10 @@
 package com.unclezs.novel.app.views.activity;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,11 +29,11 @@ import com.unclezs.novel.app.utils.Utils;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.utils.sdkinit.XUpdateInit;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
-import com.unclezs.novel.app.views.fragment.download.DownloadManagerFragment;
 import com.unclezs.novel.app.views.fragment.components.AboutFragment;
 import com.unclezs.novel.app.views.fragment.components.DownloadConfigFragment;
 import com.unclezs.novel.app.views.fragment.components.SearchBookFragment;
 import com.unclezs.novel.app.views.fragment.components.SponsorFragment;
+import com.unclezs.novel.app.views.fragment.download.DownloadManagerFragment;
 import com.unclezs.novel.app.views.fragment.profile.ProfileFragment;
 import com.xuexiang.constant.PermissionConstants;
 import com.xuexiang.xui.adapter.FragmentAdapter;

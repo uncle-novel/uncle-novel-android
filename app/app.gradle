@@ -27,8 +27,8 @@ android {
         applicationId "com.unclezs.novel.app"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 13
-        versionName "3.0.13"
+        versionCode 14
+        versionName "3.0.14"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
@@ -124,6 +124,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview'
     implementation 'androidx.documentfile:documentfile'
     implementation 'androidx.constraintlayout:constraintlayout'
+    implementation 'androidx.activity:activity'
+    implementation 'androidx.fragment:fragment'
     // glide
     implementation 'com.github.bumptech.glide:glide'
     // 工具包

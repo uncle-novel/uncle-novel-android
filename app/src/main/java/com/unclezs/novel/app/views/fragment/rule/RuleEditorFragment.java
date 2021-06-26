@@ -70,6 +70,8 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
     RoundButton contentAdUpdate;
     @BindView(R.id.page_content)
     SuperTextView pageContent;
+    @BindView(R.id.content_enabled_next)
+    SuperTextView contentEnabledNext;
     @BindView(R.id.content_t2s)
     SuperTextView contentTraditionToSimple;
     @BindView(R.id.page_toc)
@@ -138,12 +140,15 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
                 XToastUtils.error("请先填写正确的书源站点");
             }
         });
+        // 正文规则
         contentAdUpdate.setOnClickListener(v -> {
             CommonRule content = rule.getContent().getContent();
             showDialog(content.getReplace(), replaceRules -> rule.getContent().getContent().setReplace(replaceRules));
         });
         pageContent.setCenterEditString(rule.getContent().getNext().ruleString());
         contentTraditionToSimple.setSwitchIsChecked(Boolean.TRUE.equals(rule.getContent().getTraditionToSimple()));
+        contentEnabledNext.setSwitchIsChecked(Boolean.TRUE.equals(rule.getContent().getEnableNext()));
+        // 章节规则
         pageToc.setCenterEditString(rule.getToc().getNext().ruleString());
         tocFilter.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getFilter()));
         tocSort.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getSort()));
@@ -169,6 +174,7 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
         this.rule.setSite(site.getCenterEditValue());
         this.rule.getContent().setNext(CommonRule.create(this.pageContent.getCenterEditValue()));
         this.rule.getContent().setTraditionToSimple(this.contentTraditionToSimple.getSwitchIsChecked());
+        this.rule.getContent().setEnableNext(this.contentEnabledNext.getSwitchIsChecked());
         this.rule.getToc().setFilter(this.tocFilter.getSwitchIsChecked());
         this.rule.getToc().setSort(this.tocSort.getSwitchIsChecked());
         this.rule.getToc().setAutoNext(this.tocAutoNext.getSwitchIsChecked());

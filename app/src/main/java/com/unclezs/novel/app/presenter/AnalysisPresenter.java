@@ -1,5 +1,10 @@
 package com.unclezs.novel.app.presenter;
 
+import android.content.Intent;
+import android.os.Build;
+import android.os.Environment;
+import android.provider.Settings;
+
 import com.hwangjr.rxbus.RxBus;
 import com.unclezs.novel.analyzer.core.model.AnalyzerRule;
 import com.unclezs.novel.analyzer.model.Chapter;
@@ -13,6 +18,7 @@ import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.utils.rx.RxUtils;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
 import com.unclezs.novel.app.views.fragment.download.DownloadingFragment;
+import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
 import com.xuexiang.xutil.XUtil;
 
 import org.apache.commons.lang3.StringUtils;
@@ -85,15 +91,25 @@ public class AnalysisPresenter extends BasePresenter<AnalysisFragment> {
      * 提交下载
      */
     public void submitDownload() {
-        if (novel != null) {
-            List<Chapter> selectedChapters = view.getSelectedChapters();
-            if (CollectionUtils.isEmpty(selectedChapters)) {
-                XToastUtils.error("至少选择一个章节进行下载");
-                return;
+        // 运行设备>=Android 11.0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
+            new MaterialDialog.Builder(view.requireContext())
+                .title("下载需要获取文件存储权限")
+                .positiveText("确定")
+                .negativeText("取消")
+                .onPositive((d, w) -> view.startActivityForResult(new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION), 101))
+                .cancelable(true).show();
+        } else {
+            if (novel != null) {
+                List<Chapter> selectedChapters = view.getSelectedChapters();
+                if (CollectionUtils.isEmpty(selectedChapters)) {
+                    XToastUtils.error("至少选择一个章节进行下载");
+                    return;
+                }
+                Novel novelCopy = SerializationUtils.deepClone(this.novel);
+                novelCopy.setChapters(SerializationUtils.deepClone(selectedChapters));
+                RxBus.get().post(DownloadingFragment.BUS_ACTION_ADD_TASK, novelCopy);
             }
-            Novel novelCopy = SerializationUtils.deepClone(this.novel);
-            novelCopy.setChapters(SerializationUtils.deepClone(selectedChapters));
-            RxBus.get().post(DownloadingFragment.BUS_ACTION_ADD_TASK, novelCopy);
         }
     }
 

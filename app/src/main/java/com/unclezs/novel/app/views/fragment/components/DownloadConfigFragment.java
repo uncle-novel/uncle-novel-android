@@ -2,12 +2,13 @@ package com.unclezs.novel.app.views.fragment.components;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
-import android.provider.DocumentsContract;
+import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.documentfile.provider.DocumentFile;
 
 import com.unclezs.novel.app.R;
@@ -50,6 +51,7 @@ public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter
     SuperTextView retryNum;
     @BindView(R.id.format)
     SuperTextView format;
+    private ActivityResultLauncher<Uri> selectDocTree;
 
     @Override
     protected int getLayoutId() {
@@ -69,25 +71,30 @@ public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter
         updateThreadNum(presenter.getThreadNum());
         updateTaskNum(presenter.getTaskNum());
         updateFormat(presenter.getFormat());
+        selectDocTree = requireActivity().registerForActivityResult(new ActivityResultContracts.OpenDocumentTree(), new ActivityResultCallback<Uri>() {
+            @Override
+            public void onActivityResult(Uri result) {
+                requireActivity().getContentResolver().takePersistableUriPermission(result, Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                onChangeSavePath(result);
+            }
+        });
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == -1 && data != null && data.getData() != null) {
-            DocumentFile file = DocumentFile.fromTreeUri(requireContext(), data.getData());
-            if (file != null) {
-                presenter.setSavePath(FileUtils.getPath(requireContext(), file.getUri()));
-            }
+    /**
+     * 更改保存文件夹
+     *
+     * @param result 文件夹路径
+     */
+    public void onChangeSavePath(Uri result) {
+        DocumentFile file = DocumentFile.fromTreeUri(requireContext(), result);
+        if (file != null) {
+            presenter.setSavePath(FileUtils.getPath(requireContext(), file.getUri()));
         }
     }
 
-    private void showFileChooser() {
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
-        startActivityForResult(intent, SAVE_PATH_REQUEST_CODE);
+    private void showFileChooser() {
+        selectDocTree.launch(null);
     }
 
     @OnClick(R.id.thread_num)

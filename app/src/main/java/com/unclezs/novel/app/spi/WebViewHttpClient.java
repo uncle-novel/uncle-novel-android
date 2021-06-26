@@ -40,7 +40,6 @@ public class WebViewHttpClient implements HttpProvider {
                 public void onPageFinished(WebView view, String url) {
                     webView.evaluateJavascript("document.documentElement.outerHTML", html -> {
                         result.set(StringEscapeUtils.unescapeJson(html));
-                        System.out.println(result.get());
                         countDownLatch.countDown();
                     });
                 }
