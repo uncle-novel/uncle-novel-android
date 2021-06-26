@@ -27,8 +27,8 @@ android {
         applicationId "com.unclezs.novel.app"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 14
-        versionName "3.0.14"
+        versionCode 15
+        versionName "3.0.15"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
