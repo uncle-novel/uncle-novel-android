@@ -14,6 +14,7 @@ import com.unclezs.novel.analyzer.util.CollectionUtils;
 import com.unclezs.novel.analyzer.util.SerializationUtils;
 import com.unclezs.novel.app.base.BasePresenter;
 import com.unclezs.novel.app.manager.RuleManager;
+import com.unclezs.novel.app.utils.PermissionHelper;
 import com.unclezs.novel.app.utils.XToastUtils;
 import com.unclezs.novel.app.utils.rx.RxUtils;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
@@ -91,15 +92,7 @@ public class AnalysisPresenter extends BasePresenter<AnalysisFragment> {
      * 提交下载
      */
     public void submitDownload() {
-        // 运行设备>=Android 11.0
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
-            new MaterialDialog.Builder(view.requireContext())
-                .title("下载需要获取文件存储权限")
-                .positiveText("确定")
-                .negativeText("取消")
-                .onPositive((d, w) -> view.startActivityForResult(new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION), 101))
-                .cancelable(true).show();
-        } else {
+        PermissionHelper.onGrantedDiskPermission(view.requireActivity(), () -> {
             if (novel != null) {
                 List<Chapter> selectedChapters = view.getSelectedChapters();
                 if (CollectionUtils.isEmpty(selectedChapters)) {
@@ -110,7 +103,7 @@ public class AnalysisPresenter extends BasePresenter<AnalysisFragment> {
                 novelCopy.setChapters(SerializationUtils.deepClone(selectedChapters));
                 RxBus.get().post(DownloadingFragment.BUS_ACTION_ADD_TASK, novelCopy);
             }
-        }
+        });
     }
 
     public void setNovel(Novel novel) {

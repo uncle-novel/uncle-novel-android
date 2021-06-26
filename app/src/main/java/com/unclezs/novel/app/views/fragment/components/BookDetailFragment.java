@@ -15,6 +15,7 @@ import com.unclezs.novel.analyzer.util.StringUtils;
 import com.unclezs.novel.app.R;
 import com.unclezs.novel.app.base.BaseFragment;
 import com.unclezs.novel.app.presenter.BookDetailPresenter;
+import com.unclezs.novel.app.utils.PermissionHelper;
 import com.unclezs.novel.app.views.fragment.analysis.AnalysisFragment;
 import com.unclezs.novel.app.views.fragment.download.DownloadingFragment;
 import com.unclezs.novel.app.widget.Tag;
@@ -146,7 +147,9 @@ public class BookDetailFragment extends BaseFragment<BookDetailPresenter> {
 
     @OnClick(R.id.action_download)
     public void toDownload() {
-        Novel novelCopy = SerializationUtils.deepClone(this.novel);
-        RxBus.get().post(DownloadingFragment.BUS_ACTION_ADD_TASK, novelCopy);
+        PermissionHelper.onGrantedDiskPermission(requireActivity(), () -> {
+            Novel novelCopy = SerializationUtils.deepClone(this.novel);
+            RxBus.get().post(DownloadingFragment.BUS_ACTION_ADD_TASK, novelCopy);
+        });
     }
 }
