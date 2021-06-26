@@ -5,26 +5,15 @@ import android.content.Context;
 
 import androidx.multidex.MultiDex;
 
-import com.unclezs.novel.analyzer.request.RequestParams;
-import com.unclezs.novel.analyzer.script.ScriptContext;
-import com.unclezs.novel.analyzer.script.ScriptUtils;
-import com.unclezs.novel.analyzer.util.GsonUtils;
 import com.unclezs.novel.app.utils.MMKVUtils;
+import com.unclezs.novel.app.utils.MixPanelHelper;
 import com.unclezs.novel.app.utils.sdkinit.ANRWatchDogInit;
-import com.unclezs.novel.app.utils.sdkinit.PygerInit;
 import com.unclezs.novel.app.utils.sdkinit.XBasicLibInit;
 import com.unclezs.novel.app.utils.sdkinit.XUpdateInit;
 import com.xuexiang.xormlite.annotation.DataBase;
 import com.xuexiang.xormlite.enums.DataBaseType;
 
-import org.jetbrains.annotations.NotNull;
-
-import io.reactivex.Single;
-import io.reactivex.SingleEmitter;
-import io.reactivex.SingleOnSubscribe;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.plugins.RxJavaPlugins;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author blog.unclezs.com
@@ -46,7 +35,6 @@ public class App extends Application {
         super.attachBaseContext(base);
         // 解决4.x运行崩溃的问题
         MultiDex.install(this);
-        PygerInit.init(this);
     }
 
     @Override

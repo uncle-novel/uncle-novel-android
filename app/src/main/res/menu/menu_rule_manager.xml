@@ -10,6 +10,9 @@
         android:title="@string/import_rule"
         android:id="@+id/import_rule" />
     <item
+        android:title="@string/import_rule_url"
+        android:id="@+id/import_rule_url" />
+    <item
         android:title="@string/export_rule"
         android:id="@+id/export" />
     <item

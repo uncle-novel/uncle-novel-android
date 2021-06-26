@@ -69,6 +69,9 @@
   native <methods>;
 }
 
+# 保持js引擎调用的java类
+-keep class com.unclezs.novel.analyzer.**{*;}
+
 #保持自定义控件类不被混淆
 -keepclasseswithmembers class * {
   public <init>(android.content.Context, android.util.AttributeSet);

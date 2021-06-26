@@ -27,8 +27,8 @@ android {
         applicationId "com.unclezs.novel.app"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 10
-        versionName "3.0.10"
+        versionCode 13
+        versionName "3.0.13"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
@@ -60,16 +60,14 @@ android {
     }
 
     buildTypes {
-        def apiKey = findProperty("pgyer.api_key")
-        def frontJsKey = findProperty("pgyer.frontjs_key")
+        def mixPanelToken = findProperty("mixPanel.android.token")
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             buildConfigField "String", "APP_UPDATE_URL", "\"$appUpdateUrl\""
-            buildConfigField "String", "PGYER_API_KEY", "\"$apiKey\""
-            buildConfigField "String", "PGYER_FRONT_JS_KEY", "\"$frontJsKey\""
+            buildConfigField "String", "MIX_PANEL_TOKEN", "\"$mixPanelToken\""
         }
 
         debug {
@@ -77,8 +75,7 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.release
             buildConfigField "String", "APP_UPDATE_URL", "\"$appUpdateUrl\""
-            buildConfigField "String", "PGYER_API_KEY", "\"$apiKey\""
-            buildConfigField "String", "PGYER_FRONT_JS_KEY", "\"$frontJsKey\""
+            buildConfigField "String", "MIX_PANEL_TOKEN", "\"$mixPanelToken\""
         }
     }
 
@@ -153,8 +150,8 @@ dependencies {
     implementation 'me.jessyan:autosize'
     // ANR异常捕获
     implementation 'com.github.anrwatchdog:anrwatchdog'
-    // 蒲公英SDK
-    implementation 'com.pgyer:analytics'
+    // mixPanel
+    implementation 'com.mixpanel.android:mixpanel-android'
 }
 
 

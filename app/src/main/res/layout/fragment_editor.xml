@@ -120,6 +120,11 @@
                 app:sLeftTextString="正文翻页" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/content_t2s"
+                style="@style/SwitchInfoItem"
+                app:sLeftTextString="@string/content_t2s" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:id="@+id/page_toc"
                 style="@style/EditInfoItem"
                 android:inputType="text"

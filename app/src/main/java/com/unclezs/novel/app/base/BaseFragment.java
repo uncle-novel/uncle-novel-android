@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 
 import com.unclezs.novel.analyzer.util.GsonUtils;
+import com.unclezs.novel.app.utils.MixPanelHelper;
 import com.xuexiang.xpage.base.XPageActivity;
 import com.xuexiang.xpage.base.XPageFragment;
 import com.xuexiang.xpage.core.PageOption;
@@ -38,6 +39,7 @@ public abstract class BaseFragment<P extends IPresenter> extends XPageFragment i
         initViews();
         initListeners();
         setPageName(getPageTitle());
+        MixPanelHelper.event(getPageName(), requireContext());
     }
 
     @Override

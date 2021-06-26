@@ -70,6 +70,8 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
     RoundButton contentAdUpdate;
     @BindView(R.id.page_content)
     SuperTextView pageContent;
+    @BindView(R.id.content_t2s)
+    SuperTextView contentTraditionToSimple;
     @BindView(R.id.page_toc)
     SuperTextView pageToc;
     @BindView(R.id.toc_filter)
@@ -141,6 +143,7 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
             showDialog(content.getReplace(), replaceRules -> rule.getContent().getContent().setReplace(replaceRules));
         });
         pageContent.setCenterEditString(rule.getContent().getNext().ruleString());
+        contentTraditionToSimple.setSwitchIsChecked(Boolean.TRUE.equals(rule.getContent().getTraditionToSimple()));
         pageToc.setCenterEditString(rule.getToc().getNext().ruleString());
         tocFilter.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getFilter()));
         tocSort.setSwitchIsChecked(Boolean.TRUE.equals(rule.getToc().getSort()));
@@ -152,7 +155,9 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
         return new RuleEditorPresenter();
     }
 
-
+    /**
+     * 保存规则
+     */
     private void saveRule() {
         BeanUtil.copyProperties(RuleHelper.parseRule(source.getText().toString(), AnalyzerRule.class), rule, CopyOptions.create().setTransientSupport(false));
         this.rule.setEnabled(enabled.getSwitchIsChecked());
@@ -163,6 +168,7 @@ public class RuleEditorFragment extends BaseFragment<RuleEditorPresenter> {
         this.rule.setName(name.getCenterEditValue());
         this.rule.setSite(site.getCenterEditValue());
         this.rule.getContent().setNext(CommonRule.create(this.pageContent.getCenterEditValue()));
+        this.rule.getContent().setTraditionToSimple(this.contentTraditionToSimple.getSwitchIsChecked());
         this.rule.getToc().setFilter(this.tocFilter.getSwitchIsChecked());
         this.rule.getToc().setSort(this.tocSort.getSwitchIsChecked());
         this.rule.getToc().setAutoNext(this.tocAutoNext.getSwitchIsChecked());

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -26,6 +27,7 @@ import com.xuexiang.constant.PermissionConstants;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.core.PageOption;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
+import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog;
 import com.xuexiang.xutil.system.PermissionUtils;
 
 import java.io.File;
@@ -105,6 +107,9 @@ public class RuleManagerFragment extends BaseFragment<RuleManagerPresenter> impl
         switch (id) {
             case R.id.import_rule:
                 importFromFile();
+                break;
+            case R.id.import_rule_url:
+                importFromUrl();
                 break;
             case R.id.add:
                 PageOption.to(RuleEditorFragment.class)
@@ -203,6 +208,26 @@ public class RuleManagerFragment extends BaseFragment<RuleManagerPresenter> impl
         intent.setType("application/json");
         intent.setType("*/*");
         startActivityForResult(intent, EXPORT_REQUEST_CODE);
+    }
+
+    /**
+     * 从URL导入书源
+     */
+    private void importFromUrl() {
+        new MaterialDialog.Builder(requireContext())
+            .title("网络导入")
+            .inputType(InputType.TYPE_CLASS_TEXT)
+            .input(
+                "请输入书源链接",
+                null,
+                false,
+                ((dialog, input) -> {
+                    presenter.importRuleFromUrl(input.toString());
+                }))
+            .positiveText("确定")
+            .negativeText("取消")
+            .cancelable(true)
+            .show();
     }
 
     public void refreshRules() {

@@ -84,11 +84,9 @@ public class DownloadConfigFragment extends BaseFragment<DownloadConfigPresenter
 
     private void showFileChooser() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        String initPath = presenter.getSavePath();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && initPath != null) {
-            intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, initPath);
-        }
+
         startActivityForResult(intent, SAVE_PATH_REQUEST_CODE);
     }
 

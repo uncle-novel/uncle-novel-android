@@ -71,7 +71,8 @@
     <string name="enabled_dynamic">动态网页</string>
     <string name="add_rule">新增书源</string>
     <string name="clipboard_import">剪贴板导入</string>
-    <string name="import_rule">导入书源</string>
+    <string name="import_rule">本地导入</string>
+    <string name="import_rule_url">网络导入</string>
     <string name="export_rule">导出书源</string>
     <string name="rule_manager">书源管理</string>
     <string name="content_ad">正文广告</string>
@@ -104,4 +105,5 @@
     <string name="novel_audio">有声小说</string>
     <string name="novel_text">文本小说</string>
     <string name="about_item_update">版本更新</string>
+    <string name="content_t2s">正文繁转简</string>
 </resources>
