@@ -12,7 +12,7 @@ repositories{
 
 dependencyManagement {
     dependencies {
-        dependency "com.unclezs:novel-analyzer:1.0.19"
+        dependency "com.unclezs:novel-analyzer:1.0.23"
 
         dependencySet("cn.hutool:5.5.9") {
             entry "hutool-all"
